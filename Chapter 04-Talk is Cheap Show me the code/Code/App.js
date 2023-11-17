@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 //Wireframe of the App:-
 //Componenets:-
 //1.Header => logo-container,nav-items.
@@ -10,85 +9,6 @@ import ReactDOM from 'react-dom/client';
 //3.Footer => Copyrights-container,Links-container.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//Header-Component:-
-const Header = ()=>{
-return(
-<div className='header'>
-<div className='logo-container'>
-    <img className="logo" src='https://logohistory.net/wp-content/uploads/2022/10/Gofood-logo.png'/>
-</div>
-<div className='search-container'>Search</div>
-<div className='nav-items'>
-<ul>
-<li>Home</li>
-<li>About Us</li>
-<li>Contact Us</li>
-<li>Cart</li>
-</ul>
-</div>
-</div>
-)
-};
-
-//Body-Component:-
-const Body = ()=>{
-    return(
-<div className='body'>
-<div className='restaurant-container'>
-<RestaurantCardComponent resImage='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_750,h_500,c_fill/uvltlhppkqfium1fpuay' resName="Bramha Garden Restaurant" resCuisines="Biryani, Maharashtrian, Seafood" resRatings="4.5"deliveryTime="40 mins"price="₹1000 for two"/>
-<RestaurantCardComponent resImage='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_750,h_500,c_fill/jua0srbxkeug7gtvkzrl'resName="The Good Bowl" resCuisines="Japanese, Korean, Chinese"resRatings="4.2"deliveryTime="35 mins"price="₹500 for two"/>
-<RestaurantCardComponent resImage='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_750,h_500,c_fill/c058b951bd917bf716630dff74648a5d'resName="Haldiram's Restaurant" resCuisines="North Indian, South Indian"resRatings="4.0"deliveryTime="30 mins"price="₹200 for two"/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-<RestaurantCardComponent/>
-
-</div>
-</div>
-)
-};
-
-//RestaurantCard-component:- We created a new reusable component to inject into the code- Body component > restaurant-container.
-const RestaurantCardComponent = (props)=>{
-return(
-<div className="restaurant-list">
-                    <div className="place">
-                            <div className="list-item">
-                                <div className="item-content">
-                                    <div className="top-image">
-                                        <img className='res-img' alt="Res-Image" src={props.resImage}/>
-                                    </div>
-                                    </div>
-                                    <div className="place-name-div">
-                                        <div className="name">{props.resName}</div>
-                                        <div className="food-list">{props.resCuisines}</div>
-                                    </div>
-                                   <div className="info-div">
-                                    <div className="ratings"><span>{props.resRatings}</span></div>
-                                    <div className="dot">.</div>
-                                    <div className="time">{props.deliveryTime}</div>
-                                    <div className="dot">.</div>
-                                    <div className="price">{props.price}</div>
-                                </div>
-                                              
-                                <div className="address">
-                                    
-                                    <span className="sNAfh">{props.address}</span>
-                                </div>
-                              </div>
-                            </div>
-                            
-                        
-</div>
-)
-}
 
 //JSON data:-
 const restaurantObject =
@@ -224,25 +144,91 @@ const restaurantObject =
           "text": "RESTAURANT_MENU",
           "type": "WEBLINK"
         }
-      }
-   
+      };
 
+//RestaurantCard-component:- We created a new reusable component to inject into the code- Body component > restaurant-container.
+const RestaurantCardComponent = (props)=>{
+  const {restaurantData} = props;
+return(
+<div className="restaurant-list">
+                    <div className="place">
+                            <div className="list-item">
+                                <div className="item-content">
+                                    <div className="top-image">
+                                        <img className='res-img' alt="Res-Image" src={props.resImage}/>
+                                    </div>
+                                    </div>
+                                    <div className="place-name-div">
+                                        <div className="name">{}</div>
+                                        <div className="food-list">{}</div>
+                                    </div>
+                                   <div className="info-div">
+                                    <div className="ratings"><span>{}</span></div>
+                                    <div className="dot">.</div>
+                                    <div className="time">{}</div>
+                                    <div className="dot">.</div>
+                                    <div className="price">{props.price}</div>
+                                </div>
+                                              
+                                <div className="address">
+                                    
+                                    <span className="sNAfh">{props.address}</span>
+                                </div>
+                              </div>
+                            </div>                      
+</div>
+)
+};
 
+//Header-Component:-
+const Header = ()=>{
+return(
+<div className='header'>
+<div className='logo-container'>
+    <img className="logo" src='https://logohistory.net/wp-content/uploads/2022/10/Gofood-logo.png'/>
+</div>
+<div className='search-container'>Search</div>
+<div className='nav-items'>
+<ul>
+<li>Home</li>
+<li>About Us</li>
+<li>Contact Us</li>
+<li>Cart</li>
+</ul>
+</div>
+</div>
+)
+};
 
-//5.Footer-Component:-
+//Body-Component:-
+const Body = ()=>{
+    return(
+<div className='body'>
+<div className='restaurant-container'>
+<RestaurantCardComponent restaurantData={restaurantObject} />
+{/* resImage='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_750,h_500,c_fill/uvltlhppkqfium1fpuay' resName="Bramha Garden Restaurant" resCuisines="Biryani, Maharashtrian, Seafood" resRatings="4.5"deliveryTime="40 mins"price="₹1000 for two"/> */}
+{/* <RestaurantCardComponent resImage='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_750,h_500,c_fill/jua0srbxkeug7gtvkzrl'resName="The Good Bowl" resCuisines="Japanese, Korean, Chinese"resRatings="4.2"deliveryTime="35 mins"price="₹500 for two"/>
+<RestaurantCardComponent resImage='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_750,h_500,c_fill/c058b951bd917bf716630dff74648a5d'resName="Haldiram's Restaurant" resCuisines="North Indian, South Indian"resRatings="4.0"deliveryTime="30 mins"price="₹200 for two"/> */}
+</div>
+</div>
+)
+};
+
+//Footer-Component:-
 const Footer = ()=>{
     
 }
 
 
-//AppLayout-Component:- To rendering the app and all the data which are stored into the  `div` `App-container`.
+//AppLayout-Component:-
+//To rendering the app and all the data which are stored into the  `div` `App-container`.
 const AppLayout = ()=>{
     return ( 
     <div id ='App-container'>
- {/* //1.Header-Component - This is an example of component composition it means that The component is inside another component.*/}
+ {/* //1.Header-Component - This is an example of component composition it means that The component is inside an another component.*/}
 <Header/>
 
-{/* //2.Body-Component - This is an example of component composition it means that The component is inside another component.*/}
+{/* //2.Body-Component - This is an example of component composition it means that The component is inside an another component.*/}
 <Body/>
     </div>)
 };
