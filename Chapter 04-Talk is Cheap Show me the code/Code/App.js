@@ -990,8 +990,8 @@ const restaurantList =
 //RestaurantCard-component:- We created a new reusable component to inject into the code- Body component > restaurant-container.
 const RestaurantCardComponent = (props)=>{
   const {restaurantData} = props;
-  const { name, cuisines, avgRating, costForTwo, areaName } =
-  restaurantData.info;
+  const { cloudinaryImageId,name, cuisines, avgRating, costForTwo, areaName } =
+  restaurantData?.info;
   const {header} = restaurantData.info.aggregatedDiscountInfoV3;
   const { slaString } = restaurantData.info.sla;
 return(
@@ -1002,7 +1002,7 @@ return(
                                     <div className="top-image">
                                         <img className='res-img' alt="Res-Image" src={
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          restaurantData.info.cloudinaryImageId
+          cloudinaryImageId
         }/>
                                     </div>
                                     </div>
@@ -1055,8 +1055,7 @@ const Body = ()=>{
 <RestaurantCardComponent restaurantData={restaurantList[7]}/>
 <RestaurantCardComponent restaurantData={restaurantList[8]}/>
 <RestaurantCardComponent restaurantData={restaurantList[9]}/>
-
-
+<RestaurantCardComponent restaurantData={restaurantList[10]}/>
 </div>
 </div>
 )
@@ -1074,22 +1073,17 @@ const Footer = ()=>{
 
 
 
-
 //AppLayout-Component:-
-//To rendering the app and all the data which are stored into the  `div` `App-container`.
+//an example of component composition it means that The component is inside an another component.
 const AppLayout = ()=>{
     return ( 
     <div id ='App-container'>
- {/* //1.Header-Component - This is an example of component composition it means that The component is inside an another component.*/}
-<Header/>
-
-{/* //2.Body-Component - This is an example of component composition it means that The component is inside an another component.*/}
-<Body/>
-
-<footer/>
+      <Header/>
+      <Body/>
+      <footer/>
     </div>)
 };
 
-
+//To Rendering the app and all the data which are stored into the  `div` `App-container`.
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<AppLayout/>);
