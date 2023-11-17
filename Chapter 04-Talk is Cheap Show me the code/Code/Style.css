@@ -22,9 +22,43 @@
 }
 
 .body{
+    /* display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; */
+  /* margin-top: 1vw; */
+  width: 100%;
     background-color: rgb(255, 255, 255);
 }
 
+.search-container{
+    display: flex;
+    gap: 10;
+    padding: 9px;
+    margin-top: 115px;
+    background-color:#EB2836;
+
+}
+#searchInp {
+    padding: 1vw 0vw;
+    padding-right: 10vw;
+    padding-left: 2vw;
+    border: none;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+  }
+#searchBtn {
+   font-weight: bold;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 2vw;
+    font-size: 1.4vw;
+    font-weight: 520;
+    color: black;
+    background-color:#ffffff;;
+    cursor: pointer;
+   
+  }
 .logo{
 display: flex;
 align-items: center;
@@ -57,9 +91,7 @@ align-items: center;
 }
 
 
-.search-container{
-    padding: 10px;
-}
+
 
 .restaurant-container{
 display: flex;
@@ -151,7 +183,7 @@ padding: 50px;
         background-color: #48c479;
         color: white;
         height: 20px;
-        width: 20px;
+        width: 50px;
         font-weight: 400;
         display: flex;
         align-items: center;

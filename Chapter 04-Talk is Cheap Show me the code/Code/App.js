@@ -17,7 +17,6 @@ const Header = ()=>{
   <div className='logo-container'>
       <img className="logo" src='https://logohistory.net/wp-content/uploads/2022/10/Gofood-logo.png'/>
   </div>
-  <div className='search-container'>Search</div>
   <div className='nav-items'>
   <ul>
   <li>Home</li>
@@ -33,2084 +32,1002 @@ const Header = ()=>{
 
 
 //JSON data:-
-const restaurantObject =
+const restaurantList =
       [
         {
-          "info": {
-            "id": "21395",
-            "name": "Brahma Garden",
-            "cloudinaryImageId": "uvltlhppkqfium1fpuay",
-            "locality": "Sinhagad Road",
-            "areaName": "Sinhagad Road",
-            "costForTwo": "₹350 for two",
-            "cuisines": [
-              "North Indian",
-              "South Indian",
-              "Chinese",
-              "Juices",
-              "Biryani",
-              "Punjabi"
-            ],
-            "avgRating": 4.3,
-            "veg": true,
-            "feeDetails": {
-              "restaurantId": "21395",
-              "fees": [
+          info: {
+            id: "717982",
+            name: "Burger King",
+            cloudinaryImageId: "aa77cb6fce4d94f3ad4b4e7fb42782db",
+            locality: "Lotus Park 3",
+            areaName: "Ambegaon",
+            costForTwo: "₹350 for two",
+            cuisines: ["Burgers", "American"],
+            avgRating: 3.9,
+            feeDetails: {
+              restaurantId: "717982",
+              fees: [
                 {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4500
+                  name: "BASE_DISTANCE",
+                  fee: 3400,
                 },
                 {
-                  "name": "BASE_TIME"
+                  name: "BASE_TIME",
                 },
                 {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
+                  name: "ANCILLARY_SURGE_FEE",
+                },
               ],
-              "totalFee": 4500
+              totalFee: 3400,
             },
-            "parentId": "49529",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "10K+",
-            "sla": {
-              "deliveryTime": 24,
-              "lastMileTravel": 4.6,
-              "serviceability": "SERVICEABLE",
-              "slaString": "24 mins",
-              "lastMileTravelString": "4.6 km",
-              "iconType": "ICON_TYPE_EMPTY"
+            parentId: "166",
+            avgRatingString: "3.9",
+            totalRatingsString: "1K+",
+            sla: {
+              deliveryTime: 28,
+              lastMileTravel: 2.8,
+              serviceability: "SERVICEABLE",
+              slaString: "28 mins",
+              lastMileTravelString: "2.8 km",
+              iconType: "ICON_TYPE_EMPTY",
             },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:30:00",
-              "opened": true
+            availability: {
+              nextCloseTime: "2023-11-16 03:00:00",
+              opened: true,
             },
-            "badges": {
-              "imageBadges": [
-                {
-                  "imageId": "v1695133679/badges/Pure_Veg111.png",
-                  "description": "pureveg"
-                }
-              ]
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {},
+                textExtendedBadges: {},
+              },
             },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  "badgeObject": [
-                    {
-                      "attributes": {
-                        "description": "pureveg",
-                        "imageId": "v1695133679/badges/Pure_Veg111.png"
-                      }
-                    }
-                  ]
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹120",
             },
-            "aggregatedDiscountInfoV3": {
-              "header": "20% OFF",
-              "subHeader": "UPTO ₹50"
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
             },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            isNewlyOnboarded: true,
+            restaurantOfferPresentationInfo: {},
           },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/brahma-garden-sinhagad-road-pune-21395",
-            "type": "WEBLINK"
-          }
         },
         {
-          "info": {
-            "id": "156120",
-            "name": "The Good Bowl",
-            "cloudinaryImageId": "0b3356a88b6fc5966c452c4c9b1b5e4a",
-            "locality": "Karve Road",
-            "areaName": "Karve Nagar",
-            "costForTwo": "₹400 for two",
-            "cuisines": [
+          info: {
+            id: "467580",
+            name: "Baskin Robbins - Ice Cream Desserts",
+            cloudinaryImageId: "85ccae4e3576f9330af102c46ca85395",
+            locality: "Bharti Vihar",
+            areaName: "Katraj",
+            costForTwo: "₹250 for two",
+            cuisines: ["Desserts", "Ice Cream"],
+            avgRating: 4.6,
+            veg: true,
+            feeDetails: {
+              restaurantId: "467580",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3200,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3200,
+            },
+            parentId: "5588",
+            avgRatingString: "4.6",
+            totalRatingsString: "50+",
+            sla: {
+              deliveryTime: 19,
+              lastMileTravel: 1.5,
+              serviceability: "SERVICEABLE",
+              slaString: "19 mins",
+              lastMileTravelString: "1.5 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-15 23:30:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textExtendedBadges: {},
+                textBased: {},
+                imageBased: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹100",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "461939",
+            name: "Fried Chicken Destination",
+            cloudinaryImageId: "rzxyoujbwyalfwksxol7",
+            locality: "Vastunagar ",
+            areaName: "Bibvewadi",
+            costForTwo: "₹200 for two",
+            cuisines: ["North Indian"],
+            avgRating: 3.9,
+            feeDetails: {
+              restaurantId: "461939",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3400,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3400,
+            },
+            parentId: "245841",
+            avgRatingString: "3.9",
+            totalRatingsString: "1K+",
+            promoted: true,
+            adTrackingId:
+              "cid=9194051~p=3~eid=0000018b-d2c9-4558-6e1d-ac9900ff0307~srvts=1700048487768~45995",
+            sla: {
+              deliveryTime: 29,
+              lastMileTravel: 2.8,
+              serviceability: "SERVICEABLE",
+              slaString: "29 mins",
+              lastMileTravelString: "2.8 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-16 02:00:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {},
+                textExtendedBadges: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "₹125 OFF",
+              subHeader: "ABOVE ₹249",
+              discountTag: "FLAT DEAL",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "24075",
+            name: "Cafe Momos",
+            cloudinaryImageId: "alv5bura2gt24wmibqmr",
+            locality: "Bharti Vidyapeeth",
+            areaName: "Katraj",
+            costForTwo: "₹200 for two",
+            cuisines: ["Beverages"],
+            avgRating: 4.1,
+            feeDetails: {
+              restaurantId: "24075",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3400,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3400,
+            },
+            parentId: "18860",
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            promoted: true,
+            adTrackingId:
+              "cid=9108788~p=2~eid=0000018b-d2c9-4558-6e1d-ac9800ff025a~srvts=1700048487768~45995",
+            sla: {
+              deliveryTime: 19,
+              lastMileTravel: 1.6,
+              serviceability: "SERVICEABLE",
+              slaString: "19 mins",
+              lastMileTravelString: "1.6 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-15 23:00:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {},
+                textExtendedBadges: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹100",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "255149",
+            name: "Firangi Bake",
+            cloudinaryImageId: "tengdwsfnqs29t8nwfwv",
+            locality: "Datta nagar chowk",
+            areaName: "Ambegaon Bk",
+            costForTwo: "₹400 for two",
+            cuisines: [
+              "Pizzas",
+              "Pastas",
+              "Italian",
+              "Mexican",
+              "Healthy Food",
+              "Desserts",
+              "Beverages",
+            ],
+            avgRating: 4.3,
+            feeDetails: {
+              restaurantId: "255149",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3200,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3200,
+            },
+            parentId: "3952",
+            avgRatingString: "4.3",
+            totalRatingsString: "100+",
+            sla: {
+              deliveryTime: 24,
+              lastMileTravel: 0.9,
+              serviceability: "SERVICEABLE",
+              slaString: "24 mins",
+              lastMileTravelString: "0.9 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-15 23:59:00",
+              opened: true,
+            },
+            badges: {
+              textExtendedBadges: [
+                {
+                  iconId: "guiltfree/GF_Logo_android_3x",
+                  shortDescription: "options available",
+                  fontColor: "#7E808C",
+                },
+              ],
+            },
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {},
+                textExtendedBadges: {
+                  badgeObject: [
+                    {
+                      attributes: {
+                        shortDescription: "options available",
+                        fontColor: "#7E808C",
+                        iconId: "guiltfree/GF_Logo_android_3x",
+                        description: "",
+                      },
+                    },
+                  ],
+                },
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "50% OFF",
+              subHeader: "UPTO ₹100",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "37467",
+            name: "Subway",
+            cloudinaryImageId: "1ace5fa65eff3e1223feb696c956b38b",
+            locality: "Chandrabhaga Nagar Rd",
+            areaName: "Katraj",
+            costForTwo: "₹350 for two",
+            cuisines: ["Healthy Food", "Salads", "Snacks", "Desserts", "Beverages"],
+            avgRating: 4.2,
+            feeDetails: {
+              restaurantId: "37467",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3200,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3200,
+            },
+            parentId: "2",
+            avgRatingString: "4.2",
+            totalRatingsString: "5K+",
+            sla: {
+              deliveryTime: 28,
+              lastMileTravel: 1.2,
+              serviceability: "SERVICEABLE",
+              slaString: "28 mins",
+              lastMileTravelString: "1.2 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-16 03:00:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {},
+                textExtendedBadges: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹100",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "53754",
+            name: "Pizza Hut",
+            cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            locality: "Pune Satara Road",
+            areaName: "Katraj",
+            costForTwo: "₹350 for two",
+            cuisines: ["Pizzas"],
+            avgRating: 3.8,
+            feeDetails: {
+              restaurantId: "53754",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3200,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3200,
+            },
+            parentId: "721",
+            avgRatingString: "3.8",
+            totalRatingsString: "5K+",
+            sla: {
+              deliveryTime: 28,
+              lastMileTravel: 1.5,
+              serviceability: "SERVICEABLE",
+              slaString: "28 mins",
+              lastMileTravelString: "1.5 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-16 03:00:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {},
+                textExtendedBadges: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "30% OFF",
+              subHeader: "UPTO ₹75",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "669709",
+            name: "Kwality Walls Frozen Dessert and Ice Cream Shop",
+            cloudinaryImageId: "7de701fb433cb9905744d05ccd0736c1",
+            locality: "Utkarsh Society",
+            areaName: "Bibwewadi",
+            costForTwo: "₹200 for two",
+            cuisines: ["Ice Cream", "Desserts"],
+            avgRating: 4.4,
+            veg: true,
+            feeDetails: {
+              restaurantId: "669709",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3400,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3400,
+            },
+            parentId: "582",
+            avgRatingString: "4.4",
+            totalRatingsString: "20+",
+            sla: {
+              deliveryTime: 28,
+              lastMileTravel: 1.2,
+              serviceability: "SERVICEABLE",
+              slaString: "28 mins",
+              lastMileTravelString: "1.2 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-15 23:00:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                imageBased: {},
+                textExtendedBadges: {},
+                textBased: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "40% OFF",
+              subHeader: "UPTO ₹80",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "255148",
+            name: "Oven Story Pizza - Standout Toppings",
+            cloudinaryImageId: "f986df6f1a1fcf2ff24d2eaf44d570a7",
+            locality: "Datta nagar chowk",
+            areaName: "Ambegaon Bk",
+            costForTwo: "₹400 for two",
+            cuisines: ["Pizzas", "Pastas", "Italian", "Desserts", "Beverages"],
+            avgRating: 4.3,
+            feeDetails: {
+              restaurantId: "255148",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3200,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3200,
+            },
+            parentId: "3534",
+            avgRatingString: "4.3",
+            totalRatingsString: "1K+",
+            sla: {
+              deliveryTime: 27,
+              lastMileTravel: 0.9,
+              serviceability: "SERVICEABLE",
+              slaString: "23-31 mins",
+              lastMileTravelString: "0.9 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-15 23:59:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textExtendedBadges: {},
+                textBased: {},
+                imageBased: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹120",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "782004",
+            name: "Burger Battel",
+            cloudinaryImageId: "dfd90931f1a600bda63c8614a9570ace",
+            locality: "Khanapur",
+            areaName: "Bibwewadi",
+            costForTwo: "₹158 for two",
+            cuisines: ["Burgers", "Snacks", "Pizzas"],
+            veg: true,
+            feeDetails: {
+              restaurantId: "782004",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3400,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3400,
+            },
+            parentId: "465348",
+            avgRatingString: "NEW",
+            promoted: true,
+            adTrackingId:
+              "cid=9349282~p=4~eid=0000018b-d2c9-4558-6e1d-ac9a00ff047e~srvts=1700048487768~45995",
+            sla: {
+              deliveryTime: 31,
+              lastMileTravel: 2,
+              serviceability: "SERVICEABLE",
+              slaString: "31 mins",
+              lastMileTravelString: "2.0 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-15 23:59:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {},
+                textExtendedBadges: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹100",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            isNewlyOnboarded: true,
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "255150",
+            name: "Sweet Truth",
+            cloudinaryImageId: "4a3b48488e3aa9bda13efd8cfcd95284",
+            locality: "Datta nagar chowk",
+            areaName: "Ambegaon Bk",
+            costForTwo: "₹450 for two",
+            cuisines: ["Snacks", "Bakery", "Desserts", "Beverages"],
+            avgRating: 4.3,
+            feeDetails: {
+              restaurantId: "255150",
+              fees: [
+                {
+                  name: "BASE_DISTANCE",
+                  fee: 3200,
+                },
+                {
+                  name: "BASE_TIME",
+                },
+                {
+                  name: "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              totalFee: 3200,
+            },
+            parentId: "4444",
+            avgRatingString: "4.3",
+            totalRatingsString: "500+",
+            sla: {
+              deliveryTime: 19,
+              lastMileTravel: 0.9,
+              serviceability: "SERVICEABLE",
+              slaString: "19 mins",
+              lastMileTravelString: "0.9 km",
+              iconType: "ICON_TYPE_EMPTY",
+            },
+            availability: {
+              nextCloseTime: "2023-11-15 23:59:00",
+              opened: true,
+            },
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textExtendedBadges: {},
+                textBased: {},
+                imageBased: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹120",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
+          },
+        },
+        {
+          info: {
+            id: "255151",
+            name: "The Good Bowl",
+            cloudinaryImageId: "0b3356a88b6fc5966c452c4c9b1b5e4a",
+            locality: "Datta nagar chowk",
+            areaName: "Ambegaon Bk",
+            costForTwo: "₹400 for two",
+            cuisines: [
               "Biryani",
               "North Indian",
               "Pastas",
               "Punjabi",
               "Desserts",
-              "Beverages"
-            ],
-            "avgRating": 4.3,
-            "feeDetails": {
-              "restaurantId": "156120",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 3300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 3300
-            },
-            "parentId": "7918",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 18,
-              "lastMileTravel": 1.5,
-              "serviceability": "SERVICEABLE",
-              "slaString": "18 mins",
-              "lastMileTravelString": "1.5 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:59:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "40% OFF",
-              "subHeader": "UPTO ₹80"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/the-good-bowl-karve-road-karve-nagar-pune-156120",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "34845",
-            "name": "McDonald's",
-            "cloudinaryImageId": "bb7ae131544c7d37e10fc5faf76f09d6",
-            "locality": "Motiram Nagar",
-            "areaName": "Warje",
-            "costForTwo": "₹400 for two",
-            "cuisines": [
-              "Burgers",
               "Beverages",
-              "Cafe",
-              "Desserts"
             ],
-            "avgRating": 4.3,
-            "feeDetails": {
-              "restaurantId": "34845",
-              "fees": [
+            avgRating: 4,
+            feeDetails: {
+              restaurantId: "255151",
+              fees: [
                 {
-                  "name": "BASE_DISTANCE",
-                  "fee": 3300
+                  name: "BASE_DISTANCE",
+                  fee: 3200,
                 },
                 {
-                  "name": "BASE_TIME"
+                  name: "BASE_TIME",
                 },
                 {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
+                  name: "ANCILLARY_SURGE_FEE",
+                },
               ],
-              "totalFee": 3300
+              totalFee: 3200,
             },
-            "parentId": "630",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "10K+",
-            "sla": {
-              "deliveryTime": 18,
-              "lastMileTravel": 2.1,
-              "serviceability": "SERVICEABLE",
-              "slaString": "18 mins",
-              "lastMileTravelString": "2.1 km",
-              "iconType": "ICON_TYPE_EMPTY"
+            parentId: "7918",
+            avgRatingString: "4.0",
+            totalRatingsString: "500+",
+            sla: {
+              deliveryTime: 20,
+              lastMileTravel: 0.9,
+              serviceability: "SERVICEABLE",
+              slaString: "20 mins",
+              lastMileTravelString: "0.9 km",
+              iconType: "ICON_TYPE_EMPTY",
             },
-            "availability": {
-              "nextCloseTime": "2023-11-18 00:45:00",
-              "opened": true
+            availability: {
+              nextCloseTime: "2023-11-15 23:59:00",
+              opened: true,
             },
-            "badges": {
-              
+            badges: {},
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textExtendedBadges: {},
+                textBased: {},
+                imageBased: {},
+              },
             },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
+            aggregatedDiscountInfoV3: {
+              header: "40% OFF",
+              subHeader: "UPTO ₹80",
             },
-            "aggregatedDiscountInfoV3": {
-              "header": "40% OFF",
-              "subHeader": "UPTO ₹80"
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
             },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
           },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/mcdonalds-motiram-nagar-warje-pune-34845",
-            "type": "WEBLINK"
-          }
         },
         {
-          "info": {
-            "id": "16059",
-            "name": "KFC",
-            "cloudinaryImageId": "56c9ab92bd79745fd152a30fa2525426",
-            "locality": "Karve Road",
-            "areaName": "Erandwane",
-            "costForTwo": "₹400 for two",
-            "cuisines": [
-              "Burgers",
-              "Biryani",
-              "American",
-              "Snacks",
-              "Fast Food"
-            ],
-            "avgRating": 4.2,
-            "feeDetails": {
-              "restaurantId": "16059",
-              "fees": [
+          info: {
+            id: "24127",
+            name: "Kalyan Bhel",
+            cloudinaryImageId: "n4ggreyxvmcyaahscobd",
+            locality: "Bharti Vidyapeeth Road",
+            areaName: "Katraj",
+            costForTwo: "₹100 for two",
+            cuisines: ["Street Food", "Chaat", "Snacks", "South Indian"],
+            avgRating: 4.1,
+            veg: true,
+            feeDetails: {
+              restaurantId: "24127",
+              fees: [
                 {
-                  "name": "BASE_DISTANCE",
-                  "fee": 6200
+                  name: "BASE_DISTANCE",
+                  fee: 3400,
                 },
                 {
-                  "name": "BASE_TIME"
+                  name: "BASE_TIME",
                 },
                 {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
+                  name: "ANCILLARY_SURGE_FEE",
+                },
               ],
-              "totalFee": 6200
+              totalFee: 3400,
             },
-            "parentId": "547",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "10K+",
-            "sla": {
-              "deliveryTime": 29,
-              "lastMileTravel": 5,
-              "serviceability": "SERVICEABLE",
-              "slaString": "29 mins",
-              "lastMileTravelString": "5.0 km",
-              "iconType": "ICON_TYPE_EMPTY"
+            parentId: "532",
+            avgRatingString: "4.1",
+            totalRatingsString: "10K+",
+            promoted: true,
+            adTrackingId:
+              "cid=9204261~p=1~eid=0000018b-d2c9-4558-6e1d-ac9700ff017c~srvts=1700048487768~45995",
+            sla: {
+              deliveryTime: 21,
+              lastMileTravel: 1.3,
+              serviceability: "SERVICEABLE",
+              slaString: "21 mins",
+              lastMileTravelString: "1.3 km",
+              iconType: "ICON_TYPE_EMPTY",
             },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:00:00",
-              "opened": true
+            availability: {
+              nextCloseTime: "2023-11-15 22:45:00",
+              opened: true,
             },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "40% OFF",
-              "subHeader": "UPTO ₹80"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/kfc-karve-road-erandwane-pune-16059",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "14548",
-            "name": "Burger King",
-            "cloudinaryImageId": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
-            "locality": "Paud Road",
-            "areaName": "Kothrud",
-            "costForTwo": "₹350 for two",
-            "cuisines": [
-              "Burgers",
-              "American"
-            ],
-            "avgRating": 4.1,
-            "feeDetails": {
-              "restaurantId": "14548",
-              "fees": [
+            badges: {
+              imageBadges: [
                 {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4300
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                  description: "pureveg",
                 },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
               ],
-              "totalFee": 4300
             },
-            "parentId": "166",
-            "avgRatingString": "4.1",
-            "totalRatingsString": "10K+",
-            "sla": {
-              "deliveryTime": 26,
-              "lastMileTravel": 4.2,
-              "serviceability": "SERVICEABLE",
-              "slaString": "26 mins",
-              "lastMileTravelString": "4.2 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-18 06:00:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "60% OFF",
-              "subHeader": "UPTO ₹120"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/burger-king-paud-road-kothrud-pune-14548",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "63005",
-            "name": "LunchBox - Meals and Thalis",
-            "cloudinaryImageId": "ssdvzukpczydvv1hwwif",
-            "locality": "Sudhakar Thorat Colony",
-            "areaName": "Karve Nagar",
-            "costForTwo": "₹200 for two",
-            "cuisines": [
-              "Biryani",
-              "North Indian",
-              "Punjabi",
-              "Healthy Food",
-              "Desserts",
-              "Beverages"
-            ],
-            "avgRating": 4.2,
-            "feeDetails": {
-              "restaurantId": "63005",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 3300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 3300
-            },
-            "parentId": "4925",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 20,
-              "lastMileTravel": 1.5,
-              "serviceability": "SERVICEABLE",
-              "slaString": "20 mins",
-              "lastMileTravelString": "1.5 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:59:00",
-              "opened": true
-            },
-            "badges": {
-              "textExtendedBadges": [
-                {
-                  "iconId": "guiltfree/GF_Logo_android_3x",
-                  "shortDescription": "options available",
-                  "fontColor": "#7E808C"
-                }
-              ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  "badgeObject": [
+            isOpen: true,
+            type: "F",
+            badgesV2: {
+              entityBadges: {
+                textBased: {},
+                imageBased: {
+                  badgeObject: [
                     {
-                      "attributes": {
-                        "description": "",
-                        "fontColor": "#7E808C",
-                        "iconId": "guiltfree/GF_Logo_android_3x",
-                        "shortDescription": "options available"
-                      }
-                    }
-                  ]
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "60% OFF",
-              "subHeader": "UPTO ₹120"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/lunchbox-meals-and-thalis-sudhakar-thorat-colony-karve-nagar-pune-63005",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "334229",
-            "name": "Pizza Hut",
-            "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
-            "locality": "Atul Nagar",
-            "areaName": "Warje",
-            "costForTwo": "₹350 for two",
-            "cuisines": [
-              "Pizzas"
-            ],
-            "avgRating": 3.8,
-            "feeDetails": {
-              "restaurantId": "334229",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 3300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 3300
-            },
-            "parentId": "721",
-            "avgRatingString": "3.8",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 26,
-              "lastMileTravel": 2.3,
-              "serviceability": "SERVICEABLE",
-              "slaString": "26 mins",
-              "lastMileTravelString": "2.3 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-18 03:00:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "50% OFF",
-              "subHeader": "UPTO ₹100"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/pizza-hut-atul-nagar-warje-pune-334229",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "229278",
-            "name": "Faasos - Wraps & Rolls",
-            "cloudinaryImageId": "af33b81798b11deba338e94b7585d348",
-            "locality": "Law College Road",
-            "areaName": "Erandwane",
-            "costForTwo": "₹200 for two",
-            "cuisines": [
-              "Kebabs",
-              "Fast Food",
-              "Snacks",
-              "North Indian",
-              "American",
-              "Healthy Food",
-              "Desserts",
-              "Beverages"
-            ],
-            "avgRating": 4.2,
-            "feeDetails": {
-              "restaurantId": "229278",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 4300
-            },
-            "parentId": "21809",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 29,
-              "lastMileTravel": 4.5,
-              "serviceability": "SERVICEABLE",
-              "slaString": "29 mins",
-              "lastMileTravelString": "4.5 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:59:00",
-              "opened": true
-            },
-            "badges": {
-              "textExtendedBadges": [
-                {
-                  "iconId": "guiltfree/GF_Logo_android_3x",
-                  "shortDescription": "options available",
-                  "fontColor": "#7E808C"
-                }
-              ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  "badgeObject": [
-                    {
-                      "attributes": {
-                        "description": "",
-                        "fontColor": "#7E808C",
-                        "iconId": "guiltfree/GF_Logo_android_3x",
-                        "shortDescription": "options available"
-                      }
-                    }
-                  ]
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "50% OFF",
-              "subHeader": "UPTO ₹100"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/faasos-wraps-and-rolls-law-college-road-erandwane-pune-229278",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "34724",
-            "name": "Subway",
-            "cloudinaryImageId": "1ace5fa65eff3e1223feb696c956b38b",
-            "locality": "Warje",
-            "areaName": "Warje",
-            "costForTwo": "₹350 for two",
-            "cuisines": [
-              "Healthy Food",
-              "Salads",
-              "Snacks",
-              "Desserts",
-              "Beverages"
-            ],
-            "avgRating": 3.8,
-            "feeDetails": {
-              "restaurantId": "34724",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 3700
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 3700
-            },
-            "parentId": "2",
-            "avgRatingString": "3.8",
-            "totalRatingsString": "5K+",
-            "sla": {
-              "deliveryTime": 22,
-              "lastMileTravel": 2.1,
-              "serviceability": "SERVICEABLE",
-              "slaString": "22 mins",
-              "lastMileTravelString": "2.1 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:59:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "40% OFF",
-              "subHeader": "UPTO ₹80"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/subway-warje-pune-34724",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "303296",
-            "name": "Kwality Walls Frozen Dessert and Ice Cream Shop",
-            "cloudinaryImageId": "abbhetnc04iqbs5kjdik",
-            "locality": "Gangotri",
-            "areaName": "Bavdhan",
-            "costForTwo": "₹300 for two",
-            "cuisines": [
-              "Desserts",
-              "Ice Cream",
-              "Ice Cream Cakes"
-            ],
-            "avgRating": 4.5,
-            "veg": true,
-            "feeDetails": {
-              "restaurantId": "303296",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 6600
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 6600
-            },
-            "parentId": "582",
-            "avgRatingString": "4.5",
-            "totalRatingsString": "100+",
-            "sla": {
-              "deliveryTime": 28,
-              "lastMileTravel": 6.5,
-              "serviceability": "SERVICEABLE",
-              "slaString": "28 mins",
-              "lastMileTravelString": "6.5 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 22:30:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "40% OFF",
-              "subHeader": "UPTO ₹80"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/kwality-walls-frozen-dessert-and-ice-cream-shop-gangotri-bavdhan-pune-303296",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "284807",
-            "name": "Starbucks Coffee",
-            "cloudinaryImageId": "182191ab163770437b62861a6f987709",
-            "locality": "Karve Road",
-            "areaName": "Kothrud",
-            "costForTwo": "₹400 for two",
-            "cuisines": [
-              "Beverages",
-              "Cafe",
-              "Snacks",
-              "Desserts",
-              "Bakery",
-              "Ice Cream"
-            ],
-            "avgRating": 4.4,
-            "feeDetails": {
-              "restaurantId": "284807",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 5000
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 5000
-            },
-            "parentId": "195515",
-            "avgRatingString": "4.4",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 23,
-              "lastMileTravel": 3,
-              "serviceability": "SERVICEABLE",
-              "slaString": "23 mins",
-              "lastMileTravelString": "3.0 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:30:00",
-              "opened": true
-            },
-            "badges": {
-              "textExtendedBadges": [
-                {
-                  "iconId": "guiltfree/GF_Logo_android_3x",
-                  "shortDescription": "options available",
-                  "fontColor": "#7E808C"
-                }
-              ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  "badgeObject": [
-                    {
-                      "attributes": {
-                        "description": "",
-                        "fontColor": "#7E808C",
-                        "iconId": "guiltfree/GF_Logo_android_3x",
-                        "shortDescription": "options available"
-                      }
-                    }
-                  ]
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "50% OFF",
-              "subHeader": "UPTO ₹100"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/starbucks-coffee-karve-road-kothrud-pune-284807",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "518510",
-            "name": "EatFit",
-            "cloudinaryImageId": "6126c9b45de2cb222405c1af8a321e74",
-            "locality": "Paud Road",
-            "areaName": "Kothrud",
-            "costForTwo": "₹270 for two",
-            "cuisines": [
-              "Chinese",
-              "Healthy Food",
-              "Tandoor",
-              "Pizzas",
-              "North Indian",
-              "Thalis",
-              "Biryani"
-            ],
-            "avgRating": 4.1,
-            "feeDetails": {
-              "restaurantId": "518510",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 4300
-            },
-            "parentId": "76139",
-            "avgRatingString": "4.1",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 24,
-              "lastMileTravel": 3.8,
-              "serviceability": "SERVICEABLE",
-              "slaString": "24 mins",
-              "lastMileTravelString": "3.8 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:45:00",
-              "opened": true
-            },
-            "badges": {
-              "textExtendedBadges": [
-                {
-                  "iconId": "guiltfree/GF_Logo_android_3x",
-                  "shortDescription": "brand",
-                  "fontColor": "#7E808C"
-                }
-              ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  "badgeObject": [
-                    {
-                      "attributes": {
-                        "description": "",
-                        "fontColor": "#7E808C",
-                        "iconId": "guiltfree/GF_Logo_android_3x",
-                        "shortDescription": "brand"
-                      }
-                    }
-                  ]
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "60% OFF",
-              "subHeader": "UPTO ₹120"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/eatfit-paud-road-kothrud-pune-518510",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "112062",
-            "name": "Aroma's Hyderabad House",
-            "cloudinaryImageId": "aaxakpacgyunpodsygfd",
-            "locality": "Warje",
-            "areaName": "Warje",
-            "costForTwo": "₹500 for two",
-            "cuisines": [
-              "Biryani",
-              "Mughlai",
-              "North Indian",
-              "Chinese"
-            ],
-            "avgRating": 4.2,
-            "feeDetails": {
-              "restaurantId": "112062",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 3700
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 3700
-            },
-            "parentId": "71",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "10K+",
-            "sla": {
-              "deliveryTime": 20,
-              "lastMileTravel": 2.1,
-              "serviceability": "SERVICEABLE",
-              "slaString": "20 mins",
-              "lastMileTravelString": "2.1 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 16:00:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "40% OFF",
-              "subHeader": "UPTO ₹80"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/aromas-hyderabad-house-warje-pune-112062",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "218321",
-            "name": "Theobroma",
-            "cloudinaryImageId": "b033728dcb0101ceb19bff0e1e1f6474",
-            "locality": "Kothrud",
-            "areaName": "Kothrud",
-            "costForTwo": "₹500 for two",
-            "cuisines": [
-              "Bakery",
-              "Desserts"
-            ],
-            "avgRating": 4.5,
-            "feeDetails": {
-              "restaurantId": "218321",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 5200
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 5200
-            },
-            "parentId": "1040",
-            "avgRatingString": "4.5",
-            "totalRatingsString": "5K+",
-            "sla": {
-              "deliveryTime": 20,
-              "lastMileTravel": 3,
-              "serviceability": "SERVICEABLE",
-              "slaString": "20 mins",
-              "lastMileTravelString": "3.0 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-18 01:00:00",
-              "opened": true
-            },
-            "badges": {
-              "imageBadges": [
-                {
-                  "imageId": "newg.png",
-                  "description": "Gourmet"
-                }
-              ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  "badgeObject": [
-                    {
-                      "attributes": {
-                        "description": "Gourmet",
-                        "imageId": "newg.png"
-                      }
-                    }
-                  ]
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "40% OFF",
-              "subHeader": "ABOVE ₹159",
-              "discountTag": "FLAT DEAL"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/theobroma-kothrud-pune-218321",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "68577",
-            "name": "Baskin Robbins - Ice Cream Desserts",
-            "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
-            "locality": "Manik Baug",
-            "areaName": "Sinhgad Road",
-            "costForTwo": "₹200 for two",
-            "cuisines": [
-              "Ice Cream",
-              "Desserts"
-            ],
-            "avgRating": 4.4,
-            "veg": true,
-            "feeDetails": {
-              "restaurantId": "68577",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 5200
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 5200
-            },
-            "parentId": "5588",
-            "avgRatingString": "4.4",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 25,
-              "lastMileTravel": 4.7,
-              "serviceability": "SERVICEABLE",
-              "slaString": "25 mins",
-              "lastMileTravelString": "4.7 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-18 00:30:00",
-              "opened": true
-            },
-            "badges": {
-              "imageBadges": [
-                {
-                  "imageId": "v1695133679/badges/Pure_Veg111.png",
-                  "description": "pureveg"
-                }
-              ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  "badgeObject": [
-                    {
-                      "attributes": {
-                        "description": "pureveg",
-                        "imageId": "v1695133679/badges/Pure_Veg111.png"
-                      }
-                    }
-                  ]
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "30% OFF",
-              "subHeader": "UPTO ₹75"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/baskin-robbins-ice-cream-desserts-manik-baug-sinhgad-road-pune-68577",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "52944",
-            "name": "Behrouz Biryani",
-            "cloudinaryImageId": "89fccaa76f2f760e2742b9e53d32bb69",
-            "locality": "Sudhakar Thorat Colony",
-            "areaName": "Karve Nagar",
-            "costForTwo": "₹500 for two",
-            "cuisines": [
-              "Biryani",
-              "Mughlai",
-              "North Indian",
-              "Lucknowi",
-              "Hyderabadi",
-              "Kebabs",
-              "Desserts",
-              "Beverages"
-            ],
-            "avgRating": 4.3,
-            "feeDetails": {
-              "restaurantId": "52944",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4400
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 4400
-            },
-            "parentId": "1803",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "5K+",
-            "sla": {
-              "deliveryTime": 19,
-              "lastMileTravel": 1.5,
-              "serviceability": "SERVICEABLE",
-              "slaString": "19 mins",
-              "lastMileTravelString": "1.5 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:59:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "60% OFF",
-              "subHeader": "UPTO ₹120"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/behrouz-biryani-sudhakar-thorat-colony-karve-nagar-pune-52944",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "67133",
-            "name": "NIC Ice Creams",
-            "cloudinaryImageId": "c8b98c4064dc2fd6bdf350212e5f0bd5",
-            "locality": "Shastri Nagar",
-            "areaName": "Kothrud",
-            "costForTwo": "₹120 for two",
-            "cuisines": [
-              "Ice Cream",
-              "Desserts"
-            ],
-            "avgRating": 4.7,
-            "veg": true,
-            "feeDetails": {
-              "restaurantId": "67133",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 4300
-            },
-            "parentId": "6249",
-            "avgRatingString": "4.7",
-            "totalRatingsString": "10K+",
-            "sla": {
-              "deliveryTime": 20,
-              "lastMileTravel": 3,
-              "serviceability": "SERVICEABLE",
-              "slaString": "20 mins",
-              "lastMileTravelString": "3.0 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-18 00:00:00",
-              "opened": true
-            },
-            "badges": {
-              "imageBadges": [
-                {
-                  "imageId": "v1695133679/badges/Pure_Veg111.png",
-                  "description": "pureveg"
-                }
-              ]
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  "badgeObject": [
-                    {
-                      "attributes": {
-                        "description": "pureveg",
-                        "imageId": "v1695133679/badges/Pure_Veg111.png"
-                      }
-                    }
-                  ]
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "50% OFF",
-              "subHeader": "UPTO ₹100"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/nic-ice-creams-shastri-nagar-kothrud-pune-67133",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "317437",
-            "name": "Natural Ice Cream",
-            "cloudinaryImageId": "oluh5h2utewdojbvrvmw",
-            "locality": "MOHITE TWIN TOWERS",
-            "areaName": "Sinhgad Road",
-            "costForTwo": "₹150 for two",
-            "cuisines": [
-              "Ice Cream",
-              "Desserts"
-            ],
-            "avgRating": 4.7,
-            "veg": true,
-            "feeDetails": {
-              "restaurantId": "317437",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 4300
-            },
-            "parentId": "2093",
-            "avgRatingString": "4.7",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 20,
-              "lastMileTravel": 3.7,
-              "serviceability": "SERVICEABLE",
-              "slaString": "20 mins",
-              "lastMileTravelString": "3.7 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-17 23:30:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "20% OFF",
-              "subHeader": "UPTO ₹50"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/natural-ice-cream-mohite-twin-towers-sinhgad-road-pune-317437",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "55760",
-            "name": "The Belgian Waffle Co.",
-            "cloudinaryImageId": "846dab8cca3c56a482d7cbcda0dd0eb9",
-            "locality": "Ramdut Vihar",
-            "areaName": "Kothrud",
-            "costForTwo": "₹200 for two",
-            "cuisines": [
-              "Waffle",
-              "Desserts",
-              "Ice Cream"
-            ],
-            "avgRating": 4.3,
-            "veg": true,
-            "feeDetails": {
-              "restaurantId": "55760",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 4300
-            },
-            "parentId": "2233",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "5K+",
-            "sla": {
-              "deliveryTime": 27,
-              "lastMileTravel": 3,
-              "serviceability": "SERVICEABLE",
-              "slaString": "27 mins",
-              "lastMileTravelString": "3.0 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-18 01:00:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "20% OFF",
-              "subHeader": "UPTO ₹50"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/the-belgian-waffle-co-ramdut-vihar-kothrud-pune-55760",
-            "type": "WEBLINK"
-          }
-        },
-        {
-          "info": {
-            "id": "213610",
-            "name": "Wow! Momo",
-            "cloudinaryImageId": "0984acc0ed7b914206dbbcb90297becc",
-            "locality": "Kothrud",
-            "areaName": "Kothrud",
-            "costForTwo": "₹200 for two",
-            "cuisines": [
-              "Tibetan",
-              "Healthy Food",
-              "Asian",
-              "Chinese",
-              "Snacks",
-              "Continental",
-              "Desserts",
-              "Beverages"
-            ],
-            "avgRating": 4.1,
-            "feeDetails": {
-              "restaurantId": "213610",
-              "fees": [
-                {
-                  "name": "BASE_DISTANCE",
-                  "fee": 4300
-                },
-                {
-                  "name": "BASE_TIME"
-                },
-                {
-                  "name": "ANCILLARY_SURGE_FEE"
-                }
-              ],
-              "totalFee": 4300
-            },
-            "parentId": "1776",
-            "avgRatingString": "4.1",
-            "totalRatingsString": "1K+",
-            "sla": {
-              "deliveryTime": 25,
-              "lastMileTravel": 3,
-              "serviceability": "SERVICEABLE",
-              "slaString": "25 mins",
-              "lastMileTravelString": "3.0 km",
-              "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-              "nextCloseTime": "2023-11-18 01:00:00",
-              "opened": true
-            },
-            "badges": {
-              
-            },
-            "isOpen": true,
-            "type": "F",
-            "badgesV2": {
-              "entityBadges": {
-                "imageBased": {
-                  
-                },
-                "textBased": {
-                  
-                },
-                "textExtendedBadges": {
-                  
-                }
-              }
-            },
-            "aggregatedDiscountInfoV3": {
-              "header": "60% OFF",
-              "subHeader": "UPTO ₹120"
-            },
-            "differentiatedUi": {
-              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-              "differentiatedUiMediaDetails": {
-                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                "lottie": {
-                  
-                },
-                "video": {
-                  
-                }
-              }
-            },
-            "reviewsSummary": {
-              
-            },
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {
-              
-            }
-          },
-          "analytics": {
-            
-          },
-          "cta": {
-            "link": "https://www.swiggy.com/restaurants/wow-momo-kothrud-pune-213610",
-            "type": "WEBLINK"
+                      attributes: {
+                        imageId: "v1695133679/badges/Pure_Veg111.png",
+                        description: "pureveg",
+                      },
+                    },
+                  ],
+                },
+                textExtendedBadges: {},
+              },
+            },
+            aggregatedDiscountInfoV3: {
+              header: "60% OFF",
+              subHeader: "UPTO ₹100",
+            },
+            differentiatedUi: {
+              displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              differentiatedUiMediaDetails: {
+                mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                lottie: {},
+                video: {},
+              },
+            },
+            reviewsSummary: {},
+            displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            restaurantOfferPresentationInfo: {},
           },
         },
       ];
 
-
 //RestaurantCard-component:- We created a new reusable component to inject into the code- Body component > restaurant-container.
 const RestaurantCardComponent = (props)=>{
   const {restaurantData} = props;
-  // const { cloudinaryImageId,name, cuisines, avgRating, deliveryTime, costForTwo, areaName }
+  const { name, cuisines, avgRating, costForTwo, areaName } =
+  restaurantData.info;
+  const {header} = restaurantData.info.aggregatedDiscountInfoV3;
+  const { slaString } = restaurantData.info.sla;
 return(
 <div className="restaurant-list">
                     <div className="place">
                             <div className="list-item">
                                 <div className="item-content">
                                     <div className="top-image">
-                                        <img className='res-img' alt="Res-Image" src={ "https://media-assets.swiggy.com/swiggy/image/upload/"}/>
+                                        <img className='res-img' alt="Res-Image" src={
+          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+          restaurantData.info.cloudinaryImageId
+        }/>
                                     </div>
                                     </div>
                                     <div className="place-name-div">
-                                        <div className="name">{restaurantData.info.name}</div>
-                                        <div className="food-list">{restaurantData.info.cuisines}</div>
+                                        <div className="name"> { name } </div>
+                                        <div className="food-list">{cuisines.join(' , ')}</div>
                                     </div>
                                    <div className="info-div">
-                                    <div className="ratings"><span>{restaurantData.info.avgRatingString}stars</span></div>
+                                    <div className="ratings"><span>{avgRating} stars</span></div>
                                     <div className="dot">.</div>
-                                    <div className="time">{restaurantData.info.deliveryTime}minutes</div>
+                                    <h5>
+            <span>
+              <i class="ri-star-fill"></i>
+            </span>
+            {header}
+          </h5>
+          <div className="dot">.</div>
+                                    <div className="time">{slaString}</div>
                                     <div className="dot">.</div>
-                                    <div className="price">{restaurantData.info.costForTwo}</div>
+                                    <div className="price">{costForTwo}</div>
                                 </div>
                                               
                                 <div className="address">
                                     
-                                    <span className="sNAfh">{restaurantData.areaName}</span>
+                                    <span className="sNAfh">{areaName}</span>
                                 </div>
                               </div>
                             </div>                      
@@ -2123,13 +1040,23 @@ return(
 const Body = ()=>{
     return(
 <div className='body'>
+<div className='search-container'>
+      <input type="text" placeholder="Satisfy your hunger now!" id="searchInp"></input>
+      <button id="searchBtn">Search</button>
+    </div>
 <div className='restaurant-container'>
-<RestaurantCardComponent restaurantData={restaurantObject}/>
-<RestaurantCardComponent restaurantData={restaurantObject}/>
-<RestaurantCardComponent restaurantData={restaurantObject}/>
-<RestaurantCardComponent restaurantData={restaurantObject}/>
-<RestaurantCardComponent restaurantData={restaurantObject}/>
-<RestaurantCardComponent restaurantData={restaurantObject}/>
+<RestaurantCardComponent restaurantData={restaurantList[0]}/>
+<RestaurantCardComponent restaurantData={restaurantList[1]}/>
+<RestaurantCardComponent restaurantData={restaurantList[2]}/>
+<RestaurantCardComponent restaurantData={restaurantList[3]}/>
+<RestaurantCardComponent restaurantData={restaurantList[4]}/>
+<RestaurantCardComponent restaurantData={restaurantList[5]}/>
+<RestaurantCardComponent restaurantData={restaurantList[6]}/>
+<RestaurantCardComponent restaurantData={restaurantList[7]}/>
+<RestaurantCardComponent restaurantData={restaurantList[8]}/>
+<RestaurantCardComponent restaurantData={restaurantList[9]}/>
+
+
 </div>
 </div>
 )
