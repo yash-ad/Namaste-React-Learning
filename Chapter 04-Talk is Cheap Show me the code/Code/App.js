@@ -19,7 +19,6 @@ const Header = ()=>{
   </div>
   <div className='nav-items'>
   <ul>
-  <li>Search</li>
   <li>Home</li>
   <li>About Us</li>
   <li>Contact Us</li>
@@ -328,10 +327,6 @@ const restaurantList =
               "Pizzas",
               "Pastas",
               "Italian",
-              "Mexican",
-              "Healthy Food",
-              "Desserts",
-              "Beverages",
             ],
             avgRating: 4.3,
             feeDetails: {
@@ -550,7 +545,7 @@ const restaurantList =
         {
           info: {
             id: "669709",
-            name: "Kwality Walls Frozen Dessert and Ice Cream Shop",
+            name: "Kwality Walls Frozen Dessert",
             cloudinaryImageId: "7de701fb433cb9905744d05ccd0736c1",
             locality: "Utkarsh Society",
             areaName: "Bibwewadi",
@@ -988,6 +983,8 @@ const restaurantList =
         },
       ];
 
+
+
 //RestaurantCard-component:- We created a new reusable component to inject into the code- Body component > restaurant-container.
 const RestaurantCardComponent = (props)=>{
   const {restaurantData} = props;
@@ -1115,6 +1112,9 @@ const AppLayout = ()=>{
       <Footer/>
     </div>)
 };
+
+
+
 
 //To Rendering the app and all the data which are stored into the  `div` `App-container`.
 const root = ReactDOM.createRoot(document.getElementById('root'));
