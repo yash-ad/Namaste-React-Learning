@@ -21,11 +21,13 @@
  background-color: #fff;
  box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
  z-index: 1000;
+ overflow: hidden;
 }
 
 .body{
 width: 100%;
 background-color: rgb(255, 255, 255);
+overflow: hidden;
 }
 
 .logo{
@@ -99,9 +101,10 @@ background-color: rgb(255, 255, 255);
 .restaurant-container{
 display: flex;
 flex-wrap: wrap;
-margin-top: 10px;
+margin-top: 50px;
 margin-left: 25px;
 padding: 10px;
+overflow: hidden;
 }
 
 .res-img{
@@ -150,32 +153,7 @@ padding: 10px;
         height: 160px;
     }
      
-    /* status promoted */
-    .promo-status{
-     position: absolute;
-     left: -8px;
-     top: 0;   
-     font-size: 13px;
-     font-weight:500 ;
-    text-transform: uppercase;
-    padding:5px 9px 4px ;
-    max-width: 50%;
-    background-color: rgb(58, 60, 65);
-    color: white;
-    
-    }
-    
-    .promo-status::before{
-        position:absolute;      /*An element that means here promo-status with position absolute is positioned relative to the nearest positioned ancestor*/
-        border-width:9px 0px 0px 9px;
-        bottom:-9px;
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: inherit;   /*because the child will take the color of parent */
-        left: 0;
-    }
+
     
     .place-name-div{
     
@@ -234,7 +212,8 @@ padding: 10px;
         color: #8a584b;
         display: flex;
         align-items: center;
-        font-weight: 600;
+        font-weight: bold;
+      margin-left: 50px;
     
     }
     
@@ -255,7 +234,7 @@ padding: 10px;
     width:100%;
     color:#fff;
     margin-top: 100px;
-    
+    overflow: hidden;
     }
     
     .footer-content{
