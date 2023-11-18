@@ -31,6 +31,7 @@ const Header = ()=>{
 
 
 
+
 //JSON data:-
 const restaurantList =  [
   {
@@ -1315,8 +1316,6 @@ const Body = ()=>{
 };
 
 
-
-
 //Footer-Component:-
 const Footer = ()=>{
   return(
@@ -1364,7 +1363,6 @@ const Footer = ()=>{
 };
 
 
-
 //AppLayout-Component:-
 //an example of component composition it means that The component is inside an another component.
 const AppLayout = ()=>{
@@ -1375,8 +1373,6 @@ const AppLayout = ()=>{
       <Footer/>
     </div>)
 };
-
-
 
 
 //To Rendering the app and all the data which are stored into the  `div` `App-container`.
