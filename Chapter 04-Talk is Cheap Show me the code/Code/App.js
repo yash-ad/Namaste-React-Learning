@@ -19,6 +19,7 @@ const Header = ()=>{
   </div>
   <div className='nav-items'>
   <ul>
+  <li>Search</li>
   <li>Home</li>
   <li>About Us</li>
   <li>Contact Us</li>
@@ -1044,18 +1045,10 @@ const Body = ()=>{
       <input type="text" placeholder="Satisfy your hunger now!" id="searchInp"></input>
       <button id="searchBtn">Search</button>
     </div>
-<div className='restaurant-container'>
-<RestaurantCardComponent restaurantData={restaurantList[0]}/>
-<RestaurantCardComponent restaurantData={restaurantList[1]}/>
-<RestaurantCardComponent restaurantData={restaurantList[2]}/>
-<RestaurantCardComponent restaurantData={restaurantList[3]}/>
-<RestaurantCardComponent restaurantData={restaurantList[4]}/>
-<RestaurantCardComponent restaurantData={restaurantList[5]}/>
-<RestaurantCardComponent restaurantData={restaurantList[6]}/>
-<RestaurantCardComponent restaurantData={restaurantList[7]}/>
-<RestaurantCardComponent restaurantData={restaurantList[8]}/>
-<RestaurantCardComponent restaurantData={restaurantList[9]}/>
-<RestaurantCardComponent restaurantData={restaurantList[10]}/>
+<div className='restaurant-container'> 
+{restaurantList.map((restaurant)=>(
+<RestaurantCardComponent key={restaurant.info.id} restaurantData={restaurant}/>
+))}
 </div>
 </div>
 )
@@ -1066,10 +1059,49 @@ const Body = ()=>{
 
 //Footer-Component:-
 const Footer = ()=>{
-  <div className="footer">
-  <h4 id="foot">Copyright</h4>
-</div> 
-}
+  return(
+<div className="footer">
+    <div className="footer-content">
+
+        <div className="points">COMPANY
+            <ul>
+                <li className="footer-li"><a href="">About</a></li>
+                <li className="footer-li"><a href="">Team</a></li>
+                <li className="footer-li"><a href="">Careers</a></li>
+                <li className="footer-li"><a href="">gofood Blog</a></li>
+                <li className="footer-li"><a href="">Bug Bounty</a></li>
+                <li className="footer-li"><a href="">gofood One</a></li>
+                <li className="footer-li"><a href="">gofood Corporate</a></li>
+                <li className="footer-li"><a href="">gofood Instamart</a></li>
+            </ul>
+        </div>
+
+        <div className="points">CONTACT
+            <ul>
+                <li className="footer-li"><a href="">Help & Support </a></li>
+                <li className="footer-li"><a href="">Partner with us</a></li>
+                <li className="footer-li"><a href="">Ride with us</a></li>
+            </ul>
+        </div>
+
+        <div className="points">Legal
+            <ul>
+                <li className="footer-li"><a href="">Terms & Conditions</a></li>
+                <li className="footer-li"><a href="">Refund & Cancellation</a></li>
+                <li className="footer-li"><a href="">Privacy Policy</a></li>
+                <li className="footer-li"><a href="">Cookie Policy</a></li>
+                <li className="footer-li"><a href="">Offer Terms</a></li>
+                <li className="footer-li"><a href="">Phishing & Fraud</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div className="footer-contact">
+        <div className="copyrights">© 2023 yash-ad / gofood</div>
+    </div>
+</div>
+)
+};
 
 
 
@@ -1080,7 +1112,7 @@ const AppLayout = ()=>{
     <div id ='App-container'>
       <Header/>
       <Body/>
-      <footer/>
+      <Footer/>
     </div>)
 };
 
