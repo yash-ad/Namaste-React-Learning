@@ -1,5 +1,4 @@
 
-/* Universal tag for body */
 * {
     margin: 0;
     padding: 0;
@@ -39,8 +38,7 @@ overflow: hidden;
     
     }
     
-    /* pseudo class */
-    .logo:hover{ transform:scale(1.1);
+.logo:hover{ transform:scale(1.1);
     }   
     
     
@@ -75,6 +73,7 @@ overflow: hidden;
     margin-bottom: 10px;
 
 }
+
 #searchInp {
     padding: 1vw 0vw;
     padding-right: 10vw;
@@ -83,6 +82,7 @@ overflow: hidden;
     border-radius: 2vw;
     font-size: 1.2vw;
   }
+
 #searchBtn {
    font-weight: bold;
     padding: 1vw 2vw;
@@ -96,7 +96,6 @@ overflow: hidden;
    
   }
 
-/*"restaurant-Section"*/
 
 .restaurant-container{
 display: flex;
@@ -175,7 +174,7 @@ overflow: hidden;
         margin-top: 4px
     }
     
-    /* Information-section */
+   
     .info-div {
         display: flex;
         align-items: center;
@@ -275,6 +274,7 @@ overflow: hidden;
     
     
     }
+
     .footer-li a{
     
         text-decoration: none;
@@ -295,6 +295,7 @@ overflow: hidden;
         transition: transform 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
     
     }
+
     .img:hover{ transform:scale(1.1);
     
     }
