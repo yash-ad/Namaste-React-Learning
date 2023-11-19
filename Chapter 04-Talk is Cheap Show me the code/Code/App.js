@@ -1262,9 +1262,7 @@ return(
                                 <div className="item-content">
                                     <div className="top-image">
                                         <img className='res-img' alt="Res-Image" src={
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          cloudinaryImageId
-        }/>
+          `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"${cloudinaryImageId}`}/>
                                     </div>
                                     </div>
                                     <div className="place-name-div">
@@ -1284,10 +1282,8 @@ return(
                                     <div className="time">{slaString}</div>
                                     <div className="dot">.</div>
                                     <div className="price">{costForTwo}</div>
-                                </div>
-                                              
+                                </div>        
                                 <div className="address">
-                                    
                                     <span className="sNAfh">{areaName}</span>
                                 </div>
                               </div>
