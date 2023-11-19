@@ -1,6 +1,6 @@
 # Namaste React 🚀
 
-# Notes
+# Chapter 1 and 2.
 
 ## 1. appendChild():
 

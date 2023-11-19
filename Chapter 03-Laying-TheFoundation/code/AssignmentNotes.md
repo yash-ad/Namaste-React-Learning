@@ -1,6 +1,6 @@
 # Namaste React 🚀
 
-## Epsiode-3
+## Chapter - 3
 ### Laying The foundation
 
 # Notes
