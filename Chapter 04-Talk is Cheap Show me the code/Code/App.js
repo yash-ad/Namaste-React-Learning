@@ -1316,7 +1316,6 @@ const Footer = ()=>{
   return(
 <div className="footer">
     <div className="footer-content">
-
         <div className="points">COMPANY
             <ul>
                 <li className="footer-li"><a href="">About</a></li>
@@ -1329,7 +1328,6 @@ const Footer = ()=>{
                 <li className="footer-li"><a href="">gofood Instamart</a></li>
             </ul>
         </div>
-
         <div className="points">CONTACT
             <ul>
                 <li className="footer-li"><a href="">Help & Support </a></li>
@@ -1337,7 +1335,6 @@ const Footer = ()=>{
                 <li className="footer-li"><a href="">Ride with us</a></li>
             </ul>
         </div>
-
         <div className="points">Legal
             <ul>
                 <li className="footer-li"><a href="">Terms & Conditions</a></li>
@@ -1349,7 +1346,6 @@ const Footer = ()=>{
             </ul>
         </div>
     </div>
-
     <div className="footer-contact">
         <div className="copyrights">© 2023 yash-ad / gofood</div>
     </div>

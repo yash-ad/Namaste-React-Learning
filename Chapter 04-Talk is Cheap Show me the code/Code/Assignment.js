@@ -1233,7 +1233,11 @@ const restaurantLists =[
     }
   ];
 
-const RestaurantCardComponent = ()=>{
+const RestaurantCardComponent = (props)=>{
+    const {restaurantData} = props;
+    const {name,cloudinaryImageId,avgRating,deliveryTime,costForTwo,areaName} = restaurantData?.info;
+    const {header} = restaurantData.info.aggregatedDiscountInfoV3;
+    const { slaString } = restaurantData.info.sla;
     return(
 <div className="restaurant-list">
 <div className="place">
@@ -1243,20 +1247,21 @@ const RestaurantCardComponent = ()=>{
 <img className="res-img" alt="Res-image" src={``}>
 </img>
 </div>
-
 </div>
 <div className="place-name-div">
 <div className="name">{}</div>
 <div className="food-list">{}</div>
-
 </div>
 <div className="info-div">
     <div className="ratings"><span>{} stars</span></div>
-    <div className="dos">.</div>
+    <div className="dot">.</div>
     <h5><span><i class="ri-star-fill"></i></span>{}</h5>
     <div className="time">{}</div>
     <div className="dot">.</div>
     <div className="price">{}</div>
+</div>
+<div className="address">
+<span className="sNAfh">{}</span>
 </div>
 </div>
 </div>
@@ -1271,7 +1276,7 @@ return(
 <input type="text" placeholder="Satisfy your hunger now!" id="search-inp"/>
 </div>
 <div className="restaurant-container">
-    <RestaurantCardComponent/>
+    <RestaurantCardComponent restaurantData={restaurantLists}/>
 </div>
 </div>
 )
@@ -1281,6 +1286,36 @@ return(
 const Footer = ()=>{
     return(
         <div className="footer">
+             <div className="footer-content">
+<div className="points">Company
+<ul>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+</ul>
+</div>
+<div className="points">Contact
+<li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    </div>
+<div className="points">Legal
+<li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">About</a></li>
+    </div>
+             </div>
+             <div className="footer-contact"> 
+             <div className="copyrights">© 2023 yash-ad / FoodExplorer</div>
+             </div>
         </div>
     )
 };
