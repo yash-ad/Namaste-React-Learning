@@ -31,7 +31,6 @@ const Header = ()=>{
 
 
 
-
 //JSON data:-
 const restaurantList =  [
   {
