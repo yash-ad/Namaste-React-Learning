@@ -4,8 +4,8 @@
   "description": "This is Namaste-React By Akshay Saini",
   "main": "index.js",
   "scripts": {
-    "start": "parcel \"Chapter 04-Talk is Cheap Show me the code/code/index.html\"",
-    "build": "parcel build \"Chapter 04-Talk is Cheap Show me the code/Code/index.html\"",
+    "start": "parcel \"Chapter 05-Lets get Hooked/code/index.html\"",
+    "build": "parcel build \"Chapter 05-Lets get Hooked/code/index.html\"",
     "test": "jest"
   },
   "repository": {
