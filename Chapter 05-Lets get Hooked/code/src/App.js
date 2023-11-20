@@ -5,7 +5,6 @@ import Body from "./components/Body"
 import Footer from "./components/Footer";
 
 
-
 const AppLayout = ()=>{
     return(
 <div id="App-container">
@@ -15,8 +14,6 @@ const AppLayout = ()=>{
 </div>
     )
 };
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<AppLayout/>)
