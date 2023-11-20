@@ -55,7 +55,7 @@ margin: 10px;
 }
     
 .nav-items > ul > li:hover{
-color:#FC9A01;
+color:#EB2836;
 }
        
 .body{
@@ -69,7 +69,7 @@ overflow: hidden;
     gap: 15;
     padding: 10px;
     margin-top: 150px;
-    background-color:#FC9A01;;
+    background-color:#EB2836;
     margin-bottom: 10px;
 
 }
