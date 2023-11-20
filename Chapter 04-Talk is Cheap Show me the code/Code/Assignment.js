@@ -7,7 +7,7 @@ return(
 <div className="logo-container">
 <img className="logo" alt="foodapplogo" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-app-icon-food-explorer-design-template-8ae900e41ccbc0a2e1b48a85d239e389_screen.jpg?ts=1585237320"/>
 </div>
-<div className="nav-container">
+<div className="nav-items">
 <ul>
 <li>Home</li>
 <li>About Us</li>
@@ -1235,7 +1235,7 @@ const restaurantLists =[
 
 const RestaurantCardComponent = (props)=>{
     const {restaurantData} = props;
-    const {name,cloudinaryImageId,avgRating,deliveryTime,costForTwo,areaName} = restaurantData?.info;
+    const {name,cloudinaryImageId,avgRating,costForTwo,areaName,cuisines} = restaurantData?.info;
     const {header} = restaurantData.info.aggregatedDiscountInfoV3;
     const { slaString } = restaurantData.info.sla;
     return(
@@ -1244,24 +1244,24 @@ const RestaurantCardComponent = (props)=>{
 <div className="list-item">
 <div className="item-content">
 <div className="top-image">
-<img className="res-img" alt="Res-image" src={``}>
+<img className="res-img" alt="Res-image" src={'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/'+ cloudinaryImageId}>
 </img>
 </div>
 </div>
 <div className="place-name-div">
-<div className="name">{}</div>
-<div className="food-list">{}</div>
+<div className="name">{name}</div>
+<div className="food-list">{cuisines.join(' , ')}</div>
 </div>
 <div className="info-div">
-    <div className="ratings"><span>{} stars</span></div>
+    <div className="ratings"><span>{avgRating} stars</span></div>
     <div className="dot">.</div>
-    <h5><span><i class="ri-star-fill"></i></span>{}</h5>
-    <div className="time">{}</div>
+    <h5><span><i class="ri-star-fill"></i></span>{header}</h5>
+    <div className="time">{slaString}</div>
     <div className="dot">.</div>
-    <div className="price">{}</div>
+    <div className="price">{costForTwo}</div>
 </div>
 <div className="address">
-<span className="sNAfh">{}</span>
+<span className="sNAfh">{areaName}</span>
 </div>
 </div>
 </div>
@@ -1273,10 +1273,13 @@ const Body = ()=>{
 return(
 <div className="body">
 <div className="search-container">
-<input type="text" placeholder="Satisfy your hunger now!" id="search-inp"/>
+<input type="text" placeholder="Satisfy your hunger now!" id="searchInp"/>
+<button id="searchBtn">Search</button>
 </div>
 <div className="restaurant-container">
-    <RestaurantCardComponent restaurantData={restaurantLists}/>
+    {restaurantLists.map((restaurant)=>(
+        <RestaurantCardComponent restaurantData={restaurant}/>
+    ))};    
 </div>
 </div>
 )
@@ -1290,31 +1293,30 @@ const Footer = ()=>{
 <div className="points">Company
 <ul>
     <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
+    <li className="footer-li"><a href="">Team</a></li>
+    <li className="footer-li"><a href="">FoodExplorer Blog</a></li>
+    <li className="footer-li"><a href="">Bug Bounty</a></li>
+    <li className="footer-li"><a href="">FoodExplorer One</a></li>
+    <li className="footer-li"><a href="">FoodExplorer Corporate</a></li>
+    <li className="footer-li"><a href="">FoodExplorer Instamart</a></li>
 </ul>
 </div>
 <div className="points">Contact
-<li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
+<li className="footer-li"><a href="">Help & Suppor</a></li>
+    <li className="footer-li"><a href="">Partner with us</a></li>
+    <li className="footer-li"><a href="">Ride with us</a></li>
     </div>
 <div className="points">Legal
-<li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
-    <li className="footer-li"><a href="">About</a></li>
+<li className="footer-li"><a href="">Terms & Conditions</a></li>
+    <li className="footer-li"><a href="">Refund & Cancellation</a></li>
+    <li className="footer-li"><a href="">Privacy Policy</a></li>
+    <li className="footer-li"><a href="">Cookie Policy</a></li>
+    <li className="footer-li"><a href="">Offer Terms</a></li>
+    <li className="footer-li"><a href="">Phishing & Fraud</a></li>
     </div>
-             </div>
-             <div className="footer-contact"> 
-             <div className="copyrights">© 2023 yash-ad / FoodExplorer</div>
+</div>
+            <div className="footer-contact"> 
+             <div className="copyrights">All rights reserved. © 2023 yash-ad / FoodExplorer</div>
              </div>
         </div>
     )

@@ -1262,7 +1262,7 @@ return(
                                 <div className="item-content">
                                     <div className="top-image">
                                         <img className='res-img' alt="Res-Image" src={
-          `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"${cloudinaryImageId}`}/>
+          'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/' + cloudinaryImageId}/>
                                     </div>
                                     </div>
                                     <div className="place-name-div">
@@ -1330,11 +1330,12 @@ const Footer = ()=>{
         </div>
         <div className="points">CONTACT
             <ul>
-                <li className="footer-li"><a href="">Help & Support </a></li>
+                <li className="footer-li"><a href="">Help & Support</a></li>
                 <li className="footer-li"><a href="">Partner with us</a></li>
                 <li className="footer-li"><a href="">Ride with us</a></li>
             </ul>
         </div>
+
         <div className="points">Legal
             <ul>
                 <li className="footer-li"><a href="">Terms & Conditions</a></li>
