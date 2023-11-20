@@ -1278,7 +1278,7 @@ return(
 </div>
 <div className="restaurant-container">
     {restaurantLists.map((restaurant)=>(
-        <RestaurantCardComponent restaurantData={restaurant}/>
+        <RestaurantCardComponent key={restaurant.info.id} restaurantData={restaurant}/>
     ))};    
 </div>
 </div>
