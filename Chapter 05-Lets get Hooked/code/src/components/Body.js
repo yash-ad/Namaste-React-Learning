@@ -19,7 +19,7 @@ const Body = ()=>{
     <div className="body">
     <div className="search-container">
     <input type="text" placeholder="Satisfy your hunger now!" id="searchInp"/>
-    <button id="searchBtn">Search</button>
+    <button id="searchBtn" onClick={()=>{}}>Search</button>
     </div>
     <div className="filter">
         <button 
