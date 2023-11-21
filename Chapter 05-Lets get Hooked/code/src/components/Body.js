@@ -3,6 +3,16 @@ import restaurantLists from "../utilities/mockData";
 import { useState } from "react";
 
 const Body = ()=>{
+///.1:-
+//const arr = useState(restaurantLists)
+//const [listOfRestaurants,setlistOfRestaurants] = arr;
+//const listOfRestaurants = arr[0];
+//const setlistOfRestaurants = arr[1];
+
+///.Both are same line of code -> The difference is way of writing code in an effecient way.
+
+///2.:-
+//Array Destructuring and useState(restaurantLists) -> returns an array.
   const [listOfRestaurants,setlistOfRestaurants] = useState(restaurantLists);
 
       return(
@@ -21,12 +31,12 @@ const filteredLists = listOfRestaurants.filter(
       setlistOfRestaurants(filteredLists)
         }}
         >Top Rated Restaurants</button>
-        
+
         <button 
         className="finder-btns" 
         onClick={()=>{
 const findVegRestaurants = listOfRestaurants.filter((res)=>(
-res.info.veg == true));
+res.info.veg === true));
 setlistOfRestaurants(findVegRestaurants);
         }}>Veg Restaurants
         </button>

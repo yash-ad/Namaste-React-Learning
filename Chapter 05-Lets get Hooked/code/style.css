@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+  
 
 }
 
@@ -94,6 +95,18 @@ overflow: hidden;
     background-color:#ffffff;;
     cursor: pointer; 
   }
+
+  .finder-btns{
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+ background: none;
+ font-weight: 300;
+ }
 
 .restaurant-container{
 display: flex;
@@ -279,14 +292,3 @@ font-size: 20px;
 letter-spacing: -.6px;
 }
 
-.finder-btns{
-   padding: 10px;
-   cursor: pointer;
-   outline: none;
-   margin: 5px;
-   border: none;
-   outline: none;
-   font-size: 20px;
-background: none;
-font-weight: 300;
-}

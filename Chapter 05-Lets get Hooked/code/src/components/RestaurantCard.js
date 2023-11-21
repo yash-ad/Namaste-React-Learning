@@ -1,6 +1,8 @@
 import { CDN_URL } from "../utilities/constants";
 
 const RestaurantCard = (props)=>{
+
+    //Object destructuring:-
     const {restaurantData} = props;
     const {name,cloudinaryImageId,avgRating,costForTwo,areaName,cuisines,locality} = restaurantData?.info;
     const {header} = restaurantData.info.aggregatedDiscountInfoV3;
