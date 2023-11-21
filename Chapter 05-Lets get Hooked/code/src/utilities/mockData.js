@@ -942,7 +942,8 @@ const restaurantLists =[
         displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
         restaurantOfferPresentationInfo: {},
       },
-    },{
+    },
+    {
       "info": {
         "id": "40165",
         "name": "Relax Pure Veg",
@@ -1043,7 +1044,8 @@ const restaurantLists =[
         "text": "RESTAURANT_MENU",
         "type": "DEEPLINK"
       }
-    },{
+    },
+    {
       "info": {
         "id": "156120",
         "name": "The Good Bowl",
@@ -1125,7 +1127,8 @@ const restaurantLists =[
         "text": "RESTAURANT_MENU",
         "type": "DEEPLINK"
       }
-    },{
+    },
+    {
       "info": {
         "id": "83296",
         "name": "PK Biryani House",
