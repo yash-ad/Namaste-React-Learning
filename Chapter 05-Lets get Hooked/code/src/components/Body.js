@@ -13,7 +13,7 @@ const Body = ()=>{
     </div>
     <div className="filter">
         <button 
-        className="filter-btn" 
+        className="finder-btns" 
         onClick={() => {
 const filteredLists = listOfRestaurants.filter(
     (res)=> res.info.avgRating > 4
@@ -21,6 +21,16 @@ const filteredLists = listOfRestaurants.filter(
       setlistOfRestaurants(filteredLists)
         }}
         >Top Rated Restaurants</button>
+        
+        <button 
+        className="finder-btns" 
+        onClick={()=>{
+const findVegRestaurants = listOfRestaurants.filter((res)=>(
+res.info.veg == true));
+setlistOfRestaurants(findVegRestaurants);
+        }}>Veg Restaurants
+        </button>
+        
     </div>
     <div className="restaurant-container">
         {listOfRestaurants.map((restaurant)=>(

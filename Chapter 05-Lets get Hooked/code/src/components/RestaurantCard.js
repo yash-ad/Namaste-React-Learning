@@ -2,7 +2,7 @@ import { CDN_URL } from "../utilities/constants";
 
 const RestaurantCard = (props)=>{
     const {restaurantData} = props;
-    const {name,cloudinaryImageId,avgRating,costForTwo,areaName,cuisines} = restaurantData?.info;
+    const {name,cloudinaryImageId,avgRating,costForTwo,areaName,cuisines,locality} = restaurantData?.info;
     const {header} = restaurantData.info.aggregatedDiscountInfoV3;
     const { slaString } = restaurantData.info.sla;
     return(
@@ -28,7 +28,7 @@ const RestaurantCard = (props)=>{
     <div className="price">{costForTwo}</div>
 </div>
 <div className="address">
-<span className="sNAfh">{areaName}</span>
+<span className="sNAfh">{locality} | {areaName}</span>
 </div>
 </div>
 </div>
