@@ -1,11 +1,11 @@
-import { CDN_URL } from "../utilities/constants";
+import { CDN_URL } from "../utilities/config";
 
 const RestaurantCard = (props)=>{
 
     //Object destructuring:-
     const {restaurantData} = props;
     const {name,cloudinaryImageId,avgRating,costForTwo,areaName,cuisines,locality} = restaurantData?.info;
-    const {header} = restaurantData.info.aggregatedDiscountInfoV3;
+    // const {header} = restaurantData?.info?.aggregatedDiscountInfoV3;
     const { slaString } = restaurantData.info.sla;
     return(
 <div className="restaurant-list">
@@ -24,7 +24,7 @@ const RestaurantCard = (props)=>{
 <div className="info-div">
     <div className="ratings"><span>{avgRating} stars</span></div>
     <div className="dot">.</div>
-    <h5><span><i class="ri-star-fill"></i></span>{header}</h5>
+    {/* <h5><span><i class="ri-star-fill"></i></span>{header}</h5> */}
     <div className="time">{slaString}</div>
     <div className="dot">.</div>
     <div className="price">{costForTwo}</div>

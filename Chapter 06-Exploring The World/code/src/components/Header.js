@@ -1,4 +1,4 @@
-import { LOGO_URL } from "../utilities/constants";
+import { LOGO_URL } from "../utilities/config";
 
 
 

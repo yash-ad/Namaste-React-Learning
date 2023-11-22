@@ -1,3 +1,6 @@
+
+
+
 const Footer = ()=>{
     return(
         <div className="footer">
@@ -28,7 +31,11 @@ const Footer = ()=>{
     </div>
 </div>
             <div className="footer-contact"> 
-             <div className="copyrights">All rights reserved. © 2023 yash-ad / FoodExplorer</div>
+             <div className="copyrights">All rights reserved. © 2023 FoodExplorer</div>
+             <div className="footer-logos">
+                <div className="social-media">
+                </div>
+        </div>
              </div>
         </div>
     )

@@ -1,21 +1,21 @@
 import RestaurantCard from "./RestaurantCard";
-import restaurantLists from "../utilities/mockData";
-import { useState } from "react";
+// import restaurantLists from "../utilities/mockData";
+import { useState , useEffect } from "react";
 
 const Body = ()=>{
-///.1:-
-//const arr = useState(restaurantLists)
-//const [listOfRestaurants,setlistOfRestaurants] = arr;
-//const listOfRestaurants = arr[0];
-//const setlistOfRestaurants = arr[1];
+  const [listOfRestaurants,setlistOfRestaurants] = useState([]);
 
-///.Both are same line of code -> The difference is way of writing code in an effecient way.
+useEffect(()=>{
+fetchData();
+},[]);
 
-///2.:-
-//Array Destructuring and useState(restaurantLists) -> returns an array.
-  const [listOfRestaurants,setlistOfRestaurants] = useState(restaurantLists);
-
-      return(
+const fetchData = async ()=>{
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833062&lng=73.8143365&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+    const json = await data.json();
+    console.log(json)
+    setlistOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+}
+return(
     <div className="body">
     <div className="search-container">
     <input type="text" placeholder="Satisfy your hunger now!" id="searchInp"/>
