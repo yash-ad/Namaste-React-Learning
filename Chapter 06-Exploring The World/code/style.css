@@ -2,13 +2,16 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
   
 
 }
 
 .App-container{
     display: flex;
-    overflow: hidden;
+   min-height: 100vh;
+   width: 100%;
+   overflow: hidden;
 }
 
 .header{
@@ -24,7 +27,7 @@
  box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
  z-index: 1000;
  overflow: hidden;
- height: 115px;
+ height: 110px;
 }
 
 .logo{
@@ -58,8 +61,13 @@ margin: 10px;
 .nav-items > ul > li:hover{
 color:#FC9A01;
 }
-       
+
 .body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3vw;
 width: 100%;
 background-color: rgb(255, 255, 255);
 overflow: hidden;
@@ -67,33 +75,41 @@ overflow: hidden;
 
 .search-container{
     display: flex;
-    gap: 15;
     padding: 10px;
-    margin-top: 115px;
+    margin-top: 70px;
     background-color:#FC9A01;;
     margin-bottom: 5px;
+    width: 70%;
+    border-radius: 5px;
+  
 
 }
-
+.search-bar{
+    padding-left: 200px;
+}
 #searchInp {
+
     padding: 1vw 0vw;
     padding-right: 10vw;
     padding-left: 2vw;
     border: none;
     border-radius: 2vw;
     font-size: 1.2vw;
+ 
 }
 
 #searchBtn {
    font-weight: bold;
     padding: 1vw 2vw;
     border: none;
-    border-radius: 2vw;
-    font-size: 1.4vw;
-    font-weight: 520;
-    color: black;
-    background-color:#ffffff;;
+    border-radius: 2.5vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color:#ffffff;
+    background-color: black;
     cursor: pointer; 
+    margin:5px;
+    margin-left: 10px;
   }
 
   .finder-btns{
@@ -108,11 +124,12 @@ overflow: hidden;
  font-weight: 300;
  }
 
+
+
 .restaurant-container{
 display: flex;
 flex-wrap: wrap;
-margin-top: 50px;
-margin-left: 25px;
+margin-left: 30px;
 padding: 10px;
 overflow: hidden;
 }
@@ -121,8 +138,8 @@ overflow: hidden;
     display: flex;
     justify-content:space-between;
     margin-bottom: 50px;
-    padding-top: 20px;
-    margin: 1px;
+    padding-top: 5px;
+    margin: 5px;
 }
 
 .restaurant-list .Place-link{
@@ -301,3 +318,124 @@ letter-spacing: -.6px;
     transform:scale(1.1);
    
 }
+
+/*Shimmer UI */
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10vw;
+    min-height: 80vh;
+    margin-left: 20px;
+}  
+.shimmer-cards{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 5vw 10vw;
+    gap: 2vw;
+    flex-wrap: wrap;
+    
+}
+.shimmer-card{
+    background-color: #ffffff;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 1vw;
+    margin-bottom: 50px;
+    padding-top: 5px;
+    margin: 5px;
+  }
+.shimmer-img{
+    background-color: #bebebe;
+    object-fit: scale-down;
+    display: flex;
+    justify-content: center;
+    padding: 1vw;
+    border-radius: 10px;
+    position: relative;
+    width: 254px;
+    height: 160px;
+}
+.shimmer-inner{
+    height:40%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+    padding:25px 25px 50px;
+  }
+  /*Animation to Shimmer Component Cards */
+.stroke {
+    height: 380px;
+    background: #d6d6d6;
+  }
+  .animate {
+    animation: shimmer 3s;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+    background-size: 1000px 100%;
+  }
+  
+  @keyframes shimmer {
+    from {
+      background-position: -1000px 0;
+    }
+    to {
+      background-position: 1000px 0;
+    }
+  }
+  .h3{
+    width: 50%;
+    height: 22px;
+    border-radius: 15px;
+    background-color: #bebebe;
+  }
+  .h2{
+    width: 100%;
+    background-color: #bebebe;
+    border-radius: 15px;
+    height: 18px;
+  }
+  .h1main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  
+  }
+  .h1left{
+    width: 30%;
+    background-color: #bebebe;
+    border-radius: 15px;
+    height: 18px;
+  }
+  .h1mid{
+    width: 30%;
+    background-color: #bebebe;
+    border-radius: 15px;
+    height: 18px;
+  }
+  .h1right{
+    width: 30%;
+    background-color: #bebebe;
+    border-radius: 15px;
+    height: 18px;
+  }
+  .h4{
+    width: 50%;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #bebebe;
+  }
+  
