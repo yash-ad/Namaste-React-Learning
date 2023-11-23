@@ -27,7 +27,8 @@ const fetchData = async () => {
     //     return <Shimmer/>
     //   }
 
-return(
+    //Conditional rendering using ternary operator:-
+return listOfRestaurants.length === 0 ? <Shimmer/> : (
     <div className="body">
     <div className="search-container">
 <div className="search-bar">
