@@ -6,7 +6,7 @@ const RestaurantCard = (props)=>{
     const {restaurantData} = props;
     const {name,cloudinaryImageId,avgRating,costForTwo,areaName,cuisines,locality} = restaurantData?.info;
     // const {header} = restaurantData?.info?.aggregatedDiscountInfoV3;
-    const { slaString } = restaurantData.info.sla;
+    const { slaString } = restaurantData?.info.sla;
     return(
 <div className="restaurant-list">
 <div className="place">
