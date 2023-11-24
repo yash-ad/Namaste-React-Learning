@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -61,7 +62,23 @@ margin: 10px;
 .nav-items > ul > li:hover{
 color:#FC9A01;
 }
-
+.toggleBtn{
+background-color:#FC9A01;
+color: #ffffff;
+font-weight: bold;
+padding: 1vw 2vw;
+border: none;
+border-radius: 2vw;
+font-size: 1.3vw;
+font-weight: 500;
+color:#ffffff;
+cursor: pointer; 
+margin:5px;
+margin-left: 10px;
+}
+.toggleBtn:hover{
+  background-color: #ffa30e; 
+}
 .body{
     display: flex;
     justify-content: space-between;
@@ -106,12 +123,15 @@ overflow: hidden;
     font-size: 1.3vw;
     font-weight: 500;
     color:#ffffff;
-    background-color: black;
+    background-color: rgb(41, 41, 41);
     cursor: pointer; 
     margin:5px;
     margin-left: 10px;
   }
 
+#searchBtn:hover{
+  background-color: black;
+}
   .finder-btns{
     padding: 10px;
     cursor: pointer;

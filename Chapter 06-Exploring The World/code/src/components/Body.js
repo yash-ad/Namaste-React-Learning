@@ -22,7 +22,7 @@ const fetchData = async () => {
     setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
 
-    // //Conditional rendering:-
+    // //Conditional rendering using if condition:-
     // if (listOfRestaurants.length === 0) {
     //     return <Shimmer/>
     //   }
