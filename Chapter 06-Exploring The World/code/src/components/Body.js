@@ -5,6 +5,9 @@ import Shimmer from "./Shimmer";
 
 const Body = ()=>{
   const [listOfRestaurants,setlistOfRestaurants] = useState([]);
+  const [searchText,setSearchText] = useState("");
+  
+//   console.log('Body Render');
 
 useEffect(()=>{
 fetchData()
@@ -19,7 +22,7 @@ const fetchData = async () => {
     const json = await data.json();
 
     //Optional chaining
-    setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setlistOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
 
     // //Conditional rendering using if condition:-
@@ -28,22 +31,36 @@ const fetchData = async () => {
     //   }
 
     //Conditional rendering using ternary operator:-
-return listOfRestaurants.length === 0 ? <Shimmer/> : (
+  return listOfRestaurants.length === 0 ? <Shimmer/> :(
     <div className="body">
+
     <div className="search-container">
 <div className="search-bar">
-<input type="text" placeholder="Satisfy your hunger now!" id="searchInp"/>
-    <button id="searchBtn" onClick={()=>{}}>Search</button>
+<input type="text" placeholder="Satisfy your hunger now!" id="searchInp" value={searchText} onChange={(event)=>{
+setSearchText(event.target.value);
+}}></input>
+    <button id="searchBtn" 
+    onClick={()=>{
+let filterSearch = listOfRestaurants.filter((res)=>
+res.info.name.toLowerCase().includes(searchText.toLowerCase())
+)
+if(filterSearch.length === 0){
+
+}
+else{
+setlistOfRestaurants(filterSearch)
+}}}>Search</button>
 </div>
     </div>
-    <div className="filter">
-        <button className="finder-btns" onClick={() => {
+
+    <div className="filter-Buttons">
+    <button className="finder-btns" 
+        onClick={() => {
 const filteredLists = listOfRestaurants.filter(
     (res)=> res.info.avgRating > 4
          )
       setlistOfRestaurants(filteredLists)
 }}>Top Rated Restaurants</button>
-
         <button 
         className="finder-btns" 
         onClick={()=>{
@@ -54,6 +71,7 @@ setlistOfRestaurants(findVegRestaurants)
         </button>
         
     </div>
+
     <div className="restaurant-container">
         {listOfRestaurants.map((restaurant)=>(
             <RestaurantCard key={restaurant.info.id} restaurantData={restaurant}/>

@@ -128,9 +128,10 @@ overflow: hidden;
     margin:5px;
     margin-left: 10px;
   }
-
-#searchBtn:hover{
-  background-color: black;
+  
+  #searchBtn:hover{
+    
+    background-color: black;
 }
   .finder-btns{
     padding: 10px;
