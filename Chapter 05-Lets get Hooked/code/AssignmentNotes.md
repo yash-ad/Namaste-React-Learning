@@ -43,4 +43,20 @@ The most commonly udes React hooks are:-
 
  The 'useState' hook is an essential for adding state management capabilities to function components in React, enabling them to handle dynamic data, user interactions and component re-rendering.it makes more powerful and versatile.
 
+
+ # 6.Why React is faster?
+
+ Because it can do faster DOM manipulations it can do effecient DOM manipulation,there is something known as Virtual-Dom there is something known as diff, reconciliation and React fiber.
+
+
+ * React hooks which is known as states.
+
+# 7.filter() method?
+
+The filter method or a function is used to filter the value inside an array and it iterates over an array,and to create a new array from a given array consisting of only those elements from the given array which satisfy the condition.
+
+* * Whenever a state variables updates , React will Re-renders the components.
+
+* * React is only good at DOM operations / DOM manipulations.
+
  

@@ -18,23 +18,24 @@ fetchData()
 const fetchData = async () => {
 
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833062&lng=73.8143365&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833062&lng=73.8143365&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     ); 
 
     const json = await data.json();
 
     //Optional chaining
-    setlistOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    setFilterRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setFilterRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
 
     // //Conditional rendering using if condition:-
-    // if (listOfRestaurants.length === 0) {
-    //     return <Shimmer/>
-    //   }
+    if (listOfRestaurants.length === 0) {
+        return <Shimmer/>
+      }
 
     //Conditional rendering using ternary operator:-
-  return listOfRestaurants.length === 0 ? <Shimmer/> : (
+//   return listOfRestaurants.length === 0 ? <Shimmer/> : 
+return(
     <div className="body">
 
     <div className="search-container">
@@ -62,14 +63,14 @@ setFilterRestaurants(filterSearch)
 const filteredLists = listOfRestaurants.filter(
     (res)=> res.info.avgRating > 4
          )
-      setlistOfRestaurants(filteredLists)
+      setFilterRestaurants(filteredLists)
 }}>Top Rated Restaurants</button>
         <button 
         className="finder-btns" 
         onClick={()=>{
 const findVegRestaurants = listOfRestaurants.filter((res)=>(
 res.info.veg === true))
-setlistOfRestaurants(findVegRestaurants)
+setFilterRestaurants(findVegRestaurants)
         }}>Veg Restaurants
         </button>
         
@@ -80,7 +81,7 @@ setlistOfRestaurants(findVegRestaurants)
             <RestaurantCard key={restaurant.info.id} restaurantData={restaurant}/>
         ))} 
     </div>
-    
+
     </div>
     )
 };
