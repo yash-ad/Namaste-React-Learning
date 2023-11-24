@@ -5,7 +5,9 @@ import Shimmer from "./Shimmer";
 
 const Body = ()=>{
   const [listOfRestaurants,setlistOfRestaurants] = useState([]);
+  const [filterRestaurants,setFilterRestaurants] = useState([]);
   const [searchText,setSearchText] = useState("");
+
   
 //   console.log('Body Render');
 
@@ -23,6 +25,7 @@ const fetchData = async () => {
 
     //Optional chaining
     setlistOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setFilterRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
 
     // //Conditional rendering using if condition:-
@@ -31,7 +34,7 @@ const fetchData = async () => {
     //   }
 
     //Conditional rendering using ternary operator:-
-  return listOfRestaurants.length === 0 ? <Shimmer/> :(
+  return listOfRestaurants.length === 0 ? <Shimmer/> : (
     <div className="body">
 
     <div className="search-container">
@@ -48,7 +51,7 @@ if(filterSearch.length === 0){
 
 }
 else{
-setlistOfRestaurants(filterSearch)
+setFilterRestaurants(filterSearch)
 }}}>Search</button>
 </div>
     </div>
@@ -73,10 +76,11 @@ setlistOfRestaurants(findVegRestaurants)
     </div>
 
     <div className="restaurant-container">
-        {listOfRestaurants.map((restaurant)=>(
+        {filterRestaurants.map((restaurant)=>(
             <RestaurantCard key={restaurant.info.id} restaurantData={restaurant}/>
         ))} 
     </div>
+    
     </div>
     )
 };
