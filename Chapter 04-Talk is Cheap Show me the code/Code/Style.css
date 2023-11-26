@@ -60,7 +60,7 @@ margin: 10px;
 }
   
 .nav-items > ul > li:hover{
-color:#FC9A01;
+color:#EB2836;
 }
 .toggleBtn{
 background-color:#FC9A01;
@@ -275,6 +275,8 @@ line-height: 1.3;
       min-width: 1200px;
       margin:0 auto;
       padding:76px 0;
+      margin-left: 100px;
+      margin-top: 20px;
  
   
   }
@@ -339,124 +341,3 @@ letter-spacing: -.6px;
   transform:scale(1.1);
  
 }
-
-/*Shimmer UI */
-
-.shimmer-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 10vw;
-  min-height: 80vh;
-  margin-left: 20px;
-}  
-.shimmer-cards{
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  padding: 5vw 10vw;
-  gap: 2vw;
-  flex-wrap: wrap;
-  
-}
-.shimmer-card{
-  background-color: #ffffff;
-  width: 300px;
-  height: 350px;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 2vw;
-  padding: 1vw;
-  margin-bottom: 50px;
-  padding-top: 5px;
-  margin: 5px;
-}
-.shimmer-img{
-  background-color: #bebebe;
-  object-fit: scale-down;
-  display: flex;
-  justify-content: center;
-  padding: 1vw;
-  border-radius: 10px;
-  position: relative;
-  width: 254px;
-  height: 160px;
-}
-.shimmer-inner{
-  height:40%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  flex-direction: column;
-  padding:25px 25px 50px;
-}
-/*Animation to Shimmer Component Cards */
-.stroke {
-  height: 380px;
-  background: #d6d6d6;
-}
-.animate {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite linear;
-}
-
-@keyframes shimmer {
-  from {
-    background-position: -1000px 0;
-  }
-  to {
-    background-position: 1000px 0;
-  }
-}
-.h3{
-  width: 50%;
-  height: 22px;
-  border-radius: 15px;
-  background-color: #bebebe;
-}
-.h2{
-  width: 100%;
-  background-color: #bebebe;
-  border-radius: 15px;
-  height: 18px;
-}
-.h1main{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-
-}
-.h1left{
-  width: 30%;
-  background-color: #bebebe;
-  border-radius: 15px;
-  height: 18px;
-}
-.h1mid{
-  width: 30%;
-  background-color: #bebebe;
-  border-radius: 15px;
-  height: 18px;
-}
-.h1right{
-  width: 30%;
-  background-color: #bebebe;
-  border-radius: 15px;
-  height: 18px;
-}
-.h4{
-  width: 50%;
-  height: 15px;
-  border-radius: 15px;
-  background-color: #bebebe;
-}
-
-
