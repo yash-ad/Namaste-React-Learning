@@ -16,17 +16,22 @@ fetchData()
 },[]);
 
 const fetchData = async () => {
-
+try{
     const data = await fetch(
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833062&lng=73.8143365&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     ); 
 
     const json = await data.json();
-
+    
     //Optional chaining
     setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilterRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    };
+    }
+    catch(error){
+        console.error('Error Fetching Data:',error)
+    }
+
+};
 
     // //Conditional rendering using if condition:-
     if (listOfRestaurants.length === 0) {

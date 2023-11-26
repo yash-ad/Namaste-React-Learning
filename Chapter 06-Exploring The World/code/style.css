@@ -401,10 +401,9 @@ letter-spacing: -.6px;
     background: #d6d6d6;
   }
   .animate {
-    animation: shimmer 3s;
-    animation-iteration-count: infinite;
-    background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
-    background-size: 1000px 100%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
   }
   
   @keyframes shimmer {
