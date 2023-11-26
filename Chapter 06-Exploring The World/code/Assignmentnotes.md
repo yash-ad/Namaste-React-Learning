@@ -167,3 +167,23 @@ async function fetchData() {
 In this example, fetchData is an asynchronous function that uses await to pause execution until the fetch operation completes and the response is received. Subsequently, it uses await again to pause until the JSON parsing is done.
 
 It's important to note that the use of await only makes sense within an async function. If you try to use await outside of an async function, it will result in a syntax error.
+
+
+# 14.What is the use of 'const json = await data.json;?
+
+```javascript
+const json = await data.json();
+```
+
+* 1.`data` is the result of the`fetch` function.which is a Promise representing the response to the request made,The `fetch` function is used to make an HTTP request.
+  
+* 2.`await data.json()` is used to aynchronously wait for the JSON content of the response to be parsed.the `json()` method is an in-built method of the `Response` interface in the Fetch API that returns a Promise resolving to a Javascript object.The `await` keyword is used to wait for this Promise to resolve
+
+* 3.The result is assigned to the variable `json` after this line executes , `json` contains the parsed JSON data retrieved from the API endpoint.
+
+
+## Whenever state variable updates,react triggers a reconciliation cycle or process to (re-render the components).
+
+
+### Why React is faster?
+Reacts react-fiber the new reconciliation algorithm,which finds out the difference between the two virtual doms the new and previous one and updates the actual Dom which something needs to be changed and the specific  portion is required.
