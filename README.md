@@ -18,6 +18,11 @@ Namaste React Live Course from Zero to Hero 🚀 by Akshay Saini Founder of Nama
 📖 Notes and Assignments 
 💻 Code
 
+📚 Chapter 06-Exploring the world
+📖 Notes and Assignments 
+💻 Code
+
+
 
 
 
