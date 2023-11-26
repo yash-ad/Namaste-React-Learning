@@ -50,7 +50,7 @@ In Microservices architecture composed of small, independent services and each s
 # 7.Why do we need a `useEffect` hook?
  The 'useEffect' hook in React is used to manage side effects in functional components.Side effects refer to any code that needs to interact with the outside world which means such as fetching data,subscribing to external events,modifying the DOM or setting up timers.
 
- * `useEffect` allows functional components to perform actions after the component has rendered. it provides a declarative way to handle side effects,making the code more readable.Its common to use `useEffect` hook for sata fetching from APIs or performing other asynchronous operations.`useEffect` is suitable for handling events in a component.`useEffect` allows you to return a cleanup function that will be executed when the component unmounts or when the dependencies change
+ * `useEffect` allows functional components to perform actions after the component has rendered. it provides a declarative way to handle side effects,making the code more readable.Its common to use `useEffect` hook for data fetching from APIs or performing other asynchronous operations.`useEffect` is suitable for handling events in a component.`useEffect` allows you to return a cleanup function that will be executed when the component unmounts or when the dependencies change
 
 * `useEffect` accepts two arguments the first is callback function and the second is Dependancy array.
   
