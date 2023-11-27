@@ -1,10 +1,16 @@
 import { LOGO_URL } from "../utilities/config";
-import { useState } from "react";
-// 
+import { useState,useEffect } from "react";
 
 
 const Header = ()=>{
     const [toggleBtn,setToggleBtn] = useState('Login');
+
+//     useEffect(()=>{
+// console.log("useEffect called");
+//     },[toggleBtn]);
+
+    console.log('Header');
+
     return(
     <div className="header">
     <div className="logo-container">
