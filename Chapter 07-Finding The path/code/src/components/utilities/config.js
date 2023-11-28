@@ -6,6 +6,6 @@ export const LOGO_URL = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fo
 
 export const CORS_URL = 'https://corsproxy.io/?';
 
-export const API_URL =  'https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833062&lng=73.8143365&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+export const API_URL =  'https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833358&lng=73.812767&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
 
 // export const ERROR_IMG_URL = 'https://i.pinimg.com/originals/23/73/6e/23736e5af84855ef8458126d8775732b.jpg'

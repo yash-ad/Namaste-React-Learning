@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { CORS_URL } from "../utilities/config";
-import { API_URL } from "../utilities/config";
+import { API_URL} from "../utilities/config";
 
 const Body = ()=>{
   const [listOfRestaurants,setlistOfRestaurants] = useState([]);
@@ -26,7 +26,6 @@ try{
     catch(error){
         console.error('Error Fetching Data:',error)
     }
-
 };
 
     // //Conditional rendering using if condition:-
@@ -61,18 +60,16 @@ setFilterRestaurants(filterSearch)
 <div className="filter-Buttons">
 
 <button className="finder-btns" 
-onClick={() => {const filteredLists = filterRestaurants.filter((res)=> res.info.avgRating > 4)
+onClick={() => {const filteredLists = listOfRestaurants.filter((res)=> res.info.avgRating > 4)
 setFilterRestaurants(filteredLists)
 }}>Ratings 4.0+
 </button>
 
-<button className="finder-btns" onClick={()=>{const findVegRestaurants = filterRestaurants.filter((res)=>(
+<button className="finder-btns" onClick={()=>{const findVegRestaurants = listOfRestaurants.filter((res)=>(
 res.info.veg === true))
 setFilterRestaurants(findVegRestaurants)
         }}>Pure Veg
-</button>
-
-      
+</button>     
 </div>
 
     <div className="restaurant-container">

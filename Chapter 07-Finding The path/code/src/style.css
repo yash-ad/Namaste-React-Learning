@@ -481,3 +481,11 @@ letter-spacing: -.6px;
   padding-top: 250px;
   padding-bottom: 250px; 
 }
+
+.res-info-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
