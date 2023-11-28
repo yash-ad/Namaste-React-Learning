@@ -420,13 +420,13 @@ letter-spacing: -.6px;
     border-radius: 15px;
     background-color: #bebebe;
   }
-  .h2{
+  .div2{
     width: 100%;
     background-color: #bebebe;
     border-radius: 15px;
     height: 18px;
   }
-  .h1main{
+  .div1main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -434,19 +434,19 @@ letter-spacing: -.6px;
     width: 100%;
   
   }
-  .h1left{
+  .div1left{
     width: 30%;
     background-color: #bebebe;
     border-radius: 15px;
     height: 18px;
   }
-  .h1mid{
+  .div1mid{
     width: 30%;
     background-color: #bebebe;
     border-radius: 15px;
     height: 18px;
   }
-  .h1right{
+  .div1right{
     width: 30%;
     background-color: #bebebe;
     border-radius: 15px;

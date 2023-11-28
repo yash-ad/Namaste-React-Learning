@@ -4,13 +4,13 @@ return(
 <div className="shimmer-card  stroke animate">
 <div className="shimmer-img"></div>
           <div className="shimmer-inner">
-        <div className="h2"></div>
-                <div className="h1main">
-                    <div className="h1left"></div>
-                    <div className="h1mid"></div>
-                    <div className="h1right"></div>
+        <div className="div2"></div>
+                <div className="div1main">
+                    <div className="div1left"></div>
+                    <div className="div1mid"></div>
+                    <div className="div1right"></div>
                 </div>
-                <div className="h2"></div>
+                <div className="div2"></div>
 </div>
 </div>
 )

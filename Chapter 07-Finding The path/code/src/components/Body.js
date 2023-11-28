@@ -1,7 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
-// import restaurantLists from "../utilities/mockData";
 import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { CORS_URL } from "../utilities/config";
+import { API_URL } from "../utilities/config";
 
 const Body = ()=>{
   const [listOfRestaurants,setlistOfRestaurants] = useState([]);
@@ -14,9 +15,7 @@ fetchData()
 
 const fetchData = async () => {
 try{
-    const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833062&lng=73.8143365&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    ); 
+    const data = await fetch( CORS_URL + API_URL); 
 
     const json = await data.json();
     
@@ -59,24 +58,22 @@ setFilterRestaurants(filterSearch)
 </div>
     </div>
 
-    <div className="filter-Buttons">
-    <button className="finder-btns" 
-        onClick={() => {
-const filteredLists = listOfRestaurants.filter(
-    (res)=> res.info.avgRating > 4
-         )
-      setFilterRestaurants(filteredLists)
-}}>Top Rated Restaurants</button>
-        <button 
-        className="finder-btns" 
-        onClick={()=>{
-const findVegRestaurants = listOfRestaurants.filter((res)=>(
+<div className="filter-Buttons">
+
+<button className="finder-btns" 
+onClick={() => {const filteredLists = filterRestaurants.filter((res)=> res.info.avgRating > 4)
+setFilterRestaurants(filteredLists)
+}}>Ratings 4.0+
+</button>
+
+<button className="finder-btns" onClick={()=>{const findVegRestaurants = filterRestaurants.filter((res)=>(
 res.info.veg === true))
 setFilterRestaurants(findVegRestaurants)
-        }}>Veg Restaurants
-        </button>
-        
-    </div>
+        }}>Pure Veg
+</button>
+
+      
+</div>
 
     <div className="restaurant-container">
         {filterRestaurants.map((restaurant)=>(
