@@ -8,9 +8,6 @@ const Body = ()=>{
   const [filterRestaurants,setFilterRestaurants] = useState([]);
   const [searchText,setSearchText] = useState("");
 
-  
-//   console.log('Body Render');
-
 useEffect(()=>{
 fetchData()
 },[]);
