@@ -8,4 +8,5 @@ export const CORS_URL = 'https://corsproxy.io/?';
 
 export const API_URL =  'https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4833358&lng=73.812767&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
 
+export const RESINFO_API_URL = 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4914883&lng=73.82172899999999&restaurantId=21395&catalog_qa=undefined&submitAction=ENTER';
 // export const ERROR_IMG_URL = 'https://i.pinimg.com/originals/23/73/6e/23736e5af84855ef8458126d8775732b.jpg'
