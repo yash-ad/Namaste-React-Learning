@@ -3,7 +3,7 @@ import { CDN_URL } from "../utilities/config";
 const RestaurantCard = (props)=>{
     const {restaurantData} = props;
     const {name,cloudinaryImageId,avgRating,costForTwo,areaName,cuisines,locality} = restaurantData?.info;
-    const { slaString } = restaurantData?.info.sla;
+    const {slaString} = restaurantData?.info.sla;
     return(
 <div className="restaurant-list">
 <div className="place">

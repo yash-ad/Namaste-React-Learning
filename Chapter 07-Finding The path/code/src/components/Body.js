@@ -19,8 +19,8 @@ try{
 
     const json = await data.json();
     
-    //Optional chaining
     setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    
     setFilterRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
     catch(error){
@@ -28,37 +28,33 @@ try{
     }
 };
 
-    // //Conditional rendering using if condition:-
-    if (listOfRestaurants.length === 0) {
-        return <Shimmer/>
-      }
 
-    //Conditional rendering using ternary operator:-
-//   return listOfRestaurants.length === 0 ? <Shimmer/> : 
+if (filterRestaurants.length === 0) return <Shimmer />;
+     
+
 return(
-    <div className="body">
+<div className="body">
 
-    <div className="search-container">
+<div className="search-container">
 <div className="search-bar">
 <input type="text" placeholder="Satisfy your hunger now!" id="searchInp" value={searchText} onChange={(event)=>{
 setSearchText(event.target.value);
-}}></input>
-    <button id="searchBtn" 
-    onClick={()=>{
+}}>
+</input>
+<button id="searchBtn" onClick={()=>{
 let filterSearch = listOfRestaurants.filter((res)=>
 res.info.name.toLowerCase().includes(searchText.toLowerCase())
 )
 if(filterSearch.length === 0){
-
 }
 else{
 setFilterRestaurants(filterSearch)
-}}}>Search</button>
+}}}>Search
+</button>
 </div>
-    </div>
+</div>
 
 <div className="filter-Buttons">
-
 <button className="finder-btns" 
 onClick={() => {const filteredLists = listOfRestaurants.filter((res)=> res.info.avgRating > 4)
 setFilterRestaurants(filteredLists)
@@ -72,13 +68,13 @@ setFilterRestaurants(findVegRestaurants)
 </button>     
 </div>
 
-    <div className="restaurant-container">
+<div className="restaurant-container">
         {filterRestaurants.map((restaurant)=>(
             <RestaurantCard key={restaurant.info.id} restaurantData={restaurant}/>
         ))} 
-    </div>
+</div>
 
-    </div>
+</div>
     )
 };
 
