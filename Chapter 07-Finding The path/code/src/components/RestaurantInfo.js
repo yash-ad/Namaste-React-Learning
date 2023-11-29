@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer";
 
 const RestaurantInfo = ()=>{  
 const [resInfo,setResinfo] = useState(null);
+const [resMenu,setResmenu] = useState(null);
 
 //`useEffect()` hook to fetch the API after the component will load with a dependancy array, it will render only at once intial phase.
 useEffect(()=>{fetchInfo()},[]);
@@ -16,7 +17,8 @@ const fetchInfo = async ()=>{
 
     const json  = await data.json();
 
-    setResinfo(json.data?.cards[0]?.card?.card?.info);
+    setResinfo(json?.data?.cards[0]?.card?.card?.info);
+    setResmenu(json?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.itemCards);
 
 };
 //Before destructing the data, we need to fetch it as we don't know how long it will take to fetch and it will return undefined otherwise.
