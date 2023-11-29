@@ -5,9 +5,10 @@ import { CORS_URL } from "../utilities/config";
 import { API_URL} from "../utilities/config";
 
 const Body = ()=>{
-  const [listOfRestaurants,setlistOfRestaurants] = useState([]);
-  const [filterRestaurants,setFilterRestaurants] = useState([]);
-  const [searchText,setSearchText] = useState("");
+
+const [listOfRestaurants,setlistOfRestaurants] = useState([]);
+const [filterRestaurants,setFilterRestaurants] = useState([]);
+const [searchText,setSearchText] = useState("");
 
 useEffect(()=>{
 fetchData()
@@ -75,7 +76,7 @@ setFilterRestaurants(findVegRestaurants)
 </div>
 
 </div>
-    )
+)
 };
 
 export default Body;
