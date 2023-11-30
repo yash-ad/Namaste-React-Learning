@@ -20,9 +20,9 @@ try{
 
     const json = await data.json();
     
-    setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setlistOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     
-    setFilterRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setFilterRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
     catch(error){
         console.error('Error Fetching Data:',error)
@@ -70,7 +70,7 @@ setFilterRestaurants(findVegRestaurants)
 </div>
 
 <div className="restaurant-container">
-        {filterRestaurants.map((restaurant)=>(
+        {filterRestaurants?.map((restaurant)=>(
             <RestaurantCard key={restaurant.info.id} restaurantData={restaurant}/>
         ))} 
 </div>

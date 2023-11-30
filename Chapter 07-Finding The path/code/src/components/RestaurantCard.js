@@ -19,7 +19,7 @@ const RestaurantCard = (props)=>{
 <div className="food-list">{cuisines.join(' , ')}</div>
 </div>
 <div className="info-div">
-    <div className="ratings"><span>{avgRating} stars</span></div>
+    <div className="ratings"><span> <i class="ri-star-fill"></i> {avgRating}</span></div>
     <div className="dot">.</div>
     <div className="time">{slaString}</div>
     <div className="dot">.</div>
