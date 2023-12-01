@@ -11,6 +11,8 @@ const RestaurantInfo = ()=>{
 const [resInfo,setResinfo] = useState(null);
 const [resMenu,setResmenu] = useState(null);
 const [resMenuTitle,setResMenuTitle] = useState(null);
+const [vegFood ,setVegFood] = useState('Veg');
+const [newResMenu,setNewResMenu] = useState(null);
 
 
 //`useParams` hook to fetch dynamic from router child.
@@ -27,14 +29,17 @@ const fetchInfo = async ()=>{
 
     setResinfo(json?.data?.cards[0]?.card?.card?.info);
     setResmenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-    setResMenuTitle(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card)
-};
+    setResMenuTitle(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
+    setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
+    
+  };
 //Before destructing the data, we need to fetch it as we don't know how long it will take to fetch and it will return undefined otherwise.
 if(resMenu === null) return <Shimmer/>
 
-const {name,cuisines,avgRating,costForTwoMessage,cloudinaryImageId} = resInfo;
-const {deliveryTime} = resInfo.sla;
+const {name,cuisines,avgRating,costForTwoMessage,cloudinaryImageId,locality} = resInfo;
+const {deliveryTime} = resInfo?.sla;
 const {title} = resMenuTitle;
+const {message} = resInfo?.feeDetails;
 // console.log(resMenu);
 return(
 <div className="pages-container">
@@ -45,9 +50,10 @@ return(
         </div>
         <div className="top-menu-right">
           <h1>{name}</h1>
-          <p>{cuisines.join(", ")}</p>
+          <p>{cuisines.join(" , ")}</p>
+          <p>{locality} - {message}</p>
           <div className="top-menu-right-child">
-            <p style={avgRating > 4.0? { backgroundColor: "darkgreen" }: { backgroundColor: "rgb(164, 14, 14)" }}>
+            <p style={avgRating > 3.8? { backgroundColor: "darkgreen" }: { backgroundColor: "rgb(164, 14, 14)" }}>
               <i class="ri-star-fill"></i>
               {avgRating}
             </p>
@@ -58,34 +64,31 @@ return(
           </div>
         </div>
       </div>
-{/* 
+
+
       <div className="mid-menu">
         <button
           id="isVegBtn"
-          onClick={() => {
-            if (veg === "Veg") {
-              setveg("All");
+          role="switch"
+          onClick={() =>{
+            if (vegFood === "Veg") {
+              setVegFood("All");
             } else {
-              setveg("Veg");
+              setVegFood("Veg");
             }
-           
-
-            if (veg === "All") {
-              setrestMenu(NewrestMenu);
-              console.log("rest");
+            if (vegFood === "All") {
+              setResmenu(newResMenu);
             } else {
-              const filteredRestMenu = restMenu?.filter(
+              const filteredRestMenu = resMenu?.filter(
                 (rest) => rest.card.info.isVeg > 0
               );
-              setrestMenu(filteredRestMenu);
-              console.log("filterd");
+              setResmenu(filteredRestMenu);
             }
           }}
-          style={{ backgroundColor: veg === "Veg" ? "green" : "grey" }}
-        >
-          {veg}
+          style={{ backgroundColor: vegFood === "Veg" ? "green" : "orange" }}>
+          {vegFood}
         </button>
-      </div> */}
+      </div>
 
       <li>
         <div className="main-menu">
@@ -98,7 +101,7 @@ return(
             <div key={item.card.info.id} className="menu-card">
               <div className="menu-left">
                 <h3>{item.card.info.name}</h3>
-                <p>{"₹ " + item.card.info.price / 100}</p>
+                <p>{"₹" + item.card.info.price / 100}</p>
                 <p>{item.card.info.description}</p>
               </div>
               <div className="menu-right">

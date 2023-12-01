@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = ()=>{
-    const [toggleBtn,setToggleBtn] = useState('Login');
+    const [toggleButton,setToggleButton] = useState('Login');
 
     return(
     <div className="header">
@@ -17,9 +17,9 @@ const Header = ()=>{
     <li><Link to="/contact">Contact Us</Link></li>
     <li>Cart</li>
     <button className="toggleBtn" onClick={()=>{
-toggleBtn === 'Login'?
-setToggleBtn('Logout'):setToggleBtn('Login')
-    }}>{toggleBtn}</button>
+toggleButton === 'Login'?
+setToggleButton('Logout'):setToggleButton('Login')
+    }}>{toggleButton}</button>
     </ul>
     </div>
     </div>
