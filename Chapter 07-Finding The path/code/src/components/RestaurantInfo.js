@@ -36,10 +36,9 @@ const fetchInfo = async ()=>{
 //Before destructing the data, we need to fetch it as we don't know how long it will take to fetch and it will return undefined otherwise.
 if(resMenu === null) return <Shimmer/>
 
-const {name,cuisines,avgRating,costForTwoMessage,cloudinaryImageId,locality} = resInfo;
-const {deliveryTime} = resInfo?.sla;
+const {name,cuisines,avgRating,costForTwoMessage,cloudinaryImageId,locality,totalRatingsString,avgRatingString} = resInfo;
+const {lastMileTravelString,maxDeliveryTime} = resInfo?.sla;
 const {title} = resMenuTitle;
-const {message} = resInfo?.feeDetails;
 // console.log(resMenu);
 return(
 <div className="pages-container">
@@ -51,17 +50,25 @@ return(
         <div className="top-menu-right">
           <h1>{name}</h1>
           <p>{cuisines.join(" , ")}</p>
-          <p>{locality} - {message}</p>
+          <p>{locality} -{lastMileTravelString}</p>
           <div className="top-menu-right-child">
             <p style={avgRating > 3.8? { backgroundColor: "darkgreen" }: { backgroundColor: "rgb(164, 14, 14)" }}>
               <i class="ri-star-fill"></i>
               {avgRating}
             </p>
             <span>|</span>
-            <p>{deliveryTime}mins</p>
+            <p>{maxDeliveryTime}mins</p>
             <span>|</span>
             <p>{costForTwoMessage}</p>
           </div>
+        </div>
+        <div className="ratings-container">
+        <button className="RestaurantRatings_wrapper" >
+          <span className="RestaurantRatings_avgRating" >
+            <span className="icon-star"></span> 
+            <span><i class="ri-star-fill"></i>{avgRatingString}</span> </span>
+            <span className="RestaurantRatings_totalRatings" >{totalRatingsString}</span>
+            </button>
         </div>
       </div>
 
@@ -107,6 +114,11 @@ return(
               <div className="menu-right">
                 <img src={IMG_URL + item.card.info.imageId}></img>
                 <button id="addBtn">ADD</button>
+              </div>
+              <div className="menu-bottom">
+              <div class="RestaurantLicence_wrapper__4BYQV"><div class="RestaurantLicence_licence__Oo5_q" aria-hidden="true">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_120,h_60/fssai_final_edss9i" class="RestaurantLicence_image__2-5G_" alt="FSSAI"/><p class="RestaurantLicence_licenceText__2XEQc">License No. 11516036000869</p></div><div></div></div>
+              <div class="RestaurantFooterAddress_wrapper__16xqp" aria-hidden="true"><p class="RestaurantFooterAddress_name__deVKZ">Brahma Garden</p><p>(Outlet:Sinhagad Road)</p><div class="RestaurantFooterAddress_address__37uUA"><div class="icon-markerDark RestaurantFooterAddress_icon__2Kjdg"></div><p>Vishal Height, Manikbaug sinhgad road, Sinhgad Road, Pune</p></div></div>
               </div>
             </div>
           ))}

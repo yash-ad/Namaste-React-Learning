@@ -3,6 +3,7 @@ import { useState , useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { CORS_URL } from "../utilities/config";
 import { API_URL} from "../utilities/config";
+import { Link } from "react-router-dom";
 
 const Body = ()=>{
 
@@ -71,7 +72,7 @@ setFilterRestaurants(findVegRestaurants)
 
 <div className="restaurant-container">
         {filterRestaurants?.map((restaurant)=>(
-            <RestaurantCard key={restaurant.info.id} restaurantData={restaurant}/>
+          <Link key={restaurant.info.id} to={'/restaurants/'+ restaurant.info.id}><RestaurantCard restaurantData={restaurant}/></Link> 
         ))} 
 </div>
 

@@ -4,6 +4,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
   
 
 }
@@ -132,7 +133,16 @@ margin-left: 10px;
     
     background-color: black;
 }
-  .finder-btns{
+.filter-Buttons{
+display: flex;
+padding: 1px;
+gap: 50;
+margin-left: -65px;
+
+}
+
+.finder-btns{
+  color: #75777B;
     padding: 10px;
     cursor: pointer;
     outline: none;
@@ -142,9 +152,19 @@ margin-left: 10px;
     font-size: 20px;
  background: none;
  font-weight: 300;
+ display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(226, 226, 231);
+    padding: 8px 12px;
+    width: auto;
+    box-shadow: rgba(2, 6, 12, 0.04) 0px 2px 12px;
+    transition: background-color 0.1s ease-in 0s, border-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s, width 0.2s cubic-bezier(0.65, 0, 0.35, 1) 0s;
  }
-
-
 
 .restaurant-container{
 display: flex;
@@ -342,8 +362,8 @@ letter-spacing: -.6px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-top: 10vw;
-    min-height: 60vh;
+    margin-top: 5vw;
+    min-height: 55vh;
     margin-left: 30px;
 }  
 .shimmer-cards{
@@ -366,7 +386,7 @@ letter-spacing: -.6px;
     flex-direction: column;
     gap: 2vw;
     padding: 2vw;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-top: 5px;
     margin: 5px;
   }
@@ -484,7 +504,6 @@ letter-spacing: -.6px;
 .top-menu{
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #000;
@@ -532,6 +551,39 @@ letter-spacing: -.6px;
 }
 .top-menu-right-child span{
   padding: 0 1.5vw;
+}
+.ratings-container{
+  display: flex;
+padding-left: 750px;
+
+}
+
+.RestaurantRatings_wrapper {
+  cursor: pointer;
+  border: 1px solid #e9e9eb;
+  border-radius: 6px;
+  text-align: center;
+  padding: 8px;
+  max-width: 100px;
+  float: right;
+}
+.RestaurantRatings_wrapper:hover{
+  box-shadow: 0 1px 5px #f9f9f9;
+}
+
+.RestaurantRatings_avgRating{
+  color: #3d9b6d;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9e9eb;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+.RestaurantRatings_totalRatings{
+  font-size: 11px;
+  color: #8b8d97;
+  font-family: ProximaNovaCondensedRegular,arial,Helvetica Neue,sans-serif;
+  font-weight: 600;
 }
 .main-menu{
   background-color: rgb(255, 255, 255);
@@ -626,3 +678,7 @@ letter-spacing: -.6px;
   margin-top: -15px;
   z-index: 1;
 }
+.menu-right button:hover{
+  box-shadow: 0 1px 5px #ececec;
+}
+
