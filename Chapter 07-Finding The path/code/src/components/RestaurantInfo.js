@@ -115,15 +115,20 @@ return(
                 <img src={IMG_URL + item.card.info.imageId}></img>
                 <button id="addBtn">ADD</button>
               </div>
-              <div className="menu-bottom">
-              <div class="RestaurantLicence_wrapper__4BYQV"><div class="RestaurantLicence_licence__Oo5_q" aria-hidden="true">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_120,h_60/fssai_final_edss9i" class="RestaurantLicence_image__2-5G_" alt="FSSAI"/><p class="RestaurantLicence_licenceText__2XEQc">License No. 11516036000869</p></div><div></div></div>
-              <div class="RestaurantFooterAddress_wrapper__16xqp" aria-hidden="true"><p class="RestaurantFooterAddress_name__deVKZ">Brahma Garden</p><p>(Outlet:Sinhagad Road)</p><div class="RestaurantFooterAddress_address__37uUA"><div class="icon-markerDark RestaurantFooterAddress_icon__2Kjdg"></div><p>Vishal Height, Manikbaug sinhgad road, Sinhgad Road, Pune</p></div></div>
-              </div>
             </div>
           ))}
         </div>
       </li>
+      
+      <div className="bottom-menu">
+      <div class="RestaurantLicence_wrapper__4BYQV">
+        <div class="RestaurantLicence_licence__Oo5_q" aria-hidden="true">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_120,h_60/fssai_final_edss9i" class="RestaurantLicence_image__2-5G_" alt="FSSAI"/>
+          <p class="RestaurantLicence_licenceText__2XEQc">{}</p></div><div></div></div>
+      <div class="RestaurantFooterAddress_wrapper__16xqp" aria-hidden="true">
+        <p class="RestaurantFooterAddress_name__deVKZ">{}</p><p>Outlet:{}</p><div class="RestaurantFooterAddress_address__37uUA">
+          <div class="icon-markerDark RestaurantFooterAddress_icon__2Kjdg"></div><p>{}</p></div></div>
+      </div>
     </div>
 </div>
 )

@@ -28,7 +28,7 @@
  border: 1px solid black none;
  background-color: #fff;
  box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
- z-index: 1;
+ z-index: 10;
  overflow: hidden;
  height: 110px;
 }
@@ -487,7 +487,7 @@ letter-spacing: -.6px;
   width: 100%;
   justify-content: center;
   padding-top: 250px;
-  padding-bottom: 500px;
+  padding-bottom: 250px;
 }
 
 /* RESTAURANT MENU */
@@ -676,9 +676,34 @@ padding-left: 750px;
   cursor: pointer;
   font-weight:bolder;
   margin-top: -15px;
-  z-index: 1;
 }
 .menu-right button:hover{
   box-shadow: 0 1px 5px #ececec;
 }
 
+.bottom-menu{
+    background-color: #F1F1F6;
+    border-bottom: 1px solid #d3d3d3;
+    justify-content: center;
+    gap: 5;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10vw 1vw;
+    display: flex;
+    margin: 0.1px;
+}
+
+
+.RestaurantLicence_wrapper__4BYQV {
+  padding: 0 16px 16px;
+  background-color: #f1f1f6;
+  font-size: .93rem;
+  color: #93959f;
+}
+
+.RestaurantFooterAddress_wrapper__16xqp {
+  background-color: #f1f1f6;
+  font-size: 1rem;
+  color: #93959f;
+  padding: 0 16px 120px;
+}
