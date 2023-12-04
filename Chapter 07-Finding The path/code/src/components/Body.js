@@ -9,7 +9,8 @@ const Body = ()=>{
 
 const [listOfRestaurants,setlistOfRestaurants] = useState([]);
 const [filterRestaurants,setFilterRestaurants] = useState([]);
-const [searchText,setSearchText] = useState("");
+const [searchText,setSearchText] = useState('');
+
 
 useEffect(()=>{
 fetchData()
@@ -37,6 +38,7 @@ if (filterRestaurants.length === 0) return <Shimmer />;
 return(
 <div className="body">
 
+
 <div className="search-container">
 <div className="search-bar">
 <input type="text" placeholder="Satisfy your hunger now!" id="searchInp" value={searchText} onChange={(event)=>{
@@ -55,6 +57,8 @@ setFilterRestaurants(filterSearch)
 </button>
 </div>
 </div>
+
+
 
 <div className="filter-Buttons">
 <button className="finder-btns" 

@@ -683,7 +683,7 @@ padding-left: 750px;
 
 .bottom-menu{
     background-color: #F1F1F6;
-    border-bottom: 1px solid #d3d3d3;
+    /* border-bottom: 1px solid #d3d3d3; */
     justify-content: center;
     gap: 5;
     align-items: flex-start;

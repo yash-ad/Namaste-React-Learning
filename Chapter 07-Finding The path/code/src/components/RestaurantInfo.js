@@ -13,7 +13,9 @@ const [resMenu,setResmenu] = useState(null);
 const [resMenuTitle,setResMenuTitle] = useState(null);
 const [vegFood ,setVegFood] = useState('Veg');
 const [newResMenu,setNewResMenu] = useState(null);
+const [resNewInfo,setResNewInfo] = useState(null);
 
+console.log(useState());
 
 //`useParams` hook to fetch dynamic from router child.
 const {resId} = useParams();
@@ -28,17 +30,19 @@ const fetchInfo = async ()=>{
     const json  = await data.json();
 
     setResinfo(json?.data?.cards[0]?.card?.card?.info);
+    setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
     setResmenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
     setResMenuTitle(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
     setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-    
   };
+
 //Before destructing the data, we need to fetch it as we don't know how long it will take to fetch and it will return undefined otherwise.
 if(resMenu === null) return <Shimmer/>
 
 const {name,cuisines,avgRating,costForTwoMessage,cloudinaryImageId,locality,totalRatingsString,avgRatingString} = resInfo;
 const {lastMileTravelString,maxDeliveryTime} = resInfo?.sla;
 const {title} = resMenuTitle;
+const{message} = resNewInfo;
 // console.log(resMenu);
 return(
 <div className="pages-container">
@@ -124,10 +128,17 @@ return(
       <div class="RestaurantLicence_wrapper__4BYQV">
         <div class="RestaurantLicence_licence__Oo5_q" aria-hidden="true">
           <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_120,h_60/fssai_final_edss9i" class="RestaurantLicence_image__2-5G_" alt="FSSAI"/>
-          <p class="RestaurantLicence_licenceText__2XEQc">{}</p></div><div></div></div>
+          </div>
+          <div>
+            </div>
+            </div>
       <div class="RestaurantFooterAddress_wrapper__16xqp" aria-hidden="true">
-        <p class="RestaurantFooterAddress_name__deVKZ">{}</p><p>Outlet:{}</p><div class="RestaurantFooterAddress_address__37uUA">
-          <div class="icon-markerDark RestaurantFooterAddress_icon__2Kjdg"></div><p>{}</p></div></div>
+        <p class="RestaurantFooterAddress_name__deVKZ">{name}</p><br></br>
+        <p>Outlet:{locality}</p><br></br>
+        <div class="RestaurantFooterAddress_address__37uUA">
+          <div class="icon-markerDark RestaurantFooterAddress_icon__2Kjdg"></div><p>{message}</p>
+          </div>
+          </div>
       </div>
     </div>
 </div>
