@@ -120,3 +120,19 @@ const ExampleComponent = () => {
 
 * In client-side routing or rendering during the first load,the webapp is loaded from server to client,after which whenever there is a change in URL,the router library navigates the user to the newpage without sending any requests to backend.All `single page applications` uses `Client side routing or rendering`
 
+
+✅ How useState and useEffect work - detailed explanation!
+
+✅ Creating Routes in React with React Router DOM.
+
+✅ Route configuration and handling errors with custom components.
+
+✅ Children Routes and the use of Outlet Component.
+
+✅ Understanding why React is called a Single Page Application (SPA).
+
+✅ Importance of using Link `<Link>` Component instead of anchor `<a>` tags.
+
+✅ Dynamic Routing and defining routes for each RestaurantMenu component.
+
+✅ Leveraging useParams() hook to extract parameter values from the URL.
