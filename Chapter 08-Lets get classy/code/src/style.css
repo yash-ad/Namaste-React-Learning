@@ -707,3 +707,17 @@ font-size: 1rem;
 color: #93959f;
 padding: 0 16px 120px;
 }
+.about-us-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vw;
+  /* width: 100%; */
+min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+.user-container{
+  padding: 1px;
+
+}

@@ -1,10 +1,13 @@
+import User from "./User";
+import UserClass from "./UserClass";
 
 const About = ()=>{
+    
 return(
-<div className="pages-container">
+<div className="about-us-container">
 <h1>About Us</h1> 
-<h3>FoodExplorer Food Ordering App</h3> 
-
+<User name={"Yash dandnaik (functional)"} location={"Pune (functional)"}/>
+<UserClass name={"Yash dandnaik (class)"} location={"Pune (class)"}/>
 </div>
 )
 }
