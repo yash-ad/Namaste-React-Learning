@@ -135,4 +135,4 @@ const ExampleComponent = () => {
 
 ✅ Dynamic Routing and defining routes for each RestaurantMenu component.
 
-✅ Leveraging useParams() hook to extract parameter values from the URL.
+✅ Leveraging `useParams()` hook to extract parameter values from the URL.

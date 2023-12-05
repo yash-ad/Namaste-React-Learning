@@ -4,8 +4,8 @@
   "description": "This is Namaste-React By Akshay Saini",
   "main": "index.js",
   "scripts": {
-    "start": "parcel \"Chapter 07-Finding The path/code/src/index.html\"",
-    "build": "parcel build \"Chapter 07-Finding The path/code/src/index.html\"",
+    "start": "parcel \"Chapter 08-Lets get classy/code/src/index.html\"",
+    "build": "parcel build \"Chapter 08-Lets get classy/code/src/index.html\"",
     "test": "jest"
   },
   "repository": {
