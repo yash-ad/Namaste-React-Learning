@@ -8,10 +8,16 @@ this.state = {
 count : 0,
 message:"Hello React,Im in a `this.state{}` In a constructor special method from Classbased component"
 
-};
+}
+console.log("Child constructor called");
     };
 
+componentDidMount(){
+console.log("Child componentDidMount called");
+};
+
 render(){
+    console.log("Child render called");
     const{name,location} =  this.props;
     const{count,message} = this.state;
     return(
@@ -26,7 +32,7 @@ render(){
         <button onClick={()=>{
 this.setState({
 count:this.state.count + 1,
-message:"Hello React ,Tadaaa , Im using `this.setState()` to update myself",
+message:"Hello React ,Tadaaa , Im using `this.setState()` to update myself.",
 })
         }}>Click Here</button>
         <h4>Message:{message}</h4>
