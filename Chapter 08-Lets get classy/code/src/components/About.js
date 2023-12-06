@@ -21,6 +21,10 @@ render(){
         <UserClass name={"Yash dandnaik (class)"} location={"Pune (class)"}/> */}
         <UserClass name={"First"} location={"First class"}/>
         <UserClass name={"Second"} location={"Second class"}/>
+        <UserClass name={"Third"} location={"Third class"}/>
+        <UserClass name={"Fourth"} location={"Fourth class"}/>
+        <UserClass name={"Fifth"} location={"Fifth class"}/>
+        
         </div>)
 }
 };
@@ -45,6 +49,36 @@ render(){
 // 9.Parent componentDidMount called
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//When there are more components:-
+// There are Two phases in mounting lifecycle methods:-
+      //Phase 1.Render phase:-
+// Parent constructor called
+// Parent render called
+//  First Child constructor called
+//  First Child render called
+//  Second Child constructor called
+// Second Child render called
+//  Third Child constructor called
+//  Third Child render called
+//  Fourth Child constructor called
+//  Fourth Child render called
+//  Fifth Child constructor called
+//  Fifth Child render called
+
+// {In between React updates the dom}
+
+      //Second phase.Commit phase
+//  First Child componentDidMount called
+//  Second Child componentDidMount called
+//  Third Child componentDidMount called
+//  Fourth Child componentDidMount called
+//  Fifth Child componentDidMount called
+//  Parent componentDidMount called
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ///.Functional Component:-
