@@ -1,23 +1,22 @@
 import React from "react";
 
 class UserClass extends React.Component{
-
- constructor(props){   
-super(props)
+    constructor(props){   
+        super(props)
 this.state = {
 count : 0,
 message:"Hello React,Im in a `this.state{}` In a constructor special method from Classbased component"
 
 }
-console.log("Child constructor called");
+console.log(this.props.name + " Child constructor called");
     };
 
 componentDidMount(){
-console.log("Child componentDidMount called");
+console.log(this.props.name + " Child componentDidMount called");
 };
 
 render(){
-    console.log("Child render called");
+    console.log(this.props.name + " Child render called");
     const{name,location} =  this.props;
     const{count,message} = this.state;
     return(
