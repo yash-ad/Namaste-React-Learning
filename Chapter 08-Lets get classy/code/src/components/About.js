@@ -1,33 +1,61 @@
 import React from "react";
-// import User from "./User";
 import UserClass from "./UserClass";
 import { Component } from "react";
 
-///.Classbased Component:-
 class About extends Component{
-constructor(props){
-   super(props) 
-console.log("Parent constructor called");
-}
-componentDidMount(){
-    console.log("Parent componentDidMount called");
-}
-render(){
-    console.log("Parent render called")
-    return(
-        <div className="about-us-container">
-        <h1>About Us</h1> 
-        {/* <UserClass name={"Yash dandnaik (class)"} location={"Pune (class)"}/>
-        <UserClass name={"Yash dandnaik (class)"} location={"Pune (class)"}/> */}
-        <UserClass name={"First"} location={"First class"}/>
-        <UserClass name={"Second"} location={"Second class"}/>
-        <UserClass name={"Third"} location={"Third class"}/>
-        <UserClass name={"Fourth"} location={"Fourth class"}/>
-        <UserClass name={"Fifth"} location={"Fifth class"}/>
-        
-        </div>)
-}
-};
+    constructor(props){
+       super(props) 
+    }
+
+    componentDidMount(){
+        //API
+    }
+
+    render(){
+        return(
+            <div className="about-us-container">
+            <h1>About Us</h1> 
+            <UserClass name={"First"} location={"First class"}/>
+            </div>)
+    }
+    };
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///.FOR PRACTICE PURPOSE ONLY:-
+
+///.Classbased Component:-
+// class About extends Component{
+//     constructor(props){
+//        super(props) 
+//     // console.log("Parent constructor called");
+//     }
+//     componentDidMount(){
+//         // console.log("Parent componentDidMount called");
+//     }
+//     render(){
+//         // console.log("Parent render called")
+//         return(
+//             <div className="about-us-container">
+//             <h1>About Us</h1> 
+//             {/* <UserClass name={"Yash dandnaik (class)"} location={"Pune (class)"}/>
+//             <UserClass name={"Yash dandnaik (class)"} location={"Pune (class)"}/> */}
+//             <UserClass name={"First"} location={"First class"}/>
+//             {/* <UserClass name={"Second"} location={"Second class"}/>
+//             <UserClass name={"Third"} location={"Third class"}/>
+//             <UserClass name={"Fourth"} location={"Fourth class"}/>
+//             <UserClass name={"Fifth"} location={"Fifth class"}/> */}
+            
+//             </div>)
+//     }
+//     };
+
 
 ///.Outputs in the console:-
 // 1.Parent constructor called
@@ -48,8 +76,6 @@ render(){
 // 8.Second Child componentDidMount called
 // 9.Parent componentDidMount called
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //When there are more components:-
 // There are Two phases in mounting lifecycle methods:-
@@ -91,6 +117,5 @@ render(){
 // </div>
 // )
 // }
-
 
 export default About;
