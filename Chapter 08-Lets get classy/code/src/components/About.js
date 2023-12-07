@@ -8,7 +8,6 @@ class About extends Component{
     }
 
     componentDidMount(){
-        //API
     }
 
     render(){
