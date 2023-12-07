@@ -23,6 +23,19 @@ const RestaurantInfo = () => {
     fetchInfo();
   }, []);
 
+  
+  ///.Checking in the console browser how to clear the interval which was writtein the useEffect Hook:-
+  // useEffect(()=>{
+  //   const timer = setInterval(()=>{
+  //     console.log("Namaste-React");
+  //         },1000);
+      
+  //         return ()=>{
+  //     clearInterval(timer);
+  //         }
+  // },[]);
+
+
   // Async function to fetch restaurant information
   const fetchInfo = async () => {
     const data = await fetch(CORS_URL + REST_INFO_API_URL + resId);

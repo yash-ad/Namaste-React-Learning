@@ -22,7 +22,19 @@ async componentDidMount(){
 this.setState({
 userInfo:json,
 })
+
+this.timer = setInterval(()=>{
+// console.log("Namaste-React")
+},1000);
 };
+
+componentDidUpdate(){
+console.log("componentDidUpdate");
+};
+
+componentWillUnmount(){
+clearInterval(this.timer);
+}
 
 render(){
     const{name,location,blog,bio,avatar_url} =  this.state.userInfo;
