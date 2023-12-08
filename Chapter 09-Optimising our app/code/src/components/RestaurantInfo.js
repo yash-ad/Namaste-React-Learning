@@ -1,54 +1,23 @@
 // Importing necessary dependencies and components
-import { useState, useEffect } from "react";
-import { CORS_URL, REST_INFO_API_URL } from "../utilities/config";
 import { IMG_URL } from "../utilities/config";
 import Shimmer from "./Shimmer";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+import useRestaurantInfo from "../utilities/useRestaurantInfo";
+
 
 // Defining the RestaurantInfo component
 const RestaurantInfo = () => {
-  // State variables using the useState hook to hold and update data
-  const [resInfo, setResinfo] = useState(null);
-  const [resMenu, setResmenu] = useState(null);
-  const [resMenuTitle, setResMenuTitle] = useState(null);
   const [vegFood, setVegFood] = useState('Veg');
-  const [newResMenu, setNewResMenu] = useState(null);
-  const [resNewInfo, setResNewInfo] = useState(null);
 
-  // useParams hook to fetch dynamic parameters from the router
+
+  // useParams hook to fetch dynamic parameters from the router child.
   const { resId } = useParams();
 
-  // useEffect() hook to fetch the API after the component will load with a dependency array, it will render only once at the initial phase.
-  useEffect(() => {
-    fetchInfo();
-  }, []);
+  //Lets create our own custom hooks to take the tasks of fetching the data.
+  const {resMenu,resInfo,resMenuTitle,newResMenu,resNewInfo} = useRestaurantInfo(resId);
 
   
-  ///.Checking in the console browser how to clear the interval which was writtein the useEffect Hook:-
-  // useEffect(()=>{
-  //   const timer = setInterval(()=>{
-  //     console.log("Namaste-React");
-  //         },1000);
-      
-  //         return ()=>{
-  //     clearInterval(timer);
-  //         }
-  // },[]);
-
-
-  // Async function to fetch restaurant information
-  const fetchInfo = async () => {
-    const data = await fetch(CORS_URL + REST_INFO_API_URL + resId);
-    const json = await data.json();
-
-    // Setting state variables with fetched data
-    setResinfo(json?.data?.cards[0]?.card?.card?.info);
-    setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
-    setResmenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-    setResMenuTitle(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
-    setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-  };
-
   // Before destructuring the data, we need to fetch it as we don't know how long it will take to fetch, and it will return undefined otherwise.
   if (resMenu === null) return <Shimmer />;
 
@@ -110,10 +79,10 @@ const RestaurantInfo = () => {
               }
               // Filtering the menu based on Veg or All
               if (vegFood === "All") {
-                setResmenu(newResMenu);
+           setVegFood(newResMenu);
               } else {
                 const filteredRestMenu = resMenu?.filter((rest) => rest.card.info.isVeg > 0);
-                setResmenu(filteredRestMenu);
+                setVegFood(filteredRestMenu);
               }
             }}
             style={{ backgroundColor: vegFood === "Veg" ? "green" : "orange" }}>
