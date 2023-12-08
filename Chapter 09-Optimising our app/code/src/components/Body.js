@@ -1,40 +1,24 @@
 // Importing necessary dependencies and components
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
-import { CORS_URL } from "../utilities/config";
-import { API_URL } from "../utilities/config";
 import { Link } from "react-router-dom";
+import useRestaurantList from "../utilities/useRestaurantList";
 
 // Defining the Body component
 const Body = () => {
-  // State variables using the useState hook
-  const [listOfRestaurants, setlistOfRestaurants] = useState([]);
-  const [filterRestaurants, setFilterRestaurants] = useState([]);
-  const [searchText, setSearchText] = useState('');
+const listOfRestaurants = useRestaurantList();
+const [filterRestaurants, setFilterRestaurants] = useState([]);
+const [searchText, setSearchText] = useState('');
 
-  // useEffect hook to fetch data when the component mounts
-  useEffect(() => {
-    fetchData();
-  }, []);
 
-  // Async function to fetch restaurant data
-  const fetchData = async () => {
-    try {
-      // Fetching data from the specified API
-      const data = await fetch(CORS_URL + API_URL);
-      const json = await data.json();
+useEffect(()=>{
+setFilterRestaurants(listOfRestaurants);
+},[listOfRestaurants])
 
-      // Setting the state variables with restaurant data
-      setlistOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setFilterRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    } catch (error) {
-      console.error('Error Fetching Data:', error);
-    }
-  };
 
   // Display a loading shimmer if there are no filtered restaurants yet
-  if (filterRestaurants.length === 0) return <Shimmer />;
+  if (listOfRestaurants.length === 0) return <Shimmer />;
 
   return (
     <div className="body">
