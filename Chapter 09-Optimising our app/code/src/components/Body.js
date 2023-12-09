@@ -4,6 +4,8 @@ import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";   
 import useRestaurantList from "../utilities/useRestaurantList";
+import useOnlineStatus from "../utilities/useOnlineStatus";
+import NetworkStatus from "./NetworkStatus";
 
 // Defining the Body component
 const Body = () => {
@@ -16,10 +18,16 @@ useEffect(()=>{
 setFilterRestaurants(listOfRestaurants);
 },[listOfRestaurants])
 
+//Lets add the feature overhere to check Whether the user is an offline or not with our own custom hook `useOnlineStatus()`.
+const onlineStatus = useOnlineStatus()
+
+if(onlineStatus === false)
+  return( <NetworkStatus/>
+  )
+
 
   // Display a loading shimmer if there are no filtered restaurants yet
   if (filterRestaurants.length === 0) return <Shimmer />;
-
   return (
     <div className="body">
       {/* Search Bar */}

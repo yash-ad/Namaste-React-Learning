@@ -388,7 +388,7 @@ letter-spacing: -.6px;
   padding: 3vw;
   margin-bottom: 5px;
   margin-top: 25px;
-  margin: 10px;
+  margin: 5px;
 }
 .shimmer-img{
   background-color: #bebebe;
@@ -398,8 +398,8 @@ letter-spacing: -.6px;
   padding: 1vw;
   border-radius: 10px;
   position: relative;
-  width: 254px;
-  height: 160px;
+  width: 300px;
+  height: 350px;
 }
 .shimmer-inner{
   height:40%;
@@ -476,11 +476,7 @@ letter-spacing: -.6px;
 }
 
 
-.error-container{
-display: flex;
-width: 100%;
-justify-content: center;
-}
+
 
 .pages-container{
 display: flex;
@@ -719,4 +715,109 @@ min-height: 100vh;
 }
 .user-card{
  padding: 20px;
+}
+
+.status-container{
+  display: flex;
+width: 100%;
+justify-content: center;
+padding-top: 250px;
+padding-bottom: 250px;
+}
+
+
+.GenericError__container {
+  min-height: calc(100vh - 229px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.GenericError__content {
+  text-align: center;
+  width: 430px;
+  line-height: 1.25;
+  padding: 80px 0;
+}
+
+.GenericError__image {
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/023/152/240/original/delivery-break-404-error-animation-fast-food-restaurant-worker-empty-state-4k-concept-footage-with-alpha-channel-transparency-colorful-page-not-found-flash-message-for-ui-ux-web-design-video.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 260px;
+}
+
+.GenericError__title {
+  color: #282c3f;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 35px 0 14px;
+}
+
+.GenericError__description {
+  color: #686b78;
+  font-size: 16px;
+}
+
+.nDVxx {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+._3vspF {
+  min-height: calc(100vh - 229px);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.hFjjz {
+  text-align: center;
+  width: 430px;
+  line-height: 1.25;
+  padding: 300px 0;
+}
+
+._3Ognu {
+  color: #282c3f;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 30px 0 10px;
+}
+._1CN4Y {
+  color: #93959f;
+  font-size: 16px;
+}
+._35xiX {
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  line-height: 50px;
+  font-size: 14px;
+  height: 50px;
+  padding: 0 2rem;
+  color: #fc8019;
+  letter-spacing: 0;
+  color: #fff;
+  background-color: #fc8019;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  width: auto;
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
 }
