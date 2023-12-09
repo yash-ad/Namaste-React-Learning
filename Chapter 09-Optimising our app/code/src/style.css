@@ -383,12 +383,12 @@ letter-spacing: -.6px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  gap: 2vw;
-  padding: 2vw;
+  flex-direction: column; 
+   gap: 2vw; 
+  padding: 3vw;
   margin-bottom: 5px;
-  padding-top: 5px;
-  margin: 5px;
+  margin-top: 25px;
+  margin: 10px;
 }
 .shimmer-img{
   background-color: #bebebe;
@@ -413,7 +413,7 @@ letter-spacing: -.6px;
 }
 /*Animation to Shimmer Component Cards */
 .stroke {
-  height: 380px;
+  height: 350px;
   background: #d6d6d6;
 }
 .animate {

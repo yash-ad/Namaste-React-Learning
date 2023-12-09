@@ -2,7 +2,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";   
 import useRestaurantList from "../utilities/useRestaurantList";
 
 // Defining the Body component
@@ -18,7 +18,7 @@ setFilterRestaurants(listOfRestaurants);
 
 
   // Display a loading shimmer if there are no filtered restaurants yet
-  if (listOfRestaurants.length === 0) return <Shimmer />;
+  if (filterRestaurants.length === 0) return <Shimmer />;
 
   return (
     <div className="body">
