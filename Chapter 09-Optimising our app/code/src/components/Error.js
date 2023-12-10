@@ -9,7 +9,7 @@ return(
           <div class="GenericError__image"></div>
           <div class="GenericError__title">Oops something went wrong!!</div>
           <div class="GenericError__description">
-          {error.status}:not found. We'll be back shortly.
+          {error.status}:not found. Sorry for the inconvenience.
           </div>
         </div>
       </div>
