@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
-import Body from "./components/Body";
 import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { lazy,Suspense } from "react";
 import Error from "./components/Error";
 import RestaurantInfo from "./components/RestaurantInfo";
-import Shimmer from "./components/Shimmer";
 
 // Define the layout of the entire application
 const AppLayout = () => {
@@ -24,7 +22,6 @@ const AppLayout = () => {
 const About = lazy(()=> import("./components/About"));
 
 const Contact = lazy(()=> import("./components/Contact"));
-
 
 
 // Create a router for the application using react-router-dom
