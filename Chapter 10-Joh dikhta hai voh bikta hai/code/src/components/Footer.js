@@ -14,11 +14,11 @@ const Footer = () => {
             {/* List of company-related links */}
             <li className="footer-li"><a href="">About</a></li>
             <li className="footer-li"><a href="">Team</a></li>
-            <li className="footer-li"><a href="">FoodExplorer Blog</a></li>
+            <li className="footer-li"><a href="">gofood Blog</a></li>
             <li className="footer-li"><a href="">Bug Bounty</a></li>
-            <li className="footer-li"><a href="">FoodExplorer One</a></li>
-            <li className="footer-li"><a href="">FoodExplorer Corporate</a></li>
-            <li className="footer-li"><a href="">FoodExplorer Instamart</a></li>
+            <li className="footer-li"><a href="">gofood One</a></li>
+            <li className="footer-li"><a href="">gofood Corporate</a></li>
+            <li className="footer-li"><a href="">gofood Instamart</a></li>
           </ul>
         </div>
         {/* Contact Section */}
@@ -48,7 +48,7 @@ const Footer = () => {
       {/* Footer Contact Section */}
       <div className="footer-contact"> 
         {/* Copyright information */}
-        <div className="copyrights">All rights reserved. © 2023 FoodExplorer</div>
+        <div className="copyrights">All rights reserved. © 2023 gofood</div>
         <div className="footer-logos">
           {/* Social media icons or logos could be added here */}
           <div className="social-media">
