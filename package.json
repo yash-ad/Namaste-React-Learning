@@ -4,8 +4,8 @@
   "description": "This is Namaste-React By Akshay Saini",
   "main": "index.js",
   "scripts": {
-    "start": "parcel \"Chapter 09-Optimising our app/code/src/index.html\"",
-    "build": "parcel build \"Chapter 09-Optimising our app/code/src/index.html\"",
+    "start": "parcel \"Chapter 10-Joh dikhta hai voh bikta hai/code/src/index.html\"",
+    "build": "parcel build \"Chapter 10-Joh dikhta hai voh bikta hai/code/src/index.html\"",
     "test": "jest"
   },
   "repository": {
