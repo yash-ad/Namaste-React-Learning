@@ -2,7 +2,7 @@
 
 export const CDN_URL =  'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/';
 
-export const LOGO_URL = "https://logohistory.net/wp-content/uploads/2022/10/Gofood-logo.png";
+export const LOGO_URL = "https://1000logos.net/wp-content/uploads/2023/01/Gofood-logo.png";
 
 export const CORS_URL = 'https://corsproxy.io/?';
 
