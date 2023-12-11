@@ -20,7 +20,7 @@
   
   }
   
-  .header{
+  /* .header{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,19 +34,20 @@
   z-index: 10;
   overflow: hidden;
   height: 110px;
-  }
+  } */
   
   .logo{
   display: flex;
   align-items: center;
   transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); 
-  /* width: 100px; */
+  width: 180px;
   margin-left: 15px;  
     }
     
   .logo:hover{ 
     transform:scale(1.1);
     }
+    
   
   .nav-items > ul{
   display: flex;
@@ -67,6 +68,7 @@
   .nav-items > ul > li:hover{
   color:#FC9A01;
   }
+  
   .toggleBtn{
   background-color:#FC9A01;
   color: #ffffff;
