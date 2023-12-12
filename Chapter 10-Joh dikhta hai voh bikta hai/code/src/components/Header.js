@@ -10,11 +10,13 @@ const Header = () => {
 
   return (
     // JSX representing the structure of the Header component
-    <div className="flex items-center justify-between fixed top-0 left-0 right-0 border border-solid border-black bg-[#fff] z-10 shadow-lg overflow-hidden h-[110px]">
+    <div className="header shadow-lg">
+      <div className="logo-container">
         {/* Linking the logo to the home page */}
         <Link to="/">
           <img className="logo" alt="foodapplogo" src={LOGO_URL} />
         </Link>
+      </div>
       <div className="nav-items">
         <ul>
           {/* Navigation links using the Link component from React Router */}
