@@ -28,7 +28,7 @@ if(onlineStatus === false)
 
   // Display a loading shimmer if there are no filtered restaurants yet
   if (filterRestaurants.length === 0) return <Shimmer />;
-  // console.log("Body Rendered",listOfRestaurants);
+  console.log("Body Rendered",listOfRestaurants);
   return (
     <div className="body">
       {/* Search Bar */}
