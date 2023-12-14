@@ -1,58 +1,28 @@
 // Importing necessary dependencies and components
 import { IMG_URL } from "../utilities/config";
 import Shimmer from "./Shimmer";
-import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { CORS_URL, REST_INFO_API_URL } from "../utilities/config";
+import useRestaurantInfo from "../utilities/useRestaurantInfo";
+import { useState } from "react";
+
 
 
 // Defining the RestaurantInfo component
 const RestaurantInfo = () => {
-  
-   // State variables using the useState hook to hold and update data
-   const [resInfo,setResInfo] = useState(null);
-   const [resMenu,setResMenu] = useState(null);
-   const [newResMenu, setNewResMenu] = useState(null);
-   const [resMenuTitle,setResMenuTitle] = useState(null);
-   const [resNewInfo, setResNewInfo] = useState(null);
-   const [vegFood, setVegFood] = useState('Veg');
+  const [vegFood, setVegFood] = useState('Veg');
 
 
-   // useParams hook to fetch dynamic parameters from the router child.
-     const { resId } = useParams();
-   
- // useEffect() hook to fetch the API after the component will load with a dependency array, it will render only once at the initial phase.
-useEffect(()=>{
-fetchInfo();
-},[]);
+     // useParams hook to fetch dynamic parameters from the router child.
+       const { resId } = useParams();
 
+       const {resInfo,resMenu,newResMenu,resMenuTitle,resNewInfo} = useRestaurantInfo(resId);
 
-
-//Async function to fetch restaurant information
-const fetchInfo =  async () => {
-const data =  await fetch(CORS_URL + REST_INFO_API_URL + resId);
-const json = await data.json();
-
-//Setting state variables with fetched data
-setResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-
-setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-
-setResMenuTitle(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
-
-setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
-
-setResInfo(json?.data?.cards[0]?.card?.card?.info);
-};
-
-
-
-  
   // Before destructuring the data, we need to fetch it as we don't know how long it will take to fetch, and it will return undefined otherwise.
   if (resMenu === null) {
     return <Shimmer />
   };
 
+ 
   // Destructuring values from the fetched data
   const { name, cuisines, avgRating, costForTwoMessage, cloudinaryImageId, locality, totalRatingsString, avgRatingString } = resInfo;
   const { lastMileTravelString, maxDeliveryTime } = resInfo?.sla;
@@ -61,6 +31,7 @@ setResInfo(json?.data?.cards[0]?.card?.card?.info);
 
   // Rendering the JSX structure
   return (
+   
     <div className="pages-container">
       <div className="rest-menu">
         {/* Top Menu Section */}

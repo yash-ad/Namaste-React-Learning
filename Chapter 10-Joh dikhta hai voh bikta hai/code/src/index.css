@@ -541,14 +541,14 @@ border-radius: 10px
 .top-menu-right{
 width: 50%;
 display: flex;
-justify-content: space-between;
+/* justify-content: space-between; */
 align-items: flex-start;
 flex-direction: column;
 gap: 1vw;
 }
 .top-menu-right-child{
 display: flex;
-justify-content: space-between;
+/* justify-content: space-between; */
 align-items: center;
 flex-direction: row;
 padding-top: 10px;

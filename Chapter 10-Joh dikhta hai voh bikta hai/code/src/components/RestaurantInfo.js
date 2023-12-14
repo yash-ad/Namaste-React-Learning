@@ -70,7 +70,7 @@ setResInfo(json?.data?.cards[0]?.card?.card?.info);
             <img src={IMG_URL + cloudinaryImageId} alt="Restaurant" />
           </div>
           <div className="top-menu-right">
-            <h1>{name}</h1>
+            <span className="font-bold">{name}</span>
             <p>{cuisines.join(" , ")}</p>
             <p>{locality} - {lastMileTravelString}</p>
             <div className="top-menu-right-child">
@@ -124,6 +124,8 @@ setResInfo(json?.data?.cards[0]?.card?.card?.info);
           </button>
         </div>
 
+
+
         {/* Main Menu Section */}
         <li>
           <div className="main-menu">
@@ -133,6 +135,7 @@ setResInfo(json?.data?.cards[0]?.card?.card?.info);
             </h1>
             {/* Iterating over the recommended list/array of objects using map() */}
             {resMenu?.map((item) => (
+
               <div key={item.card.info.id} className="menu-card">
                 <div className="menu-left">
                   <h3>{item.card.info.name}</h3>
@@ -147,6 +150,9 @@ setResInfo(json?.data?.cards[0]?.card?.card?.info);
             ))}
           </div>
         </li>
+
+
+
 
         {/* Bottom Menu Section */}
         <div className="bottom-menu">
