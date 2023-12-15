@@ -616,6 +616,12 @@ align-items: flex-start;
 justify-content: flex-start;
 flex-direction: column;
 width: 100%;
+
+}
+.category-header{
+display: flex;
+justify-content: space-between;
+gap: 750px;
 }
 .main-menu h1{
 font-size: 20px;
@@ -716,6 +722,7 @@ box-shadow: 0 1px 5px #ececec;
   padding: 10vw 1vw;
   display: flex;
   margin: 0.1px;
+  border: none;
 }
 
 

@@ -14,7 +14,6 @@ const RestaurantInfo = () => {
    const [resInfo,setResInfo] = useState(null);
    const [resMenu,setResMenu] = useState(null);
    const [newResMenu, setNewResMenu] = useState(null);
-   const [resMenuTitle,setResMenuTitle] = useState(null);
    const [resNewInfo, setResNewInfo] = useState(null);
    const [resCategory,setResCategory] = useState(null);
    const [vegFood, setVegFood] = useState('Veg');
@@ -41,8 +40,6 @@ const fetchInfo =  async () => {
     
     setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
     
-    setResMenuTitle(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
-    
     setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
     
     setResInfo(json?.data?.cards[0]?.card?.card?.info);
@@ -68,7 +65,6 @@ const fetchInfo =  async () => {
   // Destructuring values from the fetched data
   const { name, cuisines, avgRating, costForTwoMessage, cloudinaryImageId, locality, totalRatingsString, avgRatingString } = resInfo;
   const { lastMileTravelString, maxDeliveryTime } = resInfo?.sla;
-  const { title } = resMenuTitle;
   const { message } = resNewInfo;
 
 
@@ -147,37 +143,10 @@ console.log(categories);
 
 {/* Categories Accordions */}
 
-{categories.map((category)=>{
-  <RestaurantCategory/>
-})}
-        {/* Main Menu Section */}
-        <li>
-          <div className="main-menu">
-            <h1 className="font-bold">
-              {title}
-              <span>({resMenu?.length})</span>
-            </h1>
-            {/* Iterating over the recommended list/array of objects using map() */}
-            {resMenu?.map((item) => (
-
-              <div key={item.card.info.id} className="menu-card">
-                <div className="menu-left">
-                  <h3 className="font-bold text-lg">{item.card.info.name}</h3>
-                  <p className="font-semibold">{"₹"+ item.card.info.price / 100}</p>
-                  <p>{item.card.info.description}</p>
-                </div>
-                <div className="menu-right">
-                  <img src={IMG_URL + item.card.info.imageId} alt="Item" />
-                  <button id="addBtn">ADD</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </li>
-
-
-
-
+{categories.map ((category)=>(
+  <RestaurantCategory  data={category.card?.card}/>)
+)}
+      
         {/* Bottom Menu Section */}
         <div className="bottom-menu">
           <div className="RestaurantLicence_wrapper__4BYQV">
@@ -196,6 +165,7 @@ console.log(categories);
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

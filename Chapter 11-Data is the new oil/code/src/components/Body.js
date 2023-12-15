@@ -49,6 +49,7 @@ if(onlineStatus === false)
                 let filterSearch = listOfRestaurants.filter((res) =>
                   res.info.name.toLowerCase().includes(searchText.toLowerCase()) ||
                   res.info.cuisines.includes(searchText)
+                 
                 );
                 if (filterSearch.length === 0) {
                   // Handle case when no restaurants match the search
