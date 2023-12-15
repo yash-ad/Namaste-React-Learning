@@ -1,39 +1,87 @@
 // Importing necessary dependencies and components
 import { IMG_URL } from "../utilities/config";
 import Shimmer from "./Shimmer";
+import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useRestaurantInfo from "../utilities/useRestaurantInfo";
-import { useState } from "react";
-
+import {  REST_INFO_API_URL } from "../utilities/config";
 
 
 // Defining the RestaurantInfo component
 const RestaurantInfo = () => {
-  const [vegFood, setVegFood] = useState('Veg');
+  
+   // State variables using the useState hook to hold and update data
+   const [resInfo,setResInfo] = useState(null);
+   const [resMenu,setResMenu] = useState(null);
+   const [newResMenu, setNewResMenu] = useState(null);
+   const [resMenuTitle,setResMenuTitle] = useState(null);
+   const [resNewInfo, setResNewInfo] = useState(null);
+   const [resCategory,setResCategory] = useState(null);
+   const [vegFood, setVegFood] = useState('Veg');
 
 
-     // useParams hook to fetch dynamic parameters from the router child.
-       const { resId } = useParams();
+   // useParams hook to fetch dynamic parameters from the router child.
+     const { resId } = useParams();
+   
+ // useEffect() hook to fetch the API after the component will load with a dependency array, it will render only once at the initial phase.
+useEffect(()=>{
+fetchInfo();
+},[]);
 
-       const {resInfo,resMenu,newResMenu,resMenuTitle,resNewInfo} = useRestaurantInfo(resId);
 
+
+//Async function to fetch restaurant information
+const fetchInfo =  async () => {
+  try {
+    const data =  await fetch(REST_INFO_API_URL + resId);
+    const json = await data.json();
+    
+    //Setting state variables with fetched data
+    setResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
+    
+    setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
+    
+    setResMenuTitle(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
+    
+    setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
+    
+    setResInfo(json?.data?.cards[0]?.card?.card?.info);
+
+    setResCategory(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
+
+    // console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
+   
+  } catch (error) {
+    console.error("Error fetching restaurant information:", error);
+  }
+
+};
+
+
+
+  
   // Before destructuring the data, we need to fetch it as we don't know how long it will take to fetch, and it will return undefined otherwise.
   if (resMenu === null) {
     return <Shimmer />
   };
 
- 
   // Destructuring values from the fetched data
   const { name, cuisines, avgRating, costForTwoMessage, cloudinaryImageId, locality, totalRatingsString, avgRatingString } = resInfo;
   const { lastMileTravelString, maxDeliveryTime } = resInfo?.sla;
   const { title } = resMenuTitle;
   const { message } = resNewInfo;
 
+
+  //To find the Item categories from Swiggys API and stored in the variable.
+const categories = resCategory;
+console.log(categories);
+
+
   // Rendering the JSX structure
   return (
-   
     <div className="pages-container">
+    
       <div className="rest-menu">
+
         {/* Top Menu Section */}
         <div className="top-menu">
           <div className="top-menu-left">
@@ -95,15 +143,18 @@ const RestaurantInfo = () => {
           </button>
         </div>
 
+
+
         {/* Main Menu Section */}
         <li>
           <div className="main-menu">
-            <h1>
+            <h1 className="font-bold">
               {title}
               <span>({resMenu?.length})</span>
             </h1>
             {/* Iterating over the recommended list/array of objects using map() */}
             {resMenu?.map((item) => (
+
               <div key={item.card.info.id} className="menu-card">
                 <div className="menu-left">
                   <h3>{item.card.info.name}</h3>
@@ -118,6 +169,9 @@ const RestaurantInfo = () => {
             ))}
           </div>
         </li>
+
+
+
 
         {/* Bottom Menu Section */}
         <div className="bottom-menu">
