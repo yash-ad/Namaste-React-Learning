@@ -649,10 +649,11 @@ width: 65%;
 }
 .menu-left h3{
 color: #3E4152;
-font-size: 16px;
+font-size: 18px;
 line-height: 25px;
 letter-spacing: 0.25px;
 word-spacing: 2px;
+font-weight: 600;
 }
 .mid-menu button{
 color: white;
@@ -662,14 +663,15 @@ outline: none;
 .menu-left p:nth-child(2){
 padding-bottom: 2vw;
 padding-top: 0.5vw;
-font-size: 14px;
+font-size: 16px;
 color: #353535;
 line-height: 25px;
 letter-spacing: 0.1px;
 word-spacing: 2px;
+font-weight: 500;
 }
 .menu-left p:nth-child(3){
-font-size: 14px;
+font-size: 15px;
 color: #8d8d8d;
 line-height: 20px;
 letter-spacing: 0.25px;

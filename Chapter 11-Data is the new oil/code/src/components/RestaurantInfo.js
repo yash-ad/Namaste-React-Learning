@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {  REST_INFO_API_URL } from "../utilities/config";
+import RestaurantCategory from "./RestaurantCategory";
 
 
 // Defining the RestaurantInfo component
@@ -79,7 +80,7 @@ console.log(categories);
   // Rendering the JSX structure
   return (
     <div className="pages-container">
-    
+
       <div className="rest-menu">
 
         {/* Top Menu Section */}
@@ -144,7 +145,11 @@ console.log(categories);
         </div>
 
 
+{/* Categories Accordions */}
 
+{categories.map((category)=>{
+  <RestaurantCategory/>
+})}
         {/* Main Menu Section */}
         <li>
           <div className="main-menu">
@@ -157,8 +162,8 @@ console.log(categories);
 
               <div key={item.card.info.id} className="menu-card">
                 <div className="menu-left">
-                  <h3>{item.card.info.name}</h3>
-                  <p>{"₹" + item.card.info.price / 100}</p>
+                  <h3 className="font-bold text-lg">{item.card.info.name}</h3>
+                  <p className="font-semibold">{"₹"+ item.card.info.price / 100}</p>
                   <p>{item.card.info.description}</p>
                 </div>
                 <div className="menu-right">
