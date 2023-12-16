@@ -612,17 +612,26 @@ font-weight: 600;
 background-color: rgb(255, 255, 255);
 padding: 2vw 18vw;
 display: flex;
-align-items: flex-start;
-justify-content: flex-start;
+/* align-items: flex-start;
+justify-content: flex-start; */
 flex-direction: column;
 width: 100%;
 
 }
 .category-header{
 display: flex;
+text-align: center;
+align-items: center;
 justify-content: space-between;
-gap: 750px;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 1rem;
+margin-right: 1rem;
+padding: 16px;
+box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    /* --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color); */
 }
+
 .main-menu h1{
 font-size: 20px;
 margin-bottom: 1.5vw;
