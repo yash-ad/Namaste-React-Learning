@@ -144,7 +144,7 @@ console.log(categories);
 {/* Categories Accordions */}
 
 {categories.map ((category)=>(
-  <RestaurantCategory  data={category.card?.card}/>)
+  <RestaurantCategory data={category.card?.card}/>)
 )}
       
         {/* Bottom Menu Section */}

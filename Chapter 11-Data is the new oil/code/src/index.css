@@ -119,8 +119,6 @@ background-color: #ffa30e;
     border-radius: 3px;
 }
 
-
-
 .input-bar {
   font-size: 1.15rem;
   line-height: 24px;
@@ -150,7 +148,6 @@ background-color: #ffa30e;
   font-weight: 500;
   display: flex;
 }
-
 
 .filter-Buttons{
 display: flex;
@@ -347,7 +344,6 @@ font-size:15px;
 font-weight:300;
   }
   
-  
 .footer-contact{
 display: flex;
 flex-grow: 1;
@@ -384,6 +380,7 @@ letter-spacing: -.6px;
   min-height: 55vh;
   margin-left: 30px;
 }  
+
 .shimmer-cards{
   display: flex;
   /* justify-content: center;
@@ -393,6 +390,7 @@ letter-spacing: -.6px;
   flex-wrap: wrap;
   
 }
+
 .shimmer-card{
   background-color: #ffffff;
   width: 300px;
@@ -408,10 +406,12 @@ letter-spacing: -.6px;
   margin-top: 25px;
   margin: 5px;
 }
+
 .loading-spinner{
   width: 100%;
   height: 100%; 
 }
+
 .shimmer-img{
   background-color: #bebebe;
   /* object-fit: scale-down; */
@@ -423,6 +423,7 @@ letter-spacing: -.6px;
   width: 300px;
   height: 350px;
 }
+
 .shimmer-inner{
   height:40%;
   width: 100%;
@@ -433,11 +434,14 @@ letter-spacing: -.6px;
   flex-direction: column;
   padding:20px 20px 50px;
 }
+
+
 /*Animation to Shimmer Component Cards */
 .stroke {
   height: 350px;
   background: #d6d6d6;
 }
+
 .animate {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
@@ -452,18 +456,21 @@ letter-spacing: -.6px;
     background-position: 1000px 0;
   }
 }
+
 .h3{
   width: 50%;
   height: 22px;
   border-radius: 15px;
   background-color: #bebebe;
 }
+
 .div2{
   width: 100%;
   background-color: #bebebe;
   border-radius: 15px;
   height: 18px;
 }
+
 .div1main{
   display: flex;
   flex-direction: row;
@@ -472,6 +479,7 @@ letter-spacing: -.6px;
   width: 100%;
 
 }
+
 .div1left{
   width: 30%;
   background-color: #bebebe;
@@ -505,12 +513,12 @@ display: flex;
 width: 100%;
 justify-content: center;
 padding-top: 250px;
-padding-bottom: 250px;
+/* padding-bottom: 250px; */
 }
 
 /* RESTAURANT MENU */
 .rest-menu{
-background-color: #9c9c9c;
+/* background-color: #9c9c9c; */
 min-height: 100vh;
 margin-top: -138px;
 }
@@ -552,6 +560,7 @@ padding-left: 20px;
 font-weight: bold;
 font-size: 30px;
   }
+
 .top-menu-right-child{
 display: flex;
 justify-content: space-between;
@@ -560,10 +569,12 @@ flex-direction: row;
 padding-top: 20px;
 color: white;
 }
+
 .top-menu-right-child p:nth-child(1) i{
 font-size: 20px;
 padding-right: 5px;
 }
+
 .top-menu-right-child p:nth-child(1){
 background-color: rgb(164, 14, 14);
 border-radius: 5px;
@@ -573,9 +584,11 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 }
+
 .top-menu-right-child span{
 padding: 0 1.5vw;
 }
+
 .ratings-container{
 display: flex;
 padding-left: 780px;
@@ -590,6 +603,7 @@ text-align: center;
 padding: 10px;
 max-width: 100px;
 }
+
 .RestaurantRatings_wrapper:hover{
 box-shadow: 0 1px 5px #f9f9f9;
 }
@@ -602,35 +616,46 @@ font-weight: 700;
 margin-bottom: 8px;
 display: block;
 }
+
 .RestaurantRatings_totalRatings{
 font-size: 11px;
 color: #8b8d97;
 font-family: ProximaNovaCondensedRegular,arial,Helvetica Neue,sans-serif;
 font-weight: 600;
 }
+
 .main-menu{
 background-color: rgb(255, 255, 255);
 padding: 2vw 18vw;
 display: flex;
-/* align-items: flex-start;
-justify-content: flex-start; */
 flex-direction: column;
 width: 100%;
-
+padding-bottom: 150px;
 }
-.category-header{
-display: flex;
-text-align: center;
+
+.category-items{
+  text-align: center;
 align-items: center;
-justify-content: space-between;
-margin-top: auto;
-margin-bottom: auto;
-margin-left: 1rem;
-margin-right: 1rem;
+margin: auto -5rem;
 padding: 16px;
 box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     /* --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color); */
 }
+
+.Accordions-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Accordions-header > .menu-title{
+  cursor: pointer;
+}
+
+.Accordions-header > .arrow-symbol{
+  cursor: pointer;
+}
+
+
 
 .main-menu h1{
 font-size: 20px;
@@ -712,10 +737,10 @@ background-color: #fff;
 color: #60B246;
 outline: none;
 border: 0.1px solid gray;
-border-radius: 5px;
+border-radius: 10px;
 cursor: pointer;
 font-weight:bolder;
-margin-top: -15px;
+margin-top: -20px;
 }
 .menu-right button:hover{
 box-shadow: 0 1px 5px #ececec;
@@ -736,18 +761,19 @@ box-shadow: 0 1px 5px #ececec;
 
 
 .RestaurantLicence_wrapper__4BYQV {
+  display: flex;
+  justify-content: center;
 padding: 0 16px 16px;
-background-color: #f1f1f6;
 font-size: .93rem;
-color: #93959f;
+color: #f1f1f6;
 }
 
 .RestaurantFooterAddress_wrapper__16xqp {
-background-color: #f1f1f6;
-font-size: 1rem;
-color: #93959f;
+font-size: 1.2rem;
+color:#A0A0AB;
 padding: 0 16px 120px;
 }
+
 .about-us-container{
   display: flex;
   /* justify-content: space-between; */
