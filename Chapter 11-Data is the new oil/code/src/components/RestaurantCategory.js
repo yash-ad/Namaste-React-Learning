@@ -17,13 +17,14 @@ const handleClick = ()=>{
   // setShowItems(true);
   setShowItems(!showItems);
 }
+
     return(
         <div>
 
          <li>
           <div className="main-menu">
 <div className="category-items">
-          {/* Accordions */}
+          {/* Accordions Header */}
 <div className="Accordions-header" onClick={handleClick}>
 <h1 className="menu-title">
               {data.title}
@@ -34,6 +35,7 @@ expand_more
 </span></span>
 </div>  
 
+    {/* Accordions Body  */}
 {showItems && <div className="Accordions-body">
 <ItemsList items={data.itemCards} />
 </div>}

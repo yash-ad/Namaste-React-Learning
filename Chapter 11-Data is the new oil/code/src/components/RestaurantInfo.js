@@ -5,6 +5,7 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {  REST_INFO_API_URL } from "../utilities/config";
 import RestaurantCategory from "./RestaurantCategory";
+import FoodSwitchButton from "./FoodSwitchButton";
 
 
 // Defining the RestaurantInfo component
@@ -79,7 +80,7 @@ console.log(categories);
 
       <div className="rest-menu">
 
-        {/* Top Menu Section */}
+        {/* Top-Menu Section */}
         <div className="top-menu">
           <div className="top-menu-left">
             {/* Displaying the restaurant image */}
@@ -113,41 +114,14 @@ console.log(categories);
           </div>
         </div>
 
-        {/* Mid Menu Section */}
-        <div className="mid-menu">
-          <button
-            id="isVegBtn"
-        
-            onClick={() => {
-              // Toggling between Veg and All options
-              if (vegFood === "Veg") {
-                setVegFood("All");
-              } else {
-                setVegFood("Veg");
-              }
-              // Filtering the menu based on Veg or All
-              if (vegFood === "All") {
-         setResMenu(newResMenu);
-              } 
-              else {
-                const filteredRestMenu = resMenu?.filter((rest) => rest.card.info.isVeg > 0);
-                setResMenu(filteredRestMenu);
-             
-              }
-            }}
-            style={{ backgroundColor: vegFood === "Veg" ? "green" : "orange" }}>
-            {vegFood}
-          </button>
-        </div>
+        {/* Mid-Menu Section added with the component */}
+      <FoodSwitchButton/>
 
-
-{/* Categories Accordions */}
-
+{/*  Main-Menu Categories Accordions added with the component*/}
 {categories.map ((category)=>(
   <RestaurantCategory data={category.card?.card}/>)
 )}
-      
-        {/* Bottom Menu Section */}
+        {/* Bottom-Menu Section */}
         <div className="bottom-menu">
           <div className="RestaurantLicence_wrapper__4BYQV">
             <div className="RestaurantLicence_licence__Oo5_q" aria-hidden="true">
@@ -165,7 +139,6 @@ console.log(categories);
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );
