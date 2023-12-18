@@ -145,8 +145,12 @@ const categories = resCategory;
 
 
 {/*  Main-Menu Categories Accordions added with the component*/}
-{categories.map ((category)=>(
-  <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>)
+       {/* Introduced Controlled and uncontrolled Components  In this code , The parent is controlling over on child component*/}
+{categories.map ((category,index)=>(
+  <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}
+  // The logical AND (&&) operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false.
+    showItems={index === 0 && true}
+  />)
 )}
 
         {/* Bottom-Menu Section */}
