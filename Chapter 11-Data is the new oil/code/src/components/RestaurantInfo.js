@@ -5,7 +5,7 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {  REST_INFO_API_URL } from "../utilities/config";
 import RestaurantCategory from "./RestaurantCategory";
-import FoodSwitchButton from "./FoodSwitchButton";
+
 
 
 // Defining the RestaurantInfo component
@@ -14,9 +14,11 @@ const RestaurantInfo = () => {
    // State variables using the useState hook to hold and update data
    const [resInfo,setResInfo] = useState(null);
    const [resMenu,setResMenu] = useState(null);
-   const [newResMenu, setNewResMenu] = useState(null);
+  //  const [newResMenu, setNewResMenu] = useState(null);
    const [resNewInfo, setResNewInfo] = useState(null);
    const [resCategory,setResCategory] = useState(null);
+  //  const [vegFood, setVegFood] = useState('GreenChilli');
+
 
 
    // useParams hook to fetch dynamic parameters from the router child.
@@ -38,18 +40,16 @@ const fetchInfo =  async () => {
     //Setting state variables with fetched data
     setResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
     
-    setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-    
     setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
     
     setResInfo(json?.data?.cards[0]?.card?.card?.info);
 
     setResCategory(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
-
-    // console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
-
-    console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
    
+    // setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
+
+
+
   } catch (error) {
     console.error("Error fetching restaurant information:", error);
   }
@@ -69,10 +69,12 @@ const fetchInfo =  async () => {
   const { lastMileTravelString, maxDeliveryTime } = resInfo?.sla;
   const { message } = resNewInfo;
 
+  
 
   //To find the Item categories from Swiggys API and stored in the variable.
 const categories = resCategory;
 // console.log(categories);
+
 
 
   // Rendering the JSX structure
@@ -115,13 +117,38 @@ const categories = resCategory;
           </div>
         </div>
 
-        {/* Mid-Menu Section added with the component */}
-      <FoodSwitchButton/>
+{/* 
+      Mid-Menu Section added with the component */}
+{/* <div className="mid-menu">
+  <button
+    id="isVegBtn"
+    onClick={() => {
+      // Toggling between Veg and All options
+      if (vegFood === "GreenChilli") {
+        setVegFood("RedChilli");
+        // Set the entire menu when switching to "RedChilli" (All options)
+        setResMenu(newResMenu); // Replace 'apiResponse' with the actual variable holding the API data
+      } else {
+        setVegFood("GreenChilli");
+        // Filter the menu for vegetarian options when switching to "GreenChilli"
+        const filteredVegMenu = resMenu?.filter((res) => res.card.info.itemAttribute.vegClassifier === 'VEG');
+        setResMenu(filteredVegMenu);
+      }
+    }}
+    style={{ backgroundColor: vegFood === "GreenChilli" ? "green" : "red" }}>
+    {vegFood}
+  </button>
+
+</div> */}
+
+
+
 
 {/*  Main-Menu Categories Accordions added with the component*/}
 {categories.map ((category)=>(
   <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>)
 )}
+
         {/* Bottom-Menu Section */}
         <div className="bottom-menu">
           <div className="RestaurantLicence_wrapper__4BYQV">
@@ -144,6 +171,7 @@ const categories = resCategory;
     </div>
   );
 };
+
 
 // Exporting the RestaurantInfo component
 export default RestaurantInfo;

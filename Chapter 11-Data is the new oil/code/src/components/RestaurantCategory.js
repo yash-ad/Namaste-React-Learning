@@ -30,7 +30,7 @@ const handleClick = ()=>{
               {data.title}
               <span>({data.itemCards.length})</span>
             </h1>
-  <span className="arrow-symbol"><span class="material-symbols-outlined">
+  <span className="arrow-symbol"><span className="material-symbols-outlined">
 expand_more
 </span></span>
 </div>  
