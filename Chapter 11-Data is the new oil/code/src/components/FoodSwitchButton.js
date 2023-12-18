@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const FoodSwitchButton = ()=>{
+  const [vegFood, setVegFood] = useState('Veg');
 return(
 <div>
 <div className="mid-menu">

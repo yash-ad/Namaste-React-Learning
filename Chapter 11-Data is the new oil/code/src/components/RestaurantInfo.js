@@ -17,7 +17,6 @@ const RestaurantInfo = () => {
    const [newResMenu, setNewResMenu] = useState(null);
    const [resNewInfo, setResNewInfo] = useState(null);
    const [resCategory,setResCategory] = useState(null);
-   const [vegFood, setVegFood] = useState('Veg');
 
 
    // useParams hook to fetch dynamic parameters from the router child.
@@ -48,6 +47,8 @@ const fetchInfo =  async () => {
     setResCategory(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
 
     // console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
+
+    console.log(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
    
   } catch (error) {
     console.error("Error fetching restaurant information:", error);
@@ -71,7 +72,7 @@ const fetchInfo =  async () => {
 
   //To find the Item categories from Swiggys API and stored in the variable.
 const categories = resCategory;
-console.log(categories);
+// console.log(categories);
 
 
   // Rendering the JSX structure
@@ -119,7 +120,7 @@ console.log(categories);
 
 {/*  Main-Menu Categories Accordions added with the component*/}
 {categories.map ((category)=>(
-  <RestaurantCategory data={category.card?.card}/>)
+  <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>)
 )}
         {/* Bottom-Menu Section */}
         <div className="bottom-menu">
