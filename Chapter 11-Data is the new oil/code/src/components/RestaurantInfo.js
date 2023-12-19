@@ -113,7 +113,9 @@ const categories = resCategory;
   //Controlled component:-
   <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}
 showItems={index === showIndex ? true : false}
-//showTheIndex is a prop that you pass to the RestaurantCategory component. It is a function that presumably handles the toggling of the accordion's visibility.
+//`showTheIndex` is a prop that you pass to the RestaurantCategory component. It is a function that presumably handles the toggling of the accordion's visibility.
+//`showTheIndex` function uses the callback version of setShowIndex to toggle the state based on the current state. 
+//This ensures that clicking on an already expanded accordion collapses it. 
 showTheIndex={()=>{
 //This is the state-setting function which is provided by `React hooks` `useState` hook,It is used to update the state .
 //`prevIndex` This is a parameter of the arrow function,representing the current value of `showIndex` state
