@@ -14,10 +14,9 @@ const RestaurantInfo = () => {
    // State variables using the useState hook to hold and update data
    const [resInfo,setResInfo] = useState(null);
    const [resMenu,setResMenu] = useState(null);
-  //  const [newResMenu, setNewResMenu] = useState(null);
    const [resNewInfo, setResNewInfo] = useState(null);
    const [resCategory,setResCategory] = useState(null);
-  //  const [vegFood, setVegFood] = useState('GreenChilli');
+  const [showIndex,setShowIndex] = useState(null);
 
 
 
@@ -46,18 +45,11 @@ const fetchInfo =  async () => {
 
     setResCategory(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
    
-    // setNewResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-
-
-
   } catch (error) {
     console.error("Error fetching restaurant information:", error);
   }
 
 };
-
-
-
   
   // Before destructuring the data, we need to fetch it as we don't know how long it will take to fetch, and it will return undefined otherwise.
   if (resMenu === null) {
@@ -70,20 +62,17 @@ const fetchInfo =  async () => {
   const { message } = resNewInfo;
 
   
-
-  //To find the Item categories from Swiggys API and stored in the variable.
+//To find the Item categories from Swiggys API and stored in the variable.
 const categories = resCategory;
 // console.log(categories);
-
-
 
   // Rendering the JSX structure
   return (
     <div className="pages-container">
 
-      <div className="rest-menu">
+<div className="rest-menu">
 
-        {/* Top-Menu Section */}
+{/* Top-Menu Section */}
         <div className="top-menu">
           <div className="top-menu-left">
             {/* Displaying the restaurant image */}
@@ -117,43 +106,24 @@ const categories = resCategory;
           </div>
         </div>
 
-{/* 
-      Mid-Menu Section added with the component */}
-{/* <div className="mid-menu">
-  <button
-    id="isVegBtn"
-    onClick={() => {
-      // Toggling between Veg and All options
-      if (vegFood === "GreenChilli") {
-        setVegFood("RedChilli");
-        // Set the entire menu when switching to "RedChilli" (All options)
-        setResMenu(newResMenu); // Replace 'apiResponse' with the actual variable holding the API data
-      } else {
-        setVegFood("GreenChilli");
-        // Filter the menu for vegetarian options when switching to "GreenChilli"
-        const filteredVegMenu = resMenu?.filter((res) => res.card.info.itemAttribute.vegClassifier === 'VEG');
-        setResMenu(filteredVegMenu);
-      }
-    }}
-    style={{ backgroundColor: vegFood === "GreenChilli" ? "green" : "red" }}>
-    {vegFood}
-  </button>
-
-</div> */}
-
-
-
 
 {/*  Main-Menu Categories Accordions added with the component*/}
-       {/* Introduced Controlled and uncontrolled Components  In this code , The parent is controlling over on child component*/}
+ {/* Introduced Controlled and uncontrolled Components  In this code , The parent is controlling over on child component*/}
 {categories.map ((category,index)=>(
+  //Controlled component:-
   <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}
-  // The logical AND (&&) operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false.
-    showItems={index === 0 && true}
+   showItems={index === showIndex ? true : false}
+   showTheIndex={() => {
+    
+              // Toggle the accordion state
+              setShowIndex((prevIndex) => (
+                prevIndex === index ? null : index));
+            }}
   />)
-)}
 
-        {/* Bottom-Menu Section */}
+)} 
+
+{/* Bottom-Menu Section */}
         <div className="bottom-menu">
           <div className="RestaurantLicence_wrapper__4BYQV">
             <div className="RestaurantLicence_licence__Oo5_q" aria-hidden="true">
@@ -171,6 +141,7 @@ const categories = resCategory;
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

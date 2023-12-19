@@ -1,11 +1,9 @@
-// import { useState } from "react";
+
 import ItemsList from "./ItemsList";
 
 const RestaurantCategory = (props)=>{
   // Destructuring the props.
-    const {data,showItems} = props;
-
-
+  const {data,showItems,showTheIndex} = props;
 
 
   //Whenever the state variables update,react triggers a reconciliation process or cycle it re-renders the components or component.
@@ -15,6 +13,7 @@ const RestaurantCategory = (props)=>{
 //Defined `handleClick()` function to enabling and closing accordions
 const handleClick = ()=>{
   // console.log("Clicked");
+showTheIndex();
 
   //The `Javascript !` operator is the logical not operator which returns the true if its operand is false and false if its operand its true.
   // setShowItems(true);
