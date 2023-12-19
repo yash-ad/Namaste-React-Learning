@@ -117,7 +117,7 @@ showItems={index === showIndex ? true : false}
 //`showTheIndex` function uses the callback version of setShowIndex to toggle the state based on the current state. 
 //This ensures that clicking on an already expanded accordion collapses it. 
 showTheIndex={()=>{
-//This is the state-setting function which is provided by `React hooks` `useState` hook,It is used to update the state .
+//`setShowIndex()` This is the state-setting function which is provided by `React hooks` `useState` hook,It is used to update the state .
 //`prevIndex` This is a parameter of the arrow function,representing the current value of `showIndex` state
   //This expression determines the new state value for showIndex based on the current state (prevIndex) and the index of the accordion.
   //This is a conditionally ternary expression. if the current accordion index `prevIndex` is equal to the index clicked accordion `index`
