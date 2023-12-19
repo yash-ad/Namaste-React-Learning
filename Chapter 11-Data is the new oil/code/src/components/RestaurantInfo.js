@@ -112,15 +112,18 @@ const categories = resCategory;
 {categories.map ((category,index)=>(
   //Controlled component:-
   <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}
-   showItems={index === showIndex ? true : false}
-   showTheIndex={() => {
-    
-              // Toggle the accordion state
-              setShowIndex((prevIndex) => (
-                prevIndex === index ? null : index));
-            }}
-  />)
-
+showItems={index === showIndex ? true : false}
+//showTheIndex is a prop that you pass to the RestaurantCategory component. It is a function that presumably handles the toggling of the accordion's visibility.
+showTheIndex={()=>{
+//This is the state-setting function which is provided by `React hooks` `useState` hook,It is used to update the state .
+//`prevIndex` This is a parameter of the arrow function,representing the current value of `showIndex` state
+  //This expression determines the new state value for showIndex based on the current state (prevIndex) and the index of the accordion.
+  //This is a conditionally ternary expression. if the current accordion index `prevIndex` is equal to the index clicked accordion `index`
+  //it means the accordion is already open, so set the state to null (close the accordion).
+  //if they are not equal, set the state to the index of the clicked accordion (open the accordion).
+setShowIndex((prevIndex)=>(prevIndex === index ? null : index))
+}
+}/>)
 )} 
 
 {/* Bottom-Menu Section */}

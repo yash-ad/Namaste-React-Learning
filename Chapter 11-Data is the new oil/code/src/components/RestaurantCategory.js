@@ -13,8 +13,8 @@ const RestaurantCategory = (props)=>{
 //Defined `handleClick()` function to enabling and closing accordions
 const handleClick = ()=>{
   // console.log("Clicked");
-showTheIndex();
 
+showTheIndex();
   //The `Javascript !` operator is the logical not operator which returns the true if its operand is false and false if its operand its true.
   // setShowItems(true);
   // setShowItems(!showItems);
@@ -38,6 +38,9 @@ expand_more
 </div>  
 
     {/* Accordions Body  */}
+{/* The logical AND operator ( && ) returns true if both operands are true and returns false otherwise. 
+The operands are implicitly converted to type bool before evaluation, and the result is of type bool . 
+Logical AND has left-to-right associativity. */}
 {showItems && <div className="Accordions-body">
 <ItemsList items={data.itemCards} />
 </div>}
