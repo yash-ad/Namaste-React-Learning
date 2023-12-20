@@ -1,12 +1,18 @@
 // Importing necessary dependencies and configuration
 import { LOGO_URL } from "../utilities/config";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utilities/UserContext";
 
 // Defining the Header component
 const Header = () => {
   // Using the useState hook to manage the state of the toggle button
   const [toggleButton, setToggleButton] = useState('Login');
+
+
+  //Introduced `useContext` hook:-
+const {data} = useContext(UserContext);
+console.log(data);
 
   return (
     // JSX representing the structure of the Header component
@@ -35,6 +41,7 @@ const Header = () => {
           >
             {toggleButton}
           </button>
+          <li>Cart</li>
         </ul>
       </div>
     </div>
