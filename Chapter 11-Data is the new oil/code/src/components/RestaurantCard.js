@@ -1,15 +1,17 @@
 // Importing necessary dependencies
 import { CDN_URL } from "../utilities/config";
 
+
 // Defining the RestaurantCard component
 const RestaurantCard = (props) => {
   // Destructuring the props to get the restaurantData object
   const { restaurantData } = props;
+  
 
   // Destructuring values from the restaurantData object
   const { name, cloudinaryImageId, avgRating, costForTwo, areaName, cuisines, locality } = restaurantData?.info;
   const { slaString } = restaurantData?.info.sla;
-
+  
   return (
     <div className="restaurant-list">
       <div className="place">

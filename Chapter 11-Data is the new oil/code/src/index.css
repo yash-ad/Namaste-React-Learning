@@ -61,9 +61,19 @@ font-weight: 500;
 .nav-items > ul > li{
 cursor: pointer;
 padding: 10px;
-margin: 10px;
+margin: 12px;
+margin-right: 20px;
 }
-  
+._1T-E4{
+  display: flex;
+  align-items: center;
+  padding-left: 28px;
+}
+._1T-E4 {
+  height: 100%;
+  margin-left: -28px;
+  color: inherit;
+}
 .nav-items > ul > li:hover{
 color:#FC9A01;
 }

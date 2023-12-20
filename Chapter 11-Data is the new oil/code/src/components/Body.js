@@ -1,11 +1,12 @@
 // Importing necessary dependencies and components
 import RestaurantCard from "./RestaurantCard";
-import { useState,useEffect } from "react";
+import { useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";   
 import useRestaurantList from "../utilities/useRestaurantList";
 import useOnlineStatus from "../utilities/useOnlineStatus";
 import NetworkStatus from "./NetworkStatus";
+
 
 // Defining the Body component
 const Body = () => {
@@ -13,12 +14,14 @@ const listOfRestaurants = useRestaurantList();
 const [filterRestaurants, setFilterRestaurants] = useState([]);
 const [searchText, setSearchText] = useState('');
 
+
 useEffect(()=>{
 setFilterRestaurants(listOfRestaurants);
 },[listOfRestaurants])
 
 //Lets add the feature overhere to check Whether the user is an offline or not with our own custom hook `useOnlineStatus()`.
 const onlineStatus = useOnlineStatus()
+
 
 if(onlineStatus === false)
   return( <NetworkStatus/>
@@ -81,6 +84,7 @@ if(onlineStatus === false)
       </div>
        </div>
        </div>
+
   
 
 
@@ -95,9 +99,8 @@ if(onlineStatus === false)
             setFilterRestaurants(filteredLists);
           }}
         >
-          Ratings 4.0+
+         Top Rated Restaurants
         </button>
-
         <button
           className="finder-btns"
           onClick={() => {
@@ -109,6 +112,8 @@ if(onlineStatus === false)
           Pure Veg
         </button>
       </div>
+   
+
 
       {/* Displaying Restaurant Cards */}
       <div className="restaurant-container">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -7,16 +7,32 @@ import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import { lazy,Suspense } from "react";
 import Error from "./components/Error";
 import RestaurantInfo from "./components/RestaurantInfo";
+import UserContext from "./utilities/UserContext";
 
 
 // Define the layout of the entire application
 const AppLayout = () => {
+  const[userName,setUserName] = useState();
+
+  //For-Authentication
+useEffect(()=>{
+const data = {
+  Name:"",
+}
+setUserName(data.Name)
+},[])
+
+
   return (
+    //React-context
+    <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
     <div className="App-container">
       <Header />
       <Outlet />
       <Footer />
     </div>
+    </UserContext.Provider>
+   
   );
 };
 

@@ -1,11 +1,14 @@
 import React from "react";
 import UserClass from "./UserClass";
 import { Component } from "react";
+import UserContext from "../utilities/UserContext";
 
 class About extends Component{
     constructor(props){
        super(props) 
     }
+
+
 
     componentDidMount(){
     }
@@ -14,6 +17,11 @@ class About extends Component{
         return(
             <div className="about-us-container">
             <h1>About Us</h1> 
+            <div>
+            User :<UserContext.Consumer>
+                {/* {({loggedInUser})=> loggedInUser} */}
+                {({loggedInUser})=> <h1>{loggedInUser}</h1>}
+            </UserContext.Consumer></div>
             <UserClass name={"First"} location={"First class"}/>
             </div>)
     }
