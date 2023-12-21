@@ -48,7 +48,7 @@ const Footer = () => {
       {/* Footer Contact Section */}
       <div className="footer-contact"> 
         {/* Copyright information */}
-        <div className="copyrights">All rights reserved. © 2023 FoodExplorer</div>
+        <div className="copyrights">All rights reserved. © 2023-24 FoodExplorer</div>
         <div className="footer-logos">
           {/* Social media icons or logos could be added here */}
           <div className="social-media">
