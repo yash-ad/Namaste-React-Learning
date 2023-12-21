@@ -6,13 +6,18 @@ import { Link } from "react-router-dom";
 import useRestaurantList from "../utilities/useRestaurantList";
 import useOnlineStatus from "../utilities/useOnlineStatus";
 import NetworkStatus from "./NetworkStatus";
-
+import { withPromotedLabel } from "./RestaurantCard";
 
 // Defining the Body component
 const Body = () => {
 const listOfRestaurants = useRestaurantList();
 const [filterRestaurants, setFilterRestaurants] = useState([]);
 const [searchText, setSearchText] = useState('');
+console.log(listOfRestaurants);
+
+
+//This is a higher order component that we passed in the RestaurantCard which returns a new component.
+const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
 
 
 useEffect(()=>{
@@ -120,7 +125,14 @@ if(onlineStatus === false)
         {filterRestaurants?.map((restaurant) => (
           // Linking each restaurant card to its details page
           <Link key={restaurant.info.id} to={'/restaurants/' + restaurant.info.id}>
-            <RestaurantCard restaurantData={restaurant} />
+
+
+{/* The recent update to the Swiggy API, the 'PROMOTED' data is no longer available,Because there were no any option so Instead of "Promoted' there is a 'veg' attribute for every restaurant. So I used that for label "Promoted" using higher order components */}
+{restaurant.info.veg ? (
+  <RestaurantPromotedLabel restaurantData={restaurant} />
+  ) : ( <RestaurantCard restaurantData={restaurant} />)
+}
+           
           </Link>
         ))}
       </div>

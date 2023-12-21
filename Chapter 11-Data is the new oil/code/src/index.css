@@ -551,12 +551,14 @@ gap: 2vw;
 
  align-items: center;
 }
+
 .top-menu-left img{
 max-width: 220px;
 min-width: 200px;
 border-radius: 10px;
 padding-top: 20px;
 }
+
 .top-menu-right{
 width: 50%;
 display: flex;
@@ -566,6 +568,7 @@ gap: 1vw;
 padding-top: 40px;
 padding-left: 20px;
 }
+
 .top-menu-right > h1{
 font-weight: bold;
 font-size: 30px;
@@ -665,13 +668,12 @@ box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   cursor: pointer;
 }
 
-
-
 .main-menu h1{
 font-size: 20px;
 margin-bottom: 1.5vw;
 font-weight: 1000;
 }
+
 .mid-menu{
 background-color: #fff;
 display: flex;
@@ -679,12 +681,14 @@ justify-content: flex-start;
 align-items: center;
 padding: 2vw 18vw;
 }
+
 .mid-menu button{
 padding: 4px 15px;
 border-radius: 5px;
 font-size: 15px;
 font-weight: 800;
 }
+
 .menu-card{
 background-color: #fff;
 width: 100%;
@@ -694,9 +698,11 @@ align-items: flex-start;
 padding: 2vw 0;
 border-bottom: 1px solid #D3D3D3;
 }
+
 .menu-left{
 width: 65%;
 }
+
 .menu-left h3{
 color: #3E4152;
 font-size: 18px;
@@ -705,11 +711,13 @@ letter-spacing: 0.25px;
 word-spacing: 2px;
 font-weight: 600;
 }
+
 .mid-menu button{
 color: white;
 border: none;
 outline: none;
 }
+
 .menu-left p:nth-child(2){
 padding-bottom: 2vw;
 padding-top: 0.5vw;
@@ -720,6 +728,7 @@ letter-spacing: 0.1px;
 word-spacing: 2px;
 font-weight: 500;
 }
+
 .menu-left p:nth-child(3){
 font-size: 15px;
 color: #8d8d8d;
@@ -727,6 +736,7 @@ line-height: 20px;
 letter-spacing: 0.25px;
 word-spacing: 2px;
 }
+
 .menu-right{
 height: 70%;
 display: flex;
@@ -734,6 +744,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 }
+
 .menu-right img{
 max-width: 150px;
 min-width: 150px;
@@ -741,6 +752,7 @@ max-height: 150px;
 min-height: 100px;
 border-radius: 10px;
 }
+
 .menu-right button{
 padding: 9px 24px;
 background-color: #fff;
@@ -752,6 +764,7 @@ cursor: pointer;
 font-weight:bolder;
 margin-top: -20px;
 }
+
 .menu-right button:hover{
 box-shadow: 0 1px 5px #ececec;
 }
@@ -771,8 +784,8 @@ box-shadow: 0 1px 5px #ececec;
 
 
 .RestaurantLicence_wrapper__4BYQV {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 padding: 0 16px 16px;
 font-size: .93rem;
 color: #f1f1f6;
@@ -794,6 +807,7 @@ padding: 0 16px 120px;
 min-height: 100vh;
   background-color: rgb(255, 255, 255);
 }
+
 .user-card{
  padding: 20px;
 }
@@ -901,4 +915,22 @@ padding-bottom: 250px;
   font-size: 15px;
   font-weight: 600;
   outline: none;
+}
+
+.promo-status {
+  /* left: -8px;
+  top: 0; */
+  position: absolute;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 9px 9px 5px;
+  max-width: 40%;
+  background-color: rgb(58, 60, 65);
+  color: rgb(255, 255, 255);
+  border-color: rgb(30, 32, 35) transparent;
+  margin-top: 15px;
+  margin-left: 30px;
+  border-radius: 0.3rem;
 }

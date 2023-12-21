@@ -1,6 +1,6 @@
 // Importing necessary dependencies
 import { CDN_URL } from "../utilities/config";
-
+import DisplayPromoted from "./DisplayPromoted";
 
 // Defining the RestaurantCard component
 const RestaurantCard = (props) => {
@@ -21,8 +21,7 @@ const RestaurantCard = (props) => {
               {/* Displaying the restaurant image using CDN_URL and cloudinaryImageId */}
               <img className="res-img" alt="Res-image" src={CDN_URL + cloudinaryImageId} />
             </div>
-          </div>
-          <div className="place-name-div">
+            <div className="place-name-div">
             <div className="name">{name}</div>
 
             {/* Here i have used `slice()` method to limit the number of displayed cuisines and here i want to add cuisines only few 3 to 4
@@ -42,6 +41,7 @@ const RestaurantCard = (props) => {
             {/* Displaying locality and areaName */}
             <span className="sNAfh">{locality} | {areaName}</span>
           </div>
+          </div>
         </div>
       </div>
     </div>
@@ -50,3 +50,21 @@ const RestaurantCard = (props) => {
 
 // Exporting the RestaurantCard component
 export default RestaurantCard;
+
+
+//Higher order component:-
+
+export const withPromotedLabel = (RestaurantCard)=>{
+return(props)=>{
+return (
+<div>
+{/* Implemneted the `<DisplayPromoted/>` directly into the Higher order component which displays the `PROMOTED` label on the restaurants cards. */}
+<DisplayPromoted/>
+{/* //Using spread operator all the props that i have recieved from */}
+<RestaurantCard {...props}/> 
+</div>
+);
+
+};
+
+};
