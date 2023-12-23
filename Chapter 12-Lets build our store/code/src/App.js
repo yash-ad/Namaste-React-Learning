@@ -8,6 +8,8 @@ import { lazy,Suspense } from "react";
 import Error from "./components/Error";
 import RestaurantInfo from "./components/RestaurantInfo";
 import UserContext from "./utilities/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utilities/appStore";
 
 
 // Define the layout of the entire application
@@ -24,6 +26,9 @@ setUserName(data.Name)
 
 
   return (
+
+    //React-redux
+<Provider store={appStore}>
     //React-context
     <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
     <div className="App-container">
@@ -32,7 +37,7 @@ setUserName(data.Name)
       <Footer />
     </div>
     </UserContext.Provider>
-   
+    </Provider>
   );
 };
 
