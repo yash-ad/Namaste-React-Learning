@@ -4,8 +4,8 @@
   "description": "This is Namaste-React By Akshay Saini",
   "main": "index.js",
   "scripts": {
-    "start": "parcel \"Chapter 11-Data is the new oil/code/src/index.html\"",
-    "build": "parcel build \"Chapter 11-Data is the new oil/code/src/index.html\"",
+    "start": "parcel \"Chapter 12-Lets build our store/code/src/index.html\"",
+    "build": "parcel build \"Chapter 12-Lets build our store/code/src/index.html\"",
     "test": "jest"
   },
   "repository": {
