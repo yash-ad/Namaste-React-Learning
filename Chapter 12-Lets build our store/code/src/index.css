@@ -92,7 +92,11 @@ align-items: center;
   text-align: center;
   margin-top: 5px;
  }
-
+.cart-length{
+  font-size:19px;
+  color:#60B246;
+  font-weight: 500;
+}
 .toggleBtn{
 background-color:#FC9A01;
 color: #ffffff;
