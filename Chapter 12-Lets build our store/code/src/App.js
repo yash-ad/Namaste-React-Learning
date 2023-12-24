@@ -27,9 +27,9 @@ setUserName(data.Name)
 
   return (
 
-    //React-redux
+    // React-redux
 <Provider store={appStore}>
-    //React-context
+    {/* //React-context */}
     <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
     <div className="App-container">
       <Header />

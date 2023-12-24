@@ -52,7 +52,7 @@ margin-left: 15px;
 display: flex;
 align-items: center;
 list-style:none;
-margin-right: 15px;
+margin-right: 10px;
 color: #3d4152;
 font-size: 19px;
 font-weight: 500;
@@ -62,7 +62,7 @@ font-weight: 500;
 cursor: pointer;
 padding: 10px;
 margin: 10px;
-margin-right: 15px;
+margin-right: 10px;
 }
 ._1T-E4{
   display: flex;
@@ -77,6 +77,21 @@ margin-right: 15px;
 .nav-items > ul > li:hover{
 color:#FC9A01;
 }
+.cart{
+  display: flex;
+align-items: center;
+  gap: 5;
+ }
+ .user{
+  display: flex;
+  align-items: center;
+    gap: 5;
+ }
+ .user-text{
+  display: flex;
+  text-align: center;
+  margin-top: 5px;
+ }
 
 .toggleBtn{
 background-color:#FC9A01;
