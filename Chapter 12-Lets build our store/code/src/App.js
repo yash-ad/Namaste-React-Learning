@@ -10,6 +10,7 @@ import RestaurantInfo from "./components/RestaurantInfo";
 import UserContext from "./utilities/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utilities/appStore";
+import CartStore from "./components/CartStore";
 
 
 // Define the layout of the entire application
@@ -59,6 +60,7 @@ const appRouter = createBrowserRouter([
       //<Suspense> is a React component that is used for handling components with asynchronous behavior, such as lazy-loaded components or data fetching.
       { path: "/about", element: <Suspense fallback={<div>Loading...</div>}><About/></Suspense> },
       { path: "/contact", element:<Suspense fallback={<div>Loading...</div>}><Contact/></Suspense>  },
+      { path: "/cart", element: <CartStore/>},
     ],
   },
 ]);
