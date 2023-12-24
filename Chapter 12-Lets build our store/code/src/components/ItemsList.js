@@ -1,15 +1,23 @@
 import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
+import { addItem } from "../utilities/cartSlice";
 
 const ItemsList = (props)=>{
   const {items} = props;
     // console.log(items);
 
 //Introduced `useDispatch` hook for dispatching an actions.
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
+
+//This is a designated callback function.handleAddItem();
 const handleAddItem = ()=>{
+  //In the action whatever i pass into this action it will be display.
+  //dispatch(addItem("pizza"))//['pizza']
+  
 //`It dispatches an action`.
-}
+dispatch(addItem())
+};
 
     return(
 <div>
@@ -23,6 +31,7 @@ const handleAddItem = ()=>{
                 </div>
                 <div className="menu-right">
                   <img src={IMG_URL + item.card.info.imageId} alt="Item" />
+                  {/* //The `onClick` event will call a designated callback function when the button is clicked. */}
                   <button onClick={handleAddItem} id="addBtn">ADD </button>
                 </div>
               </div>
