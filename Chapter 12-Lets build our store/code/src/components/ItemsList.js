@@ -1,8 +1,16 @@
+import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
 
 const ItemsList = (props)=>{
   const {items} = props;
     // console.log(items);
+
+//Introduced `useDispatch` hook for dispatching an actions.
+    const dispatch = useDispatch()
+const handleAddItem = ()=>{
+//`It dispatches an action`.
+}
+
     return(
 <div>
     {/* Iterating over the restaurant categories of items list/array of objects using map() */}
@@ -15,7 +23,7 @@ const ItemsList = (props)=>{
                 </div>
                 <div className="menu-right">
                   <img src={IMG_URL + item.card.info.imageId} alt="Item" />
-                  <button id="addBtn">ADD</button>
+                  <button onClick={handleAddItem} id="addBtn">ADD </button>
                 </div>
               </div>
             ))}
