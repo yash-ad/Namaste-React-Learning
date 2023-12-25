@@ -1,5 +1,7 @@
 
+import CartList from "./CartList";
 import ItemsList from "./ItemsList";
+
 
 const RestaurantCategory = (props)=>{
   // Destructuring the props.
@@ -43,6 +45,7 @@ The operands are implicitly converted to type bool before evaluation, and the re
 Logical AND has left-to-right associativity. */}
 {showItems && <div className="Accordions-body">
 <ItemsList items={data.itemCards} />
+<CartList items={data.itemCards}/>
 </div>}
 
 </div>

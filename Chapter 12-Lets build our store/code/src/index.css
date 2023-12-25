@@ -720,6 +720,8 @@ padding: 2vw 0;
 border-bottom: 1px solid #D3D3D3;
 }
 
+
+
 .menu-left{
 width: 65%;
 }
@@ -779,15 +781,16 @@ padding: 9px 24px;
 background-color: #fff;
 color: #60B246;
 outline: none;
-border: 0.1px solid gray;
+border: 0.1px solid #d4d4d4;
 border-radius: 10px;
 cursor: pointer;
 font-weight:bolder;
-margin-top: -20px;
+z-index: 1;
+margin-top: -25px;
 }
 
 .menu-right button:hover{
-box-shadow: 0 1px 5px #ececec;
+box-shadow: 0 1px 5px #bab9b9;
 }
 
 .bottom-menu{
@@ -833,11 +836,81 @@ min-height: 100vh;
   /* justify-content: space-between; */
   align-items: center;
   flex-direction: column;
-  margin-top: 10vw;
+  margin-top: 8vw;
   /* width: 100%; */
 min-height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: #e9ecee;
 }
+
+
+.cart-items{
+  margin-left: 250px;
+  padding: 35px 40px 39px;
+  width: 70%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15vw;
+}
+
+.cart-menu{
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2vw 5vw;
+  border-bottom: 1px solid #D3D3D3;
+  }
+  .cart-menu-right button{
+    padding: 9px 24px;
+    background-color: #fff;
+    color: #60B246;
+    outline: none;
+    border: 0.1px solid #d4d4d4;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight:bolder;
+    margin-top: -25px;
+    }
+
+    .cart-menu-right{
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      }
+      
+      .cart-menu-right img{
+      max-width: 120px;
+      min-width: 120px;
+      max-height: 120px;
+      min-height: 100px;
+      border-radius: 10px;
+      }
+      
+      .cart-menu-right button{
+      padding: 5px 20px;
+      background-color: #fff;
+      color: #60B246;
+      outline: none;
+      border: 0.5px solid #d4d4d4;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight:bolder;
+      z-index: 1;
+      margin-top: -20px;
+      }
+      
+      .cart-menu-right button:hover{
+      box-shadow: 0 1px 5px #bab9b9;
+      }
+   .buttons{
+    display: flex;
+   gap: 15;
+   }
+      
+
 .user-card{
  padding: 20px;
 }

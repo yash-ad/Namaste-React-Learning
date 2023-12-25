@@ -2,9 +2,8 @@ import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
 import { addItem } from "../utilities/cartSlice";
 
-const ItemsList = (props)=>{
-  const {items} = props;
-    // console.log(items);
+const ItemsList = ({items})=>{
+   
 
 //Introduced `useDispatch` hook for dispatching an actions.
   const dispatch = useDispatch();
@@ -46,10 +45,7 @@ dispatch(addItem(item))
                   // This means that handleAddItem will be called with the argument item as soon as the component renders, not when the button is clicked.
                   // If you want to pass arguments to the handleAddItem function when the button is clicked, you should use an arrow function or a function reference without invoking it immediately. 
                   // {/* <button onClick={handleAddItem(item)}  */}
-                  
-                  
-                  
-                  id="addBtn">ADD </button>
+                  id="addBtn">ADD</button>
                 </div>
               </div>
             ))}

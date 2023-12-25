@@ -10,19 +10,24 @@ import { withPromotedLabel } from "./RestaurantCard";
 
 // Defining the Body component
 const Body = () => {
-const listOfRestaurants = useRestaurantList();
-const [filterRestaurants, setFilterRestaurants] = useState([]);
+  const [filterRestaurants, setFilterRestaurants] = useState([]);
+  const listOfRestaurants = useRestaurantList();
 const [searchText, setSearchText] = useState('');
-console.log(listOfRestaurants);
+// console.log(listOfRestaurants);
 
 
 //This is a higher order component that we passed in the RestaurantCard which returns a new component.
 const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
 
-
+//The `useEffect` hook is a React hook that is used for handling side-effects in functional components, in this specific case,it is being used to update the state variable `filterRestaurants` whenever the `listOfRestaurants` changes.
 useEffect(()=>{
+  // console.log("listOfRestaurants:", listOfRestaurants);
+//The function inside useEffect is the side effect that you want to perform. In this case, it sets the state of filterRestaurants using the setFilterRestaurants function to be equal to the current value of listOfRestaurants.
 setFilterRestaurants(listOfRestaurants);
+//The second argument to useEffect is the dependency array. It contains variables that the useEffect depends on. The useEffect will be re-run whenever any of the variables in the dependency array change.
 },[listOfRestaurants])
+//In your code, the useEffect is triggered whenever the value of listOfRestaurants changes. When this happens, it updates filterRestaurants to match the latest value of listOfRestaurants.
+// console.log("filterRestaurants:", filterRestaurants);
 
 //Lets add the feature overhere to check Whether the user is an offline or not with our own custom hook `useOnlineStatus()`.
 const onlineStatus = useOnlineStatus()
@@ -33,9 +38,16 @@ if(onlineStatus === false)
   )
 
 
-  // Display a loading shimmer if there are no filtered restaurants yet
-  if (filterRestaurants.length === 0) return <Shimmer />;
-  // console.log("Body Rendered",listOfRestaurants);
+
+// Display a loading shimmer if there are no filtered restaurants yet
+// if (filterRestaurants.length === 0) return <Shimmer />;
+
+if (!filterRestaurants || filterRestaurants.length === 0) {
+  // Data is not yet available, return a loading state or nothing
+  return <Shimmer/>;
+};
+
+
   return (
     <div className="body">
       {/* Search Bar */}
