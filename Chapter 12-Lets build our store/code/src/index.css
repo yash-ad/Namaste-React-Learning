@@ -800,9 +800,8 @@ box-shadow: 0 1px 5px #bab9b9;
   gap: 5;
   align-items: flex-start;
   width: 100%;
-  padding: 10vw 1vw;
+  padding: 9vw 0vw;
   display: flex;
-  margin: 0.1px;
   border: none;
 }
 
@@ -840,7 +839,7 @@ min-height: 100vh;
   margin-top: 8vw;
   /* width: 100%; */
 min-height: 100vh;
-  background-color: #e9ecee;
+  background-color: #f7f7f7;
 }
 
 
@@ -974,33 +973,38 @@ box-shadow: 0 1px 5px #bab9b9;
   
 
 .empty-cart-container{
-    height: calc(100vh - 80px);
+    height: 90vh;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin:auto;
     text-align: center;
-    background: #fff;
+    margin-top: -95px;
+    margin-left: 25px;
+    /* background: #fff; */
 }
 .empty-cart-image{
-  width: 271px;
-  height: 256px;
-  background-image: url(https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0);
+  width: 281px;
+  height: 266px;
+  background-image: url(https://cdni.iconscout.com/illustration/free/thumb/free-empty-cart-4085814-3385483.png);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  margin-right: 340px;
 }
 .empty-cart-status{
-  margin-top: 24px;
-  font-size: 20px;
+  margin-top: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #535665;
 }
 .empty-cart-command{
-  margin-top: 8px;
-    color: #7e808c;
+  margin-top: 10px;
+    color: #444444;
+    font-size: 17px;
+    font-weight: 100;
 }
 .empty-cart-button{
   margin-top: 30px;
@@ -1014,7 +1018,6 @@ box-shadow: 0 1px 5px #bab9b9;
     outline: 0;
     font-size: 15px;
     text-align: center;
-    -ms-transform: translateY(0);
     transform: translateY(0);
     transition: transform .8s cubic-bezier(.2,1,.2,1);
 }

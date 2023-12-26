@@ -11,6 +11,7 @@ import UserContext from "./utilities/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utilities/appStore";
 import CartStore from "./components/CartStore";
+import EmptyCart from "./components/EmptyCart";
 
 
 // Define the layout of the entire application
@@ -61,6 +62,7 @@ const appRouter = createBrowserRouter([
       { path: "/about", element: <Suspense fallback={<div>Loading...</div>}><About/></Suspense> },
       { path: "/contact", element:<Suspense fallback={<div>Loading...</div>}><Contact/></Suspense>  },
       { path: "/cart", element: <CartStore/>},
+      { path: "/", element: <EmptyCart/>},
     ],
   },
 ]);

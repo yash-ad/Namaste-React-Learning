@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import CartList from "./CartList";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../utilities/cartSlice";
+import EmptyCart from "./EmptyCart";
 
 const CartStore = ()=> {
 
@@ -16,10 +17,12 @@ dispatch(clearCart());
 return (
     <div className="cart-container">
     <div className="cart-items">
-    {/* //Re-usable component for showing itemLists , and it takes an items as an input and pass the cartItems overhere*/}
-{/* <ItemsList items={cartItems} /> */}
-<CartList items={cartItems}/>
-  {/* Conditionally render the "Clear Cart" button */}
+
+
+{cartItems.length === 0 ? <EmptyCart/> :
+<CartList items={cartItems}/>}
+
+  {/* Conditionally render the "Clear Cart" button using ternary operator */}
   {cartItems.length > 0 ? <button className="clear-cart-button rounded" onClick={handleClearCart}>Clear Cart</button>: null
         }
     </div>
