@@ -40,7 +40,7 @@ if(onlineStatus === false)
 
 
 // Display a loading shimmer if there are no filtered restaurants yet
-// if (filterRestaurants.length === 0) return <Shimmer />;
+// if (!filterRestaurants || filterRestaurants.length === 0)  return <Shimmer />;
 
 if (!filterRestaurants || filterRestaurants.length === 0) {
   // Data is not yet available, return a loading state or nothing
