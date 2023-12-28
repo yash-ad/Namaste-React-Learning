@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//Context of Redux slice:-
 
 const cartSlice = createSlice({
 //We added `name` to the slice.
@@ -10,12 +11,18 @@ items:[]
 },
 reducers:{
 addItem:(state,action)=>{
+const addToCart = action.payload;
 //Mutating the state here , directly modifying the state.
-state.items.push(action.payload);
+//We have to mutate the state      [`Immer` library for immutable state]
+//Redux-toolkit uses `Immer` Behind the scenes.
+state.items.push(addToCart);
 },
-removeItem:(state)=>{
-state.items.pop()
+
+removeItem:(state,action)=>{
+    const itemToRemove = action.payload;
+   state.items.filter((item)=> item.id !== itemToRemove);
 },
+
 clearCart:(state)=>{
 state.items.length = 0 //[for an empty array]
 }

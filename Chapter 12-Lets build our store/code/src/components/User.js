@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useContext } from "react";
+import UserContext from "../utilities/UserContext";
 
-const User = (props)=>{
-const[count] = useState(0);
-const[message] = useState('Hello React , Im From functional component')
-const{name,location} = props;
+
+
+const User = ()=> {
+
+const {loggedInUser,setUserName} = useContext(UserContext);
+
 return(
-<div className="user-card">
-<div>Name:{name}</div>
-<div>Location:{location}</div>
-<h2>Count:{count}</h2>
-<h3>Message:{message}</h3>
+<div className="user-container">
+<div>
+      <input className="input-bar border border-black p-4 bg-black"
+            type="text"
+            placeholder="Enter your Username here"
+            value={loggedInUser}
+            onChange={(event)=> setUserName(event.target.value)}
+          />
+          </div> 
 </div>
 )
 };

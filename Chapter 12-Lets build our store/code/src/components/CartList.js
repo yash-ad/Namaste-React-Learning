@@ -1,8 +1,15 @@
 
+import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
-
+import { removeItem } from "../utilities/cartSlice";
 
 const CartList = ({items})=>{
+
+  const dispatch = useDispatch();
+
+  const  handleRemoveItem = (id) => {
+dispatch(removeItem(id))
+  };
 
     return(
  <div>
@@ -18,10 +25,10 @@ const CartList = ({items})=>{
              <div className="cart-menu-right">
            <img src={IMG_URL + item.card.info.imageId} alt="Item" />
           <div className="buttons">
-          <button onClick={()=> handleAddItem(item)} 
+          <button onClick={()=> handleRemoveItem(id)} 
                id="lessBtn"> - </button>
-          <button onClick={()=> handleAddItem(item)} 
-               id="addBtn"> + </button>
+          {/* <button
+               id="addBtn"> + </button> */}
           </div>
              </div>
            </div>
@@ -29,6 +36,7 @@ const CartList = ({items})=>{
 </div>
 </div>
     ) 
+    
 };
 
 export default CartList;
