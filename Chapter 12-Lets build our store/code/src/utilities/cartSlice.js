@@ -7,7 +7,6 @@ const cartSlice = createSlice({
 name:"cart",
 initialState:{
 items:[]
-// items:["Pav-Bhaji","Bhel-puri"]
 },
 reducers:{
 addItem:(state,action)=>{
@@ -18,10 +17,12 @@ const addToCart = action.payload;
 state.items.push(addToCart);
 },
 
-removeItem:(state,action)=>{
-    const itemToRemove = action.payload;
-   state.items.filter((item)=> item.id !== itemToRemove);
-},
+removeItem: (state, action) => {
+    const itemIdToRemove = action.payload.id;
+    const indexToRemove = state.items.findIndex(item => item.id !== itemIdToRemove);
+    state.items.splice(indexToRemove, 1);
+  },
+  
 
 clearCart:(state)=>{
 state.items.length = 0 //[for an empty array]
