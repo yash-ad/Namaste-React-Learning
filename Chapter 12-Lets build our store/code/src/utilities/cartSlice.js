@@ -20,7 +20,7 @@ state.items.push(addToCart);
 removeItem: (state, action) => {
     const itemIdToRemove = action.payload.id;
     const indexToRemove = state.items.findIndex(item => item.id !== itemIdToRemove);
-    state.items.splice(indexToRemove, 1);
+    state.items.splice(indexToRemove, 1); //We just want to remove `1` element from an array.
   },
   
 
@@ -34,5 +34,3 @@ state.items.length = 0 //[for an empty array]
 export const{addItem,removeItem,clearCart} = cartSlice.actions;
 
 export default cartSlice.reducer;
-
-//Now we have build the slice and  we want to add the slice to the store.
