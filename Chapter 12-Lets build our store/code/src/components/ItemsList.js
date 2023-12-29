@@ -6,15 +6,15 @@ const ItemsList = ({items})=>{
    
 
 //Introduced `useDispatch` hook for dispatching an actions.
+//It uses dispatch function,`useDispatch` hook from react-redux to send an action to the Redux store here the store on our app is `appsStore`.
   const dispatch = useDispatch();
 
 
-//This is a designated callback function.handleAddItem();
+//This is a designated callback function called `handleAddItem()`
 const handleAddItem = (item)=>{
-  //In the action whatever i pass into this action it will be display.
-  //dispatch(addItem("pizza"))//['pizza']
-  
-//`It dispatches an action`.
+//Inside `handleAddItem` function, the action `addItem` is dispatched.
+//The `addItem` action is a part of your Redux slice  which means in our app is `cartSlice` and we have exported the action from `cartSlice.actions` and it is designed to add the item for the cart. 
+// It dispatches an action which calls the `reducer` function called `addItem()` with the `item` parameter as a payload.
 dispatch(addItem(item))
 };
 
@@ -39,6 +39,7 @@ dispatch(addItem(item))
                   {/* //With Arrow Function (No Argument):Here, 
                    An arrow function is used to create an inline function that, when invoked, will call handleAddItem with the item argument. 
                    This is useful when you want to pass specific arguments to your event handler. */}
+                 {/* //This `onClick={}` attribute specifies  the `handleAddItem` function that should be called , when the user clicks on an `ADD` Button. */}
                   <button onClick={()=> handleAddItem(item)} 
 
                   // <button onClick={handleAddItem(item)} 

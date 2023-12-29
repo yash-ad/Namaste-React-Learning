@@ -9,15 +9,19 @@ initialState:{
 items:[]
 },
 reducers:{
+//Redux `addItem` reducer:-
+//The `addItem` reducer is your Redux slice is responsible for handling this actions.
+//It takes the current stata (state.items) and the actions as a parameters
 addItem:(state,action)=>{
 const addToCart = action.payload;
+//It uses `push()` method in an array to add elements at the end of an array.When user clicks on the `ADD` button, items will be add into the cart.
+state.items.push(addToCart);
 //Mutating the state here , directly modifying the state.
 //We have to mutate the state      [`Immer` library for immutable state]
 //Redux-toolkit uses `Immer` Behind the scenes.
-state.items.push(addToCart);
 },
 
-// Redux `removeItem` Reducer:
+// Redux `removeItem` Reducer:-
 //The `removeItem` reducer in your Redux slice is responsible for handling this action.
 //It takes the current state (`state.items`) and the actions as parameters.
 removeItem:(state,action)=>{
