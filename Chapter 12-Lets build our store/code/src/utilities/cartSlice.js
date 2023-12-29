@@ -17,13 +17,17 @@ const addToCart = action.payload;
 state.items.push(addToCart);
 },
 
+// Redux `removeItem` Reducer:
+//The `removeItem` reducer in your Redux slice is responsible for handling this action.
+//It takes the current state (`state.items`) and the actions as parameters.
 removeItem: (state, action) => {
-    const itemIdToRemove = action.payload.id;
+  const itemIdToRemove = action.payload.id;
+  //It finds the index of the item to be removed using `findIndex()` method based on the `id` in the payload.
     const indexToRemove = state.items.findIndex(item => item.id !== itemIdToRemove);
+    //Then, it uses splice to remove one element at the found index, effectively removing the item from the array. 
     state.items.splice(indexToRemove, 1); //We just want to remove `1` element from an array.
   },
   
-
 clearCart:(state)=>{
 state.items.length = 0 //[for an empty array]
 }

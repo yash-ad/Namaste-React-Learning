@@ -11,7 +11,7 @@ const CartList = ({ items }) => {
   const handleRemoveItem = (itemId) => {
     // console.log("Dispatching removeItem:", itemId);
   //Inside `handleRemoveItem` function ,the action `removeItem` is dispatched with an object `{ id: itemId }` as the payload.
-  //This action is part of your `Redux slice` which means in our app is `cartSlice`and we have exported the action from `cartSlice.actions` and it is designed to remove the item from the cart based on the provided `id` specific `id` ,to remove the specific `Item` Becuase each `Item` has  an `id`.
+  //This action is part of your `Redux slice` which means in our app is `cartSlice` and we have exported the action from `cartSlice.actions` and it is designed to remove the item from the cart based on the provided `id` specific `id` ,to remove the specific `Item` Becuase each `Item` has  an `id`.
     dispatch(removeItem({ id: itemId }));
   };
 
