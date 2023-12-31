@@ -45,19 +45,23 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
     <div className="body">
       <div className="search-container">
         <div className="search-bar">
-          <input
-            className="input-bar"
-            type="text"
-            placeholder="Satisfy your hunger now!"
-            id="searchInp"
-            value={searchText}
-            onChange={(event) => setSearchText(event.target.value)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                handleSearch();
-              }
-            }}
-          />
+        <input
+  className="input-bar"
+  type="text"
+  placeholder="Satisfy your hunger now !"
+  id="searchInp"
+  value={searchText}
+  onChange={(event) => {
+    setSearchText(event.target.value);
+    handleSearch(); // Trigger the search on every change
+  }}
+  onKeyDown={(event) => {
+    if (event.key === 'Enter') {
+      handleSearch(); // You can keep this for users who prefer to press Enter
+    }
+  }}
+/>
+
           <div className="button-container">
             <button id="searchBtn" onClick={handleSearch}>
               <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">

@@ -12,10 +12,12 @@ const ItemsList = ({items})=>{
 
 //This is a designated callback function called `handleAddItem()`
 const handleAddItem = (item)=>{
+  console.log('Before dispatch:', items); // Log the state before dispatch
 //Inside `handleAddItem` function, the action `addItem` is dispatched.
 //The `addItem` action is a part of your Redux slice  which means in our app is `cartSlice` and we have exported the action from `cartSlice.actions` and it is designed to add the item for the cart. 
 // It dispatches an action which calls the `reducer` function called `addItem()` with the `item` parameter as a payload.
 dispatch(addItem(item))
+console.log('After dispatch:', items); 
 };
 
     return(

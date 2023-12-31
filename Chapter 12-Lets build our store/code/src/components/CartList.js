@@ -7,14 +7,12 @@ const CartList = ({ items }) => {
   //It uses `dispatch` function , its a hook called `useDispatch()`from `react-redux` to send an action to the Redux store Here the store in our app is `appStore`.
 const dispatch = useDispatch();
 
-  // The function is defined called as `handleRemoveItem` is responsible for dispatching an action it calls a reducer function called `removeItem` with the `itemId` parameter as a payload.
+  // The function is defined called as `handleRemoveItem` is responsible for dispatching an action it calls a reducer function called `removeItem` with the `itemId` parameter as a payload. 
 const handleRemoveItem = (itemId) => {
-   // console.log("Dispatching removeItem:", itemId);
-  //Inside `handleRemoveItem` function ,the action `removeItem` is dispatched with an object `{ id: itemId }` as the payload.
-  //This `removeItem` action is part of your `Redux slice` which means in our app is `cartSlice` and we have exported the action from `cartSlice.actions` and it is designed to remove the item from the cart based on the provided `id` with the  specific `id` ,to remove the specific `Item` , Because each `Item` has  a different `id`.
-dispatch(removeItem({ id : itemId}))
-}
-   
+  console.log('Before dispatch:', items); // Log the state before dispatch
+  dispatch(removeItem({ id: itemId }));
+  console.log('After dispatch:', items); // Log the state after dispatch
+};
 
   return (
     <div>
@@ -36,7 +34,7 @@ dispatch(removeItem({ id : itemId}))
                 {/* This attribute  specifies the `handleRemoveItem` function that should be called when the button is clicked using `onClick` event handler */}
               {/*So, in this case we are using an arrow function within an event handler called `onClick` its an anonymous function that calls `handleRemoveItem` function and  passing `item.card.info.id` as an argument. */}
                 <button onClick={()=> handleRemoveItem(item.card.info.id)}>
-                  <span><svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path fill="#5a5d6c" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></span>
                 </button>
               </div>
          </div>
