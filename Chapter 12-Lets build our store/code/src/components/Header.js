@@ -19,6 +19,7 @@ const {loggedInUser} = useContext(UserContext);
 
 //Introduced `useSelector` hook to subscribing to the store using Selector.
 const cartItems = useSelector((store)=> store.cart.items)
+// after executing this line of code, cartItems will hold the value of store.cart.items, and it will automatically re-render the component whenever the items property in the cart slice changes.
 // console.log(cartItems);
 
 

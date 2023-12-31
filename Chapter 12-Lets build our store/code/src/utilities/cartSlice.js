@@ -46,3 +46,8 @@ clearCart:(state)=>{
 export const{addItem,clearCart,removeItem} = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+/// We can write in this way as well:-
+// export const addItem = cartSlice.actions.addItem;
+// export const clearCart = cartSlice.actions.clearCart;
+// export const removeItem = cartSlice.actions.removeItem;
