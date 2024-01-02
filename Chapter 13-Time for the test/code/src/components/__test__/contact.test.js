@@ -50,6 +50,7 @@ test("should load button into the Contact component",()=>{
 
 //5.Unit testing with the component `Contact`:-
 test("should load `Name` from into the Contact component",()=>{
+    //Rendering
     render(<Contact/>)
 
     //Querying

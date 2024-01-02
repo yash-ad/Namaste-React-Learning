@@ -40,4 +40,4 @@
 
   * There is something known as `__Dunder__`.
   
-  ### `test()` function it takes two arguments The first is string and the secind is function callback function.
+  ### `test()` function it takes two arguments The first is string and the second is function- callback function.
