@@ -33,14 +33,7 @@ const cartItems = useSelector((store)=> store.cart.items)
         </Link>
       </div>
 
-      {/* <div>
-      <input className="input-bar border border-black p-4 bg-black"
-            type="text"
-            placeholder="Enter your Username here"
-            value={loggedInUser}
-            onChange={(event)=> setUserName(event.target.value)}
-          />
-          </div>  */}
+ 
 
       <div className="nav-items">
         <ul>

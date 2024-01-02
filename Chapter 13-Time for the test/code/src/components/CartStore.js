@@ -28,7 +28,10 @@ return (
 
   {/* Conditionally render the "Clear Cart" button using ternary operator */}
 {/* In this example, the ternary operator checks if cartItems.length > 0. If it is true, it renders the "Clear Cart" button; otherwise, it renders null. The null is equivalent to not rendering anything in React. */}
-  {cartItems.length > 0 ? <button className="clear-cart-button rounded" onClick={handleClearCart}>Clear Cart</button>
+  {cartItems.length > 0 ? <button className="clear-cart-button rounded" onClick={handleClearCart}>Clear Cart
+  <span class="material-symbols-outlined">
+delete
+</span></button>
   : null
         }
     </div>

@@ -52,7 +52,9 @@ console.log('After dispatch:', items);
                   // If you want to pass arguments to the handleAddItem function when the button is clicked, 
                   // you should use an arrow function or a function reference without invoking it immediately. 
     
-                  id="addBtn">ADD</button>
+                  id="addBtn"><span class="material-symbols-outlined">
+add_shopping_cart
+</span></button>
                 </div>
               </div>
             ))}

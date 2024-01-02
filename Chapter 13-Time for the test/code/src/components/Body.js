@@ -47,6 +47,8 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
         <div className="search-bar">
         <input
   className="input-bar"
+  autocomplete="false" 
+  name="hidden"
   type="text"
   placeholder="Satisfy your hunger now !"
   id="searchInp"
