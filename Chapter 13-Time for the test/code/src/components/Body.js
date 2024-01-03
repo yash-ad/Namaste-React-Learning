@@ -12,8 +12,11 @@ const Body = () => {
   const [searchText, setSearchText] = useState('');
   const listOfRestaurants = useRestaurantList();
   const onlineStatus = useOnlineStatus();
+
 //This is a higher order component that we passed in the RestaurantCard which returns a new component.
 const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
+
+
 
   useEffect(() => {
     setFilterRestaurants(listOfRestaurants);
@@ -102,9 +105,12 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
           <Link key={restaurant.info.id} to={'/restaurants/' + restaurant.info.id}>
 
 
-{/* The recent update to the Swiggy API, the 'PROMOTED' data is no longer available,Because there were no any option so Instead of "Promoted' there is a 'veg' attribute for every restaurant. So I used that for label "Promoted" using higher order components */}
+{/* The recent update to the Swiggy API, the 'PROMOTED' data is no longer available,
+Because there were no any option so Instead of "Promoted' there is a 'veg' attribute for every restaurant. 
+So I used that for label "Promoted" using higher order components */}
 {restaurant.info.veg ? (
-  <RestaurantPromotedLabel restaurantData={restaurant} />
+  <RestaurantPromotedLabel restaurantData={restaurant} 
+  />
   ) : ( <RestaurantCard restaurantData={restaurant} />)
 }
            

@@ -1,6 +1,6 @@
 const DisplayPromoted = ()=>{
 return(
-<div className="promo-status " >Promoted</div>
+<div className="promo-status">Promoted</div>
 )
 };
 
