@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
   const { slaString } = restaurantData?.info.sla;
   
   return (
-    <div className="restaurant-list">
+    <div className="restaurant-list" data-testid="restaurantList">
       <div className="place">
         <div className="list-item">
           <div className="item-content">

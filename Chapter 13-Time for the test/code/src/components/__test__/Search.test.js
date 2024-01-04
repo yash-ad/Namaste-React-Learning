@@ -1,5 +1,5 @@
 //Lets create a test case for `Search` input:-
-import { render,screen,act } from "@testing-library/react";
+import { render,screen,act, fireEvent } from "@testing-library/react";
 import Body from "../Body";
 import "@testing-library/jest-dom";
 import MOCK_DATA from "../mocks/Restaurantlistmockdata.json"
@@ -19,24 +19,68 @@ return Promise.resolve({
 });
 });
 
-test("Should `Search` in the list of restaurants ,Only search for `Desserts` text input", async ()=>{
+describe("Test cases for `Search` input and Searching for Top Rated Restaurants",()=>{
+    //1.
+    test("Should `Search` in the list of restaurants ,Only search for `Desserts` text input", async ()=>{
 
-  
- //The `act()` function is used to make sure that all updates to the state and props of your components are applied and processed before your test assertions.
-  // `act()` function returns a promise , here we are using `await`.
- await act(async () => render(
+        //The `act()` function is used to make sure that all updates to the state and props of your components are applied and processed before your test assertions.
+         // `act()` function returns a promise , here we are using `await`.
+        await act(async () => render(
+       <BrowserRouter>
+        <Body/>
+        </BrowserRouter>
+        ));
+             
+        //Lets test for `Search` button in to the body component
+       
+       //Querying
+       const cardsBeforeSearch = screen.getAllByTestId("restaurantList");
+
+        expect(cardsBeforeSearch.length).toBe(9); //Passed
+
+        const searchButton = screen.getByTestId("clickSearchButton"); //Passed
+       
+        const searchInput = screen.getByPlaceholderText("Satisfy your hunger now !") //Passed
+       
+        fireEvent.change(searchInput,{target:{value:"Desserts"}}); //Passed
+       
+        fireEvent.click(searchButton); //Passed
+       
+        const cardsAfterSearch = screen.getAllByTestId("restaurantList");//Passed
+       //  console.log(cardsAfterSearch);
+       
+       expect(cardsAfterSearch.length).toBe(4); //Passed
+       
+        //Assertion
+        expect(searchInput).toBeInTheDocument();
+       });
+       
+    //2.
+    test("Should `load` `Top Rated Restaurants` clicking on the button",async ()=>{
+await act(async()=>{
+render(
 <BrowserRouter>
- <Body/>
- </BrowserRouter>
- ));
-      
- //Lets test for `Search` button in to the body component
-
-//Querying
- const searchButton = screen.getByRole("button",{name:"searchBtn"});
-
- //Assertion
- expect(searchButton).toBeInTheDocument();
+<Body/>
+</BrowserRouter>
+)
+})
 });
 
+const cardsBeforeSearch = screen.getAllByTestId('restaurantList');
+
+expect(cardsBeforeSearch.length).toBe(9);
+
+const searchForTopRatedRestaurants = screen.getByRole('button',{name:'Top Rated Restaurants'});
+
+fireEvent.click(searchForTopRatedRestaurants)
+
+expect(searchForTopRatedRestaurants).toBeInTheDocument(); //Passed
+
+const cardsAfterSearch = screen.getAllByTestId('restaurantList');
+
+expect(cardsAfterSearch.length).toBe(8);
+
+
+
+})
 
