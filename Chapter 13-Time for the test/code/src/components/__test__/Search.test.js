@@ -64,7 +64,6 @@ render(
 </BrowserRouter>
 )
 })
-});
 
 const cardsBeforeSearch = screen.getAllByTestId('restaurantList');
 
@@ -80,7 +79,7 @@ const cardsAfterSearch = screen.getAllByTestId('restaurantList');
 
 expect(cardsAfterSearch.length).toBe(8);
 
-
+});
 
 })
 
