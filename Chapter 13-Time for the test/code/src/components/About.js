@@ -1,31 +1,87 @@
-import React from "react";
-import UserClass from "./UserClass";
-import { Component } from "react";
-import UserContext from "../utilities/UserContext";
 
-class About extends Component{
-    constructor(props){
-       super(props) 
-    }
+const About = ()=> {
+    return(
+<div className="about">
+<div className="about-us-page">
+<div className="about-page-left">
+<img src="https://gimmeyummy.com/wp-content/uploads/2022/06/Sedurra-dessert-scaled.jpg" alt=""/>
+</div>
+<div className="about-page-right">
+    <h1>About FoodExplorer</h1>
+  <p>Discover culinary excellence with FoodExplorer, your premier destination for extraordinary dining. We curate top-tier local eateries, offering diverse cuisines through an easy-to-use platform. Enjoy seamless ordering, swift deliveries, and a celebration of flavors at every meal. Welcome to FoodExplorer - where exceptional dining is just a click away!</p>
+  <button>Explore More</button>
+</div>
+</div>
+</div>
+    )
+};
 
 
 
-    componentDidMount(){
-    }
 
-    render(){
-        return(
-            <div className="about-us-container">
-            <h1>About Us</h1> 
-            <div>
-            User :<UserContext.Consumer>
-                {/* {({loggedInUser})=> loggedInUser} */}
-                {({loggedInUser})=> <h1>{loggedInUser}</h1>}
-            </UserContext.Consumer></div>
-            <UserClass name={"First"} location={"First class"}/>
-            </div>)
-    }
-    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+// import UserClass from "./UserClass";
+// import { Component } from "react";
+// import UserContext from "../utilities/UserContext";
+
+// class About extends Component{
+//     constructor(props){
+//        super(props) 
+//     }
+
+
+
+//     componentDidMount(){
+//     }
+
+//     render(){
+//         return(
+//             <div className="about-us-container">
+//             <h1>About Us</h1> 
+//             <div>
+//             User :<UserContext.Consumer>
+//                 {/* {({loggedInUser})=> loggedInUser} */}
+//                 {({loggedInUser})=> <h1>{loggedInUser}</h1>}
+//             </UserContext.Consumer></div>
+//             <UserClass name={"First"} location={"First class"}/>
+//             </div>)
+//     }
+//     };
 
 
 

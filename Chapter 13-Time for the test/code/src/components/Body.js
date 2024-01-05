@@ -47,7 +47,7 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
   return (
     <div className="body">
     <div className="description">
-    <h2>FOODEXPLORER</h2>
+    <br></br>
       <h1>Explore the finest food and drinks in the city of PUNE</h1>
     </div>
       <div className="search-container">
