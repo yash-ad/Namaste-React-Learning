@@ -3,11 +3,11 @@ const Contact = ()=>{
 return(
 <div className="contact-page">
     <div id="contact">
-    <img src="https://c0.wallpaperflare.com/preview/611/507/730/beef-bread-bun-burger.jpg" alt=""/>
+    <img src="https://c1.wallpaperflare.com/preview/546/136/32/menu-pizza-vegetables-eat.jpg" alt=""/>
     <div id="overlay"></div>
     <div id="contact-left">
-    <h1>Get In Touch</h1>
-    <p>Need assistance or have a question? Contact our friendly team for quick and helpful support</p>
+    <h1>Reach out to us</h1>
+    <p>Require help or have inquiries? Reach out to our approachable team for prompt and supportive assistance.</p>
     </div>
     <div id="contact-right">
     <label>Name</label>

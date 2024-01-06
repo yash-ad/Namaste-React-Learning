@@ -1,6 +1,6 @@
 // Importing React library
 import React from "react";
-
+import appLogo from "/Chapter 13-Time for the test/code/src/Images/food-app-icon.png"
 // Defining the Footer component
 const Footer = () => {
   return (
@@ -8,7 +8,8 @@ const Footer = () => {
     <div className="footer">
 <div id="top">
 <div id="top-left">
-<h3>FoodExplorer</h3>
+{/* <img className="logo" src={appLogo} alt=""/> */}
+<h3>FOODEXPLORER</h3>
 </div>
 </div>
 <div id="bottom">
