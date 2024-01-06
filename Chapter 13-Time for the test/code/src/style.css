@@ -1318,7 +1318,7 @@ height: 450px;
   position: relative;
 }
 #contact img {
-  object-fit: cover;
+object-fit: cover;
   object-position: center;
   z-index: -99;
   width: 100%;
@@ -1337,49 +1337,60 @@ height: 450px;
   left: 0;
 }
 #contact-left {
-  padding-left: 12vw;
+  padding-left: 1vw;
 }
 
 #contact h1 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 600;
+    margin-left: -40px;
+    margin-top: 8vw;
+    color: #e7e7e7;
 }
 
 #contact p {
     width: 80%;
     margin-top: 1vw;
     font-size: 1.2vw;
+    margin-left: -40px;
+    color:#c7c8ca ;
+    padding: 1.5px;
 }
 
 
-#contact-right {
+#contact-right{
     flex-direction: column;
     width: 50%;
     display: flex;
-    margin-right: -65px;
-}
+    margin-top: -20px;
+    margin-right: 50px;
+  }
 
-
-
-#contact-right label {
-    margin-top: -10vw;
-    font-size: 1.5vw;
-    font-weight: 600;
-}
-
-
-
-#contact-right input {
-    margin-top: 0.5vw;
-    padding: 1vw 0.75vw 1vw 1.5vw;
-    font-size: 1vw;
-}
-
-
-
-#contact-right label {
+/* #contact-right label {
     margin-top: 8vw;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
+    font-weight: 600;
+} */
+#contact-right input {
+    padding: 1vw 0.85vw 1vw 1.8vw;
+    font-size: 1vw;
+    width: 100%;
+}
+#contact-right .name-label{
+  margin-top: 10vw;
+  font-size: 1.7vw;
+  font-weight: 600;
+}
+
+#contact-right .email-label{
+  margin-top: 1.5vw;
+  font-size: 1.7vw;
+  font-weight: 600;
+}
+
+#contact-right label {
+    margin-top: 2vw;
+    font-size: 1.7vw;
     font-weight: 600;
 }
 
@@ -1388,18 +1399,22 @@ height: 450px;
   padding: 1vw 0.75vw 1vw 1.5vw;
   font-size: 1vw;
 }
+
 #contact-right textarea {
-    margin-top: 0.5vw;
-    padding: 1vw 0.75vw 1vw 1.5vw;
+    margin-top: 0.6vw;
+    padding: 0.5vw 0.75vw 1vw 1.5vw;
     font-size: 1vw;
 }
 #contact button {
   color: #fff;
   cursor: pointer;
   background-color: #000;
-  border: 1px solid #0000;
+  border: 1.6px solid #0000;
   margin-top: 1.5vw;
   padding: 1vw 0;
   font-size: 1.3vw;
-  transition: all .4s;
+  transition: all .3s;
+  width: 50%;
+  margin-bottom: 1vw;
+  margin-left: 95px;
 }
