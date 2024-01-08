@@ -13,6 +13,7 @@ import appStore from "./utilities/appStore";
 import CartStore from "./components/CartStore";
 import EmptyCart from "./components/EmptyCart";
 import User from "./components/User";
+import Shimmer from "./components/Shimmer";
 
 
 // Define the layout of the entire application
@@ -49,6 +50,7 @@ const About = lazy(()=> import("./components/About"));
 
 const Contact = lazy(()=> import("./components/Contact"));
 
+const User = lazy(()=> import("./components/User"));
 
 // Create a router for the application using react-router-dom
 const appRouter = createBrowserRouter([
@@ -60,11 +62,11 @@ const appRouter = createBrowserRouter([
       { path: "/", element: <Body />}, 
       { path: "/restaurants/:resId", element: <RestaurantInfo /> },
       //<Suspense> is a React component that is used for handling components with asynchronous behavior, such as lazy-loaded components or data fetching.
-      { path: "/about", element: <Suspense fallback={<div>Loading...</div>}><About/></Suspense> },
-      { path: "/contact", element:<Suspense fallback={<div>Loading...</div>}><Contact/></Suspense>  },
+      { path: "/about", element: <Suspense fallback={<Shimmer/>}><About/></Suspense> },
+      { path: "/contact", element:<Suspense fallback={<Shimmer/>}><Contact/></Suspense>},
       { path: "/cart", element: <CartStore/>},
       { path: "/", element: <EmptyCart/>},
-      { path: "/user", element: <User/>},
+      { path: "/user", element: <Suspense fallback={<Shimmer/>}><User/></Suspense>},
     ],
   },
 ]);

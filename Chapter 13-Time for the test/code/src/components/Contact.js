@@ -1,4 +1,6 @@
 
+
+
 const Contact = ()=>{
 return(
 <div className="contact-page">

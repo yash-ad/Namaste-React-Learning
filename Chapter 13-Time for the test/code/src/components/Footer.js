@@ -1,6 +1,7 @@
 // Importing React library
 import React from "react";
-import appLogo from "/Chapter 13-Time for the test/code/src/Images/food-app-icon.png"
+
+
 // Defining the Footer component
 const Footer = () => {
   return (

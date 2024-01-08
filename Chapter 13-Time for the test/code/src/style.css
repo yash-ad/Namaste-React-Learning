@@ -933,15 +933,82 @@ margin-top: 7vw;
 }
 
 .user-container{
-  display: flex;
-  text-align: center;
-  /* justify-content: center; */
+  /* background-color: rgb(255, 255, 255); */
+  background: url('https://c0.wallpaperflare.com/preview/338/480/905/food-and-drink-pizza-pizzas.jpg');
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
   align-items: center;
+  gap: 10vw;
+  width: 100%;
+  min-height: 100%;
+  padding: 5vw 0;
+  display: flex;
+}
+
+
+.login-box{
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  border-radius: 1vw;
   flex-direction: column;
-  margin-top: 15vw;
-  /* width: 100%; */
-min-height: 100vh;
-  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  width: 30vw;
+  height: 70vh;
+  display: flex;
+  margin-top: 6vw;
+  border: 1px solid rgba(255, 255, 255, .2)
+}
+
+.login-box h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 1.5vw;
+  padding-bottom: 3vw;
+  font-size: 3vw;
+}
+
+.login-box label {
+  color: #f9f9f9;
+  width: 80%;
+  margin: 0 auto;
+}
+.login-box input {
+  border: none;
+  border-radius: 3px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1vw;
+  font-family: gilroy;
+  font-size: 1.3vw;
+}
+.login-box label {
+  color: #f9f9f9;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login-box input {
+  border: none;
+  border-radius: 3px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1vw;
+  font-family: gilroy;
+  font-size: 1.3vw;
+}
+
+.login-box button {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  width: 80%;
+  margin: 2vw auto;
+  padding: 1vw;
+  font-family: gilroy;
+  font-size: 1.3vw;
 }
 
 .cart-items{
@@ -954,16 +1021,16 @@ min-height: 100vh;
   margin-bottom: 15vw;
 }
 .clear-cart-button{
-  display: flex;
-  padding: 0.5rem;
-  margin: 0.5rem;
+ text-align: center;
   margin-top: 10px;
   background-color: black;
   color: white;
-justify-content: center;
- border-radius: 0.5rem;
- cursor: pointer;
  margin-left: 750px;
+ cursor: pointer;
+    border-radius: 1vw;
+    outline: none;
+    padding: 0.9vw 1vw;
+    font-size: 1vw;
 
 }
 
@@ -971,6 +1038,10 @@ justify-content: center;
 box-shadow: 0 1px 5px #bab9b9;
 }
   
+#trash-bin {
+  margin-left: 0.5vw;
+  font-size: 1vw;
+}
 
 .cart-menu{
   background-color: #fff;
@@ -1338,6 +1409,7 @@ object-fit: cover;
 }
 #contact-left {
   padding-left: 1vw;
+  margin-bottom: 95px;
 }
 
 #contact h1 {
