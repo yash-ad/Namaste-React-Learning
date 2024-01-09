@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import useRestaurantList from "../Utilities/useRestaurantList";
-import useOnlineStatus from "../Utilities/useOnlineStatus";
+import useRestaurantList from "../utilities/useRestaurantList";
+import useOnlineStatus from "../utilities/useOnlineStatus";
 import NetworkStatus from "./NetworkStatus";
 import { withPromotedLabel } from "./RestaurantCard";
 

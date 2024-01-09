@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { IMG_URL } from "../Utilities/config";
-import { addItem } from "../Utilities/cartSlice";
+import { IMG_URL } from "../utilities/config";
+import { addItem } from "../utilities/cartSlice";
 
 const ItemsList = ({items})=>{
    

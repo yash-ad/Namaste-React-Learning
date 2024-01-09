@@ -1,5 +1,5 @@
 // Importing necessary dependencies
-import { CDN_URL } from "../Utilities/config";
+import { CDN_URL } from "../utilities/config";
 import DisplayPromoted from "./DisplayPromoted";
 
 // Defining the RestaurantCard component

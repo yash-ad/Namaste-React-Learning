@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./Components/Header";
-import Body from "./Components/Body";
-import Footer from "./Components/Footer";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import { lazy,Suspense } from "react";
-import Error from "./Components/Error";
-import RestaurantInfo from "./Components/RestaurantInfo";
-import UserContext from "./Utilities/UserContext";
+import Error from "./components/Error";
+import RestaurantInfo from "./components/RestaurantInfo";
+import UserContext from "./utilities/UserContext";
 import { Provider } from "react-redux";
-import appStore from "./Utilities/appStore";
-import CartStore from "./Components/CartStore";
-import EmptyCart from "./Components/EmptyCart";
-import User from "./Components/User";
-import Shimmer from "./Components/Shimmer";
+import appStore from "./utilities/appStore";
+import CartStore from "./components/CartStore";
+import EmptyCart from "./components/EmptyCart";
+import User from "./components/User";
+import Shimmer from "./components/Shimmer";
 
 
 // Define the layout of the entire application
@@ -46,11 +46,11 @@ setUserName(data.Name)
 };
 
 //In React, the lazy function is used to dynamically import a component. 
-const About = lazy(()=> import("./Components/About"));
+const About = lazy(()=> import("./components/About"));
 
-const Contact = lazy(()=> import("./Components/Contact"));
+const Contact = lazy(()=> import("./components/Contact"));
 
-const User = lazy(()=> import("./Components/User"));
+const User = lazy(()=> import("./components/User"));
 
 // Create a router for the application using react-router-dom
 const appRouter = createBrowserRouter([

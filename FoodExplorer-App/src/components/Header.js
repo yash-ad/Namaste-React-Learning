@@ -1,8 +1,8 @@
 // Importing necessary dependencies and configuration
-import { LOGO_URL } from "../Utilities/config";
+import { LOGO_URL } from "../utilities/config";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../Utilities/UserContext";
+import UserContext from "../utilities/UserContext";
 import { useSelector } from "react-redux";
 
 

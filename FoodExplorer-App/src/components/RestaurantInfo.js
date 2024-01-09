@@ -1,9 +1,9 @@
 // Importing necessary dependencies and components
-import { IMG_URL } from "../Utilities/config";
+import { IMG_URL } from "../utilities/config";
 import Shimmer from "./Shimmer";
 import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {  REST_INFO_API_URL } from "../Utilities/config";
+import {  REST_INFO_API_URL } from "../utilities/config";
 import RestaurantCategory from "./RestaurantCategory";
 
 
