@@ -1,4 +1,4 @@
-import { sum } from "../sum";
+import { sum } from "/Chapter 13-Time for the test/code/src/components/sum";
 
 //Test function,It accepts Two arguments,The first is string and the second is function callback function:-
 

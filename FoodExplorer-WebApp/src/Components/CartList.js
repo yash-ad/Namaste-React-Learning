@@ -1,7 +1,7 @@
 // Component
 import {useDispatch} from "react-redux"
-import { IMG_URL } from "../utilities/config";
-import { removeItem } from "../utilities/cartSlice";
+import { IMG_URL } from "../Utilities/config";
+import { removeItem } from "../Utilities/cartSlice";
 
 const CartList = ({ items }) => {
   //It uses `dispatch` function , its a hook called `useDispatch()`from `react-redux` to send an action to the Redux store Here the store in our app is `appStore`.
