@@ -101,7 +101,8 @@ align-items: center;
  .user-text{
   display: flex;
   text-align: center;
-  margin-top: 5px;
+  /* margin-top: 5px; */
+  color:#3a3a3a; ;
  }
  .nav-items h2{
   cursor: pointer;
@@ -1021,7 +1022,7 @@ margin-top: 7vw;
   margin-bottom: 15vw;
 }
 .clear-cart-button{
- text-align: center;
+ /* text-align: center; */
   margin-top: 10px;
   background-color: black;
   color: white;
@@ -1039,8 +1040,10 @@ box-shadow: 0 1px 5px #bab9b9;
 }
   
 #trash-bin {
-  margin-left: 0.5vw;
-  font-size: 1vw;
+  justify-content: center;
+  margin-left: 0.3vw;
+  font-size: 1.2vw;
+  align-items: center;
 }
 
 .cart-menu{
