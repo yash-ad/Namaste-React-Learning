@@ -1,5 +1,5 @@
 import { render,screen } from "@testing-library/react";
-import Contact from "../Contact";
+import Contact from "/Chapter 13-Time for the test/code/src/components/Contact";
 import "@testing-library/jest-dom";
 
 //The React-testing-library provides Utilities functions like `render,screen`.

@@ -1,4 +1,4 @@
-import { minus } from "../minus";
+import { minus } from "/Chapter 13-Time for the test/code/src/components/minus";
 
 test("Substract the number using `minus function`",()=>{
 const result = minus(5,1)

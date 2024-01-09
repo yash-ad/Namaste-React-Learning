@@ -1,6 +1,6 @@
 //Lets create a test case for `Search` input:-
 import { render,screen,act, fireEvent } from "@testing-library/react";
-import Body from "../Body";
+import Body from "/Chapter 13-Time for the test/code/src/components/Body";
 import "@testing-library/jest-dom";
 import MOCK_DATA from "../mocks/Restaurantlistmockdata.json"
 import { BrowserRouter } from "react-router-dom";

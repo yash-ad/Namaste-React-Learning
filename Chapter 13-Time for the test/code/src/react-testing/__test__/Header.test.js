@@ -1,6 +1,6 @@
 //Lets write test cases for the `Header` component:-
 import { render,screen,fireEvent} from "@testing-library/react";
-import Header from "../Header";
+import Header from "/Chapter 13-Time for the test/code/src/components/Header";
 import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
 import appStore from "../../utilities/appStore";
