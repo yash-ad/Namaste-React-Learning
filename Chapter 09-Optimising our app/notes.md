@@ -1,0 +1,55 @@
+Single Responsibility Principle - Each component should have single responsibility
+Modularity - Meaning Dividing big code into multiple small piece of code or module. 
+
+To make our code -
+1) Maintainable
+2) Reusable
+3) Testable
+
+We Create custom hooks to follow Single Responsibility Principle
+
+Here this useRestaurantBody() is created to fetch data from API
+<!-- const useRestaurantBody = () => {
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(HOME_PAGE_URL);
+    const json = await data.json();
+
+    setListOfRestaurants(
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
+
+  return listOfRestaurants;
+}; -->
+
+Chunking | Code Splitting | Lazy Loading | Dynamic Bundling | On Demand Loading - Break down apps into smaller logical chunks
+
+Lazy Loading the Grocery Page or Dynamic Loading
+const Grocery = lazy(() => import("./components/Grocery"));
+
+<!-- {
+ path: "/grocery",
+ element: (
+ <Suspense fallback={<h1>Loading....</h1>}>
+ <Grocery />
+ </Suspense>
+ ),
+}, -->
+
+ - What are the advantages and disadvantages of this type of code splitting?
+   Advantages - Faster Loading Process, Reduced Server Load, Better UX(User Expereience)
+   Disadvantages - Additional Code to be processed by browser, Additional Communication with server
+
+
+
+
+
+
+
+

@@ -136,3 +136,82 @@ const ExampleComponent = () => {
 ✅ Dynamic Routing and defining routes for each RestaurantMenu component.
 
 ✅ Leveraging `useParams()` hook to extract parameter values from the URL.
+
+useEffect - useEffect will be called after every time component is rendered
+
+if no dependency array => useEffect is called on every render
+if dependency array is empty = [] => useEffect is called only once at initial render
+if you have something as dependency = [btnNameReact] => useEffect is called every time dependency(btnNameReact) changes
+
+React Router DOM
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={appRouter} />);
+
+React Router gives a special Hook called useRouteError 
+
+const AppLayout = () => {
+  return (
+    <div id="app">
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  );
+};
+
+//In place of outlet children component will be rendered come as path changes
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
+    errorElement: <Error />,
+  },
+]);
+
+Never use anchor tag to route from one page to another. Because it reloads the whole page. While using <Link /> only component
+gets refreshed
+
+React helps us create single page application
+
+There can be 2 types of routing in web applications:-
+1) Client Side Routing - Now it doesn't make network call for fetching another page.
+2) Server Side Routing - Earlier we used to make network call to server to get another html page.
+
+
+For Dynamic Routing
+{
+path: "/restaurant/:resId",
+
+}
+
+₹{price / 100 || defaultPrice / 100} 
+It evaluates on basis of truthy and falsy
+
+useParams() hook is used to give what is passed thorugh

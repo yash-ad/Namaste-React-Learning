@@ -134,3 +134,55 @@ XML is used in websites, databases, and third-party applications for storing and
 JSX Type:
 
 JSX is an embeddable XML-like syntax meant to be transformed into valid JavaScript. It allows developers to write HTML directly within JavaScript, facilitating the creation of UI components in libraries like React.
+
+
+
+ "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+
+Create scripts to run the commands
+now, we can write npm run start / npm start => npx parcel index.html
+
+//React Element => Object => HTMLElement(rendered component)
+//Created element using core react
+const heading = React.createElement("h1", { id: "heading" }, "Hello I'm here");
+
+console.log(heading);
+//JSX - Javascript syntax which is easier to create HTML element
+//JSX is seperate and React is seperate, it is used bcz its developer friendly
+
+// JSX(its a syntax) - is not HTML in Javascript, it's HTML or XML like syntax
+const jsxHeading = <h1 id="heading">Hello I'm here boy</h1>;
+
+console.log(jsxHeading);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(jsxHeading);
+
+Transpiling converts source code from a programming language into an equivalent source code of the 
+same or a different programming language
+example - Parcel transpiles the JSX code into React code before it reaches the javascript engine
+
+Parcel gives this code to Babe
+
+JSX => React.createElement => ReactElement- JS Object => HTML Element(rendered)
+
+Attributes are given in camelCase.If you want to write JSX in multiple lines we wrap it inside () paranthesis
+const jsxHeading = (<h1 className="head">Hello 
+I'm here boy
+</h1>);
+
+
+ React Component
+- Class Based Component - Old ways to build code (It uses Javascript classes)
+- Function Based Component - New way to build code (It uses Javascript functions)
+
+React Functional Component - Just a javascript function (Name it capital letter)
+that returns a React element
+const HeadingComponent = () => {
+  return <h1>Namaste React Functional Component</h1>;
+};
