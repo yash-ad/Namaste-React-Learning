@@ -20,7 +20,7 @@ const AppLayout = () => {
 };
 
 //In React, the lazy function is used to dynamically import a component. 
-const About = lazy(()=> import("./components/About"));
+const About = lazy(()=>import("./components/About"));
 
 const Contact = lazy(()=> import("./components/Contact"));
 

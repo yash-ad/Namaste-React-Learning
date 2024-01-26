@@ -1,4 +1,5 @@
-# Namaste React 🚀
+
+#React 🚀
 
 ## Chapter - 3
 ### Laying The foundation

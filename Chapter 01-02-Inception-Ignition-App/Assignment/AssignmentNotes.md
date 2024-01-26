@@ -98,6 +98,7 @@ Hot Module Replacement (HMR) is a feature in modern web development that allows 
 ## 19. What is .gitignore? what should we add and not add into it?
 
 The .gitignore file is a configuration file used by the version control system Git. It specifies files and directories that should be ignored and not tracked by Git.
+The purpose of the .gitignore file is to exclude files and directories that are not essential.
 
 ### What should we add:
 
@@ -114,7 +115,7 @@ The .gitignore file is a configuration file used by the version control system G
 - Documentation and Readme Files
 - Static Assets
 
-The purpose of the .gitignore file is to exclude files and directories that are not essential.
+
 
 ## 20. What is the difference between `package.json` and `package-lock.json`?
 
